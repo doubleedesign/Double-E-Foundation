@@ -11,27 +11,30 @@
  *
  * @link https://codex.wordpress.org/Theme_Development
  * @package WordPress
- * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
+ * @subpackage Double-E-Foundation
+ * @since Double-E-Foundation 0.0.2
  */
 
-/** Various clean up functions */
+/** Various clean up functions - thanks FoundationPress */
 require_once( 'library/cleanup.php' );
 
-/** Required for Foundation to work properly */
+/** Required for Foundation to work properly - thanks FoundationPress */
 require_once( 'library/foundation.php' );
 
-/** Register all navigation menus */
+/** Register all navigation menus - thanks FoundationPress */
 require_once( 'library/navigation.php' );
 
-/** Add menu walkers for top-bar and off-canvas */
+/** Add menu walkers for top-bar and off-canvas - thanks FoundationPress */
 require_once( 'library/menu-walkers.php' );
 
-/** Create widget areas in sidebar and footer */
+/** Create widget areas in sidebar and footer - thanks FoundationPress */
 require_once( 'library/widget-areas.php' );
 
-/** Return entry meta information for posts */
+/** Return entry meta information for posts - thanks FoundationPress */
 require_once( 'library/entry-meta.php' );
+
+/** Enqueue styles */
+require_once( 'library/enqueue-styles.php' );
 
 /** Enqueue scripts */
 require_once( 'library/enqueue-scripts.php' );
@@ -39,13 +42,13 @@ require_once( 'library/enqueue-scripts.php' );
 /** Add theme support */
 require_once( 'library/theme-support.php' );
 
-/** Add Nav Options to Customer */
+/** Add Nav Options to Custom - thanks FoundationPress */
 require_once( 'library/custom-nav.php' );
 
-/** Change WP's sticky post class */
+/** Change WP's sticky post class - thanks FoundationPress */
 require_once( 'library/sticky-posts.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
-// require_once( 'library/protocol-relative-theme-assets.php' );
+require_once( 'library/protocol-relative-theme-assets.php' );
 
 ?>
