@@ -17,6 +17,9 @@
 @import "global/wp-admin"; // Fix issues with wp-admin bar positioning
 @import "global/wp-overrides"; // Override the default WordPress styling for some elements
 
+// Foundation global styles 
+@include foundation-global-styles;
+
 // Foundation components
 @include foundation-grid;  /*alternatively, foundation-flex-grid*/
 @include foundation-typography;
