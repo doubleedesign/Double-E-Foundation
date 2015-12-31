@@ -18,8 +18,7 @@
 @import "global/wp-overrides"; // Override the default WordPress styling for some elements
 
 // Foundation components
-$flex: false; //Set to true to use flexbox grid
-@if not $flex { @include foundation-grid; } @else { @include foundation-flex-grid; }
+@include foundation-grid;  /*alternatively, foundation-flex-grid*/
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
