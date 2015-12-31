@@ -7,8 +7,8 @@
  * other "pages" on your WordPress site will use a different template.
  *
  * @package WordPress
- * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
+ * @subpackage Double-E-Foundation
+ * @since Double-E-Foundation 0.1.2
  */
 
  get_header(); ?>
@@ -31,9 +31,6 @@
            <?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', 'foundationpress' ), 'after' => '</p></nav>' ) ); ?>
            <p><?php the_tags(); ?></p>
        </footer>
-       <?php do_action( 'foundationpress_page_before_comments' ); ?>
-       <?php comments_template(); ?>
-       <?php do_action( 'foundationpress_page_after_comments' ); ?>
    </article>
  <?php endwhile;?>
 

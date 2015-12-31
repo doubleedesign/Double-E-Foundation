@@ -46,10 +46,6 @@
 
 }
 
-.vertical.menu {
-  padding: 1rem;
-}
-
 .title-bar {
   @include breakpoint(medium) {
     display: none;
