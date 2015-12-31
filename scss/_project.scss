@@ -9,6 +9,7 @@
 
 // Settings
 @import "global/settings"; // Foundation settings file.
+@import "global/project_settings"; // Custom settings for this project
 
 // Foundation mixins & browser resets
 @import 'foundation/foundation';

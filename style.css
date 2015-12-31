@@ -6,7 +6,7 @@ Theme Name:         	Double-E Foundation
 Theme URI:          	http://www.leesaward.com.au
 Github Theme URI:   	https://github.com/doubleedesign/Double-E-Foundation
 Description:        	Double-E Foundation is a WordPress starter theme based on Foundation 6 by Zurb and FoundationPress for WordPress.
-Version:            	0.1.0
+Version:            	0.1.1
 Foundation version: 	6.1.1
 Author:            		Leesa Ward / Double-E Design
 Author URI:         	http://www.leesaward.com.au
@@ -25,6 +25,54 @@ License URI:        	http://www.opensource.org/licenses/mit-license.php
   The Foundation framework is built by Zurb
   Licensed under MIT Open Source
 */
+
+/*===========================================================
+	STRUCTURE
+===========================================================*/
+
+/*Just a bit of shorthand*/
+
+/* Breakpoints */
+
+/* Top Bar */
+
+/*===========================================================
+	COLOUR SCHEME
+===========================================================*/
+
+/*===========================================================
+	TYPOGRAPHY
+===========================================================*/
+
+/*Headings*/
+
+/*My way of renaming Foundation's variables*/
+
+/* Paragraphs*/
+
+/* Lists */
+
+/* Blockquotes */
+
+/* Links */
+
+/* Breadcrumbs */
+
+/*===========================================================
+	BUTTONS
+===========================================================*/
+
+/*===========================================================
+	FORMS
+===========================================================*/
+
+/*===========================================================
+	PAGINATION
+===========================================================*/
+
+/*===========================================================
+	TABLES
+===========================================================*/
 
 /**
  * Foundation for Sites by ZURB
@@ -595,7 +643,7 @@ th {
 /* line 119, foundation/_global.scss */
 
 .foundation-mq {
-  font-family: "small=0em&medium=40em&large=64em&xlarge=75em&xxlarge=90em";
+  font-family: "small=0em&medium=40em&large=64em&xlarge=80em&xxlarge=100em";
 }
 
 /* line 123, foundation/_global.scss */
@@ -624,8 +672,8 @@ body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
-  line-height: 1.5;
-  color: #0a0a0a;
+  line-height: 1.6;
+  color: #444;
   background: #fefefe;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -685,19 +733,9 @@ button {
 /* line 26, foundation/grid/_classes.scss */
 
 .row {
-  margin-left: -0.625rem;
-  margin-right: -0.625rem;
-  margin-left: 0;
-  margin-right: 0;
-}
-
-@media screen and (min-width: 40em) {
-  /* line 26, foundation/grid/_classes.scss */
-
-  .row {
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem;
-  }
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* line 130, foundation/util/_mixins.scss */
@@ -738,6 +776,24 @@ button {
   }
 }
 
+@media screen and (min-width: 64em) {
+  /* line 35, foundation/grid/_classes.scss */
+
+  .row .row {
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  /* line 35, foundation/grid/_classes.scss */
+
+  .row .row {
+    margin-left: -1.5625rem;
+    margin-right: -1.5625rem;
+  }
+}
+
 /* line 47, foundation/grid/_classes.scss */
 
 .row .row.collapse {
@@ -768,6 +824,26 @@ button {
   .columns {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  /* line 60, foundation/grid/_classes.scss */
+
+  .column,
+  .columns {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  /* line 60, foundation/grid/_classes.scss */
+
+  .column,
+  .columns {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
   }
 }
 
@@ -2475,8 +2551,8 @@ button {
 
   .large-uncollapse > .column,
   .large-uncollapse > .columns {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   /* line 135, foundation/grid/_classes.scss */
@@ -2492,6 +2568,572 @@ button {
   .large-uncentered,
   .large-push-0,
   .large-pull-0 {
+    position: static;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  /* line 87, foundation/grid/_classes.scss */
+
+  .xlarge-1 {
+    width: 8.33333%;
+  }
+
+  /* line 93, foundation/grid/_classes.scss */
+
+  .xlarge-push-1 {
+    position: relative;
+    left: 8.33333%;
+  }
+
+  /* line 97, foundation/grid/_classes.scss */
+
+  .xlarge-pull-1 {
+    position: relative;
+    left: -8.33333%;
+  }
+
+  /* line 105, foundation/grid/_classes.scss */
+
+  .xlarge-offset-0 {
+    margin-left: 0%;
+  }
+
+  /* line 87, foundation/grid/_classes.scss */
+
+  .xlarge-2 {
+    width: 16.66667%;
+  }
+
+  /* line 93, foundation/grid/_classes.scss */
+
+  .xlarge-push-2 {
+    position: relative;
+    left: 16.66667%;
+  }
+
+  /* line 97, foundation/grid/_classes.scss */
+
+  .xlarge-pull-2 {
+    position: relative;
+    left: -16.66667%;
+  }
+
+  /* line 105, foundation/grid/_classes.scss */
+
+  .xlarge-offset-1 {
+    margin-left: 8.33333%;
+  }
+
+  /* line 87, foundation/grid/_classes.scss */
+
+  .xlarge-3 {
+    width: 25%;
+  }
+
+  /* line 93, foundation/grid/_classes.scss */
+
+  .xlarge-push-3 {
+    position: relative;
+    left: 25%;
+  }
+
+  /* line 97, foundation/grid/_classes.scss */
+
+  .xlarge-pull-3 {
+    position: relative;
+    left: -25%;
+  }
+
+  /* line 105, foundation/grid/_classes.scss */
+
+  .xlarge-offset-2 {
+    margin-left: 16.66667%;
+  }
+
+  /* line 87, foundation/grid/_classes.scss */
+
+  .xlarge-4 {
+    width: 33.33333%;
+  }
+
+  /* line 93, foundation/grid/_classes.scss */
+
+  .xlarge-push-4 {
+    position: relative;
+    left: 33.33333%;
+  }
+
+  /* line 97, foundation/grid/_classes.scss */
+
+  .xlarge-pull-4 {
+    position: relative;
+    left: -33.33333%;
+  }
+
+  /* line 105, foundation/grid/_classes.scss */
+
+  .xlarge-offset-3 {
+    margin-left: 25%;
+  }
+
+  /* line 87, foundation/grid/_classes.scss */
+
+  .xlarge-5 {
+    width: 41.66667%;
+  }
+
+  /* line 93, foundation/grid/_classes.scss */
+
+  .xlarge-push-5 {
+    position: relative;
+    left: 41.66667%;
+  }
+
+  /* line 97, foundation/grid/_classes.scss */
+
+  .xlarge-pull-5 {
+    position: relative;
+    left: -41.66667%;
+  }
+
+  /* line 105, foundation/grid/_classes.scss */
+
+  .xlarge-offset-4 {
+    margin-left: 33.33333%;
+  }
+
+  /* line 87, foundation/grid/_classes.scss */
+
+  .xlarge-6 {
+    width: 50%;
+  }
+
+  /* line 93, foundation/grid/_classes.scss */
+
+  .xlarge-push-6 {
+    position: relative;
+    left: 50%;
+  }
+
+  /* line 97, foundation/grid/_classes.scss */
+
+  .xlarge-pull-6 {
+    position: relative;
+    left: -50%;
+  }
+
+  /* line 105, foundation/grid/_classes.scss */
+
+  .xlarge-offset-5 {
+    margin-left: 41.66667%;
+  }
+
+  /* line 87, foundation/grid/_classes.scss */
+
+  .xlarge-7 {
+    width: 58.33333%;
+  }
+
+  /* line 93, foundation/grid/_classes.scss */
+
+  .xlarge-push-7 {
+    position: relative;
+    left: 58.33333%;
+  }
+
+  /* line 97, foundation/grid/_classes.scss */
+
+  .xlarge-pull-7 {
+    position: relative;
+    left: -58.33333%;
+  }
+
+  /* line 105, foundation/grid/_classes.scss */
+
+  .xlarge-offset-6 {
+    margin-left: 50%;
+  }
+
+  /* line 87, foundation/grid/_classes.scss */
+
+  .xlarge-8 {
+    width: 66.66667%;
+  }
+
+  /* line 93, foundation/grid/_classes.scss */
+
+  .xlarge-push-8 {
+    position: relative;
+    left: 66.66667%;
+  }
+
+  /* line 97, foundation/grid/_classes.scss */
+
+  .xlarge-pull-8 {
+    position: relative;
+    left: -66.66667%;
+  }
+
+  /* line 105, foundation/grid/_classes.scss */
+
+  .xlarge-offset-7 {
+    margin-left: 58.33333%;
+  }
+
+  /* line 87, foundation/grid/_classes.scss */
+
+  .xlarge-9 {
+    width: 75%;
+  }
+
+  /* line 93, foundation/grid/_classes.scss */
+
+  .xlarge-push-9 {
+    position: relative;
+    left: 75%;
+  }
+
+  /* line 97, foundation/grid/_classes.scss */
+
+  .xlarge-pull-9 {
+    position: relative;
+    left: -75%;
+  }
+
+  /* line 105, foundation/grid/_classes.scss */
+
+  .xlarge-offset-8 {
+    margin-left: 66.66667%;
+  }
+
+  /* line 87, foundation/grid/_classes.scss */
+
+  .xlarge-10 {
+    width: 83.33333%;
+  }
+
+  /* line 93, foundation/grid/_classes.scss */
+
+  .xlarge-push-10 {
+    position: relative;
+    left: 83.33333%;
+  }
+
+  /* line 97, foundation/grid/_classes.scss */
+
+  .xlarge-pull-10 {
+    position: relative;
+    left: -83.33333%;
+  }
+
+  /* line 105, foundation/grid/_classes.scss */
+
+  .xlarge-offset-9 {
+    margin-left: 75%;
+  }
+
+  /* line 87, foundation/grid/_classes.scss */
+
+  .xlarge-11 {
+    width: 91.66667%;
+  }
+
+  /* line 93, foundation/grid/_classes.scss */
+
+  .xlarge-push-11 {
+    position: relative;
+    left: 91.66667%;
+  }
+
+  /* line 97, foundation/grid/_classes.scss */
+
+  .xlarge-pull-11 {
+    position: relative;
+    left: -91.66667%;
+  }
+
+  /* line 105, foundation/grid/_classes.scss */
+
+  .xlarge-offset-10 {
+    margin-left: 83.33333%;
+  }
+
+  /* line 87, foundation/grid/_classes.scss */
+
+  .xlarge-12 {
+    width: 100%;
+  }
+
+  /* line 105, foundation/grid/_classes.scss */
+
+  .xlarge-offset-11 {
+    margin-left: 91.66667%;
+  }
+
+  /* line 17, foundation/grid/_layout.scss */
+
+  .xlarge-up-1 > .column,
+  .xlarge-up-1 > .columns {
+    width: 100%;
+    float: left;
+  }
+
+  /* line 21, foundation/grid/_layout.scss */
+
+  .xlarge-up-1 > .column:nth-of-type(1n),
+  .xlarge-up-1 > .columns:nth-of-type(1n) {
+    clear: none;
+  }
+
+  /* line 25, foundation/grid/_layout.scss */
+
+  .xlarge-up-1 > .column:nth-of-type(1n+1),
+  .xlarge-up-1 > .columns:nth-of-type(1n+1) {
+    clear: both;
+  }
+
+  /* line 29, foundation/grid/_layout.scss */
+
+  .xlarge-up-1 > .column:last-child,
+  .xlarge-up-1 > .columns:last-child {
+    float: left;
+  }
+
+  /* line 17, foundation/grid/_layout.scss */
+
+  .xlarge-up-2 > .column,
+  .xlarge-up-2 > .columns {
+    width: 50%;
+    float: left;
+  }
+
+  /* line 21, foundation/grid/_layout.scss */
+
+  .xlarge-up-2 > .column:nth-of-type(1n),
+  .xlarge-up-2 > .columns:nth-of-type(1n) {
+    clear: none;
+  }
+
+  /* line 25, foundation/grid/_layout.scss */
+
+  .xlarge-up-2 > .column:nth-of-type(2n+1),
+  .xlarge-up-2 > .columns:nth-of-type(2n+1) {
+    clear: both;
+  }
+
+  /* line 29, foundation/grid/_layout.scss */
+
+  .xlarge-up-2 > .column:last-child,
+  .xlarge-up-2 > .columns:last-child {
+    float: left;
+  }
+
+  /* line 17, foundation/grid/_layout.scss */
+
+  .xlarge-up-3 > .column,
+  .xlarge-up-3 > .columns {
+    width: 33.33333%;
+    float: left;
+  }
+
+  /* line 21, foundation/grid/_layout.scss */
+
+  .xlarge-up-3 > .column:nth-of-type(1n),
+  .xlarge-up-3 > .columns:nth-of-type(1n) {
+    clear: none;
+  }
+
+  /* line 25, foundation/grid/_layout.scss */
+
+  .xlarge-up-3 > .column:nth-of-type(3n+1),
+  .xlarge-up-3 > .columns:nth-of-type(3n+1) {
+    clear: both;
+  }
+
+  /* line 29, foundation/grid/_layout.scss */
+
+  .xlarge-up-3 > .column:last-child,
+  .xlarge-up-3 > .columns:last-child {
+    float: left;
+  }
+
+  /* line 17, foundation/grid/_layout.scss */
+
+  .xlarge-up-4 > .column,
+  .xlarge-up-4 > .columns {
+    width: 25%;
+    float: left;
+  }
+
+  /* line 21, foundation/grid/_layout.scss */
+
+  .xlarge-up-4 > .column:nth-of-type(1n),
+  .xlarge-up-4 > .columns:nth-of-type(1n) {
+    clear: none;
+  }
+
+  /* line 25, foundation/grid/_layout.scss */
+
+  .xlarge-up-4 > .column:nth-of-type(4n+1),
+  .xlarge-up-4 > .columns:nth-of-type(4n+1) {
+    clear: both;
+  }
+
+  /* line 29, foundation/grid/_layout.scss */
+
+  .xlarge-up-4 > .column:last-child,
+  .xlarge-up-4 > .columns:last-child {
+    float: left;
+  }
+
+  /* line 17, foundation/grid/_layout.scss */
+
+  .xlarge-up-5 > .column,
+  .xlarge-up-5 > .columns {
+    width: 20%;
+    float: left;
+  }
+
+  /* line 21, foundation/grid/_layout.scss */
+
+  .xlarge-up-5 > .column:nth-of-type(1n),
+  .xlarge-up-5 > .columns:nth-of-type(1n) {
+    clear: none;
+  }
+
+  /* line 25, foundation/grid/_layout.scss */
+
+  .xlarge-up-5 > .column:nth-of-type(5n+1),
+  .xlarge-up-5 > .columns:nth-of-type(5n+1) {
+    clear: both;
+  }
+
+  /* line 29, foundation/grid/_layout.scss */
+
+  .xlarge-up-5 > .column:last-child,
+  .xlarge-up-5 > .columns:last-child {
+    float: left;
+  }
+
+  /* line 17, foundation/grid/_layout.scss */
+
+  .xlarge-up-6 > .column,
+  .xlarge-up-6 > .columns {
+    width: 16.66667%;
+    float: left;
+  }
+
+  /* line 21, foundation/grid/_layout.scss */
+
+  .xlarge-up-6 > .column:nth-of-type(1n),
+  .xlarge-up-6 > .columns:nth-of-type(1n) {
+    clear: none;
+  }
+
+  /* line 25, foundation/grid/_layout.scss */
+
+  .xlarge-up-6 > .column:nth-of-type(6n+1),
+  .xlarge-up-6 > .columns:nth-of-type(6n+1) {
+    clear: both;
+  }
+
+  /* line 29, foundation/grid/_layout.scss */
+
+  .xlarge-up-6 > .column:last-child,
+  .xlarge-up-6 > .columns:last-child {
+    float: left;
+  }
+
+  /* line 17, foundation/grid/_layout.scss */
+
+  .xlarge-up-7 > .column,
+  .xlarge-up-7 > .columns {
+    width: 14.28571%;
+    float: left;
+  }
+
+  /* line 21, foundation/grid/_layout.scss */
+
+  .xlarge-up-7 > .column:nth-of-type(1n),
+  .xlarge-up-7 > .columns:nth-of-type(1n) {
+    clear: none;
+  }
+
+  /* line 25, foundation/grid/_layout.scss */
+
+  .xlarge-up-7 > .column:nth-of-type(7n+1),
+  .xlarge-up-7 > .columns:nth-of-type(7n+1) {
+    clear: both;
+  }
+
+  /* line 29, foundation/grid/_layout.scss */
+
+  .xlarge-up-7 > .column:last-child,
+  .xlarge-up-7 > .columns:last-child {
+    float: left;
+  }
+
+  /* line 17, foundation/grid/_layout.scss */
+
+  .xlarge-up-8 > .column,
+  .xlarge-up-8 > .columns {
+    width: 12.5%;
+    float: left;
+  }
+
+  /* line 21, foundation/grid/_layout.scss */
+
+  .xlarge-up-8 > .column:nth-of-type(1n),
+  .xlarge-up-8 > .columns:nth-of-type(1n) {
+    clear: none;
+  }
+
+  /* line 25, foundation/grid/_layout.scss */
+
+  .xlarge-up-8 > .column:nth-of-type(8n+1),
+  .xlarge-up-8 > .columns:nth-of-type(8n+1) {
+    clear: both;
+  }
+
+  /* line 29, foundation/grid/_layout.scss */
+
+  .xlarge-up-8 > .column:last-child,
+  .xlarge-up-8 > .columns:last-child {
+    float: left;
+  }
+
+  /* line 119, foundation/grid/_classes.scss */
+
+  .xlarge-collapse > .column,
+  .xlarge-collapse > .columns {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* line 131, foundation/grid/_classes.scss */
+
+  .xlarge-uncollapse > .column,
+  .xlarge-uncollapse > .columns {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+
+  /* line 135, foundation/grid/_classes.scss */
+
+  .xlarge-centered {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* line 140, foundation/grid/_classes.scss */
+
+  .xlarge-uncentered,
+  .xlarge-push-0,
+  .xlarge-pull-0 {
     position: static;
     margin-left: 0;
     margin-right: 0;
@@ -2530,7 +3172,7 @@ td {
 p {
   font-size: inherit;
   line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9375rem;
   text-rendering: optimizeLegibility;
 }
 
@@ -2571,8 +3213,8 @@ h6 {
   color: inherit;
   text-rendering: optimizeLegibility;
   margin-top: 0;
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
+  margin-bottom: 1.875rem;
+  line-height: 1;
 }
 
 /* line 299, foundation/typography/_base.scss */
@@ -2627,37 +3269,37 @@ h6 {
   /* line 309, foundation/typography/_base.scss */
 
   h1 {
-    font-size: 3rem;
-  }
-
-  /* line 309, foundation/typography/_base.scss */
-
-  h2 {
     font-size: 2.5rem;
   }
 
   /* line 309, foundation/typography/_base.scss */
 
+  h2 {
+    font-size: 2rem;
+  }
+
+  /* line 309, foundation/typography/_base.scss */
+
   h3 {
-    font-size: 1.9375rem;
+    font-size: 1.375rem;
   }
 
   /* line 309, foundation/typography/_base.scss */
 
   h4 {
-    font-size: 1.5625rem;
-  }
-
-  /* line 309, foundation/typography/_base.scss */
-
-  h5 {
     font-size: 1.25rem;
   }
 
   /* line 309, foundation/typography/_base.scss */
 
+  h5 {
+    font-size: 1.125rem;
+  }
+
+  /* line 309, foundation/typography/_base.scss */
+
   h6 {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 
@@ -2702,7 +3344,7 @@ ul,
 ol,
 dl {
   line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9375rem;
   list-style-position: outside;
 }
 
@@ -2728,6 +3370,8 @@ ol {
 /* line 375, foundation/typography/_base.scss */
 
 ul ul,
+ol ul,
+ul ol,
 ol ol {
   margin-left: 1.25rem;
   margin-bottom: 0;
@@ -2749,7 +3393,7 @@ dl dt {
 /* line 392, foundation/typography/_base.scss */
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 0.9375rem;
   padding: 0.5625rem 1.25rem 0 1.1875rem;
   border-left: 1px solid #cacaca;
 }
@@ -2779,7 +3423,7 @@ cite:before {
 /* line 415, foundation/typography/_base.scss */
 
 abbr {
-  color: #0a0a0a;
+  color: #444;
   cursor: help;
   border-bottom: 1px dotted #0a0a0a;
 }
@@ -2914,6 +3558,32 @@ p + .stat {
   /* line 10, foundation/typography/_alignment.scss */
 
   .large-text-justify {
+    text-align: justify;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  /* line 10, foundation/typography/_alignment.scss */
+
+  .xlarge-text-left {
+    text-align: left;
+  }
+
+  /* line 10, foundation/typography/_alignment.scss */
+
+  .xlarge-text-right {
+    text-align: right;
+  }
+
+  /* line 10, foundation/typography/_alignment.scss */
+
+  .xlarge-text-center {
+    text-align: center;
+  }
+
+  /* line 10, foundation/typography/_alignment.scss */
+
+  .xlarge-text-justify {
     text-align: justify;
   }
 }
@@ -3075,7 +3745,7 @@ p + .stat {
   margin: 0 0 1rem 0;
   font-size: 0.9rem;
   background-color: #2199e8;
-  color: white;
+  color: #fff;
 }
 
 /* line 157, foundation/util/_mixins.scss */
@@ -3089,7 +3759,7 @@ p + .stat {
 .button:hover,
 .button:focus {
   background-color: #1583cc;
-  color: white;
+  color: #fff;
 }
 
 /* line 204, foundation/components/_button.scss */
@@ -3123,7 +3793,7 @@ p + .stat {
 
 .button.primary {
   background-color: #2199e8;
-  color: white;
+  color: #fff;
 }
 
 /* line 119, foundation/components/_button.scss */
@@ -3131,14 +3801,14 @@ p + .stat {
 .button.primary:hover,
 .button.primary:focus {
   background-color: #147cc0;
-  color: white;
+  color: #fff;
 }
 
 /* line 212, foundation/components/_button.scss */
 
 .button.secondary {
-  background-color: #777777;
-  color: white;
+  background-color: #777;
+  color: #fff;
 }
 
 /* line 119, foundation/components/_button.scss */
@@ -3146,14 +3816,14 @@ p + .stat {
 .button.secondary:hover,
 .button.secondary:focus {
   background-color: #5f5f5f;
-  color: white;
+  color: #fff;
 }
 
 /* line 212, foundation/components/_button.scss */
 
 .button.success {
   background-color: #3adb76;
-  color: white;
+  color: #fff;
 }
 
 /* line 119, foundation/components/_button.scss */
@@ -3161,14 +3831,14 @@ p + .stat {
 .button.success:hover,
 .button.success:focus {
   background-color: #22bb5b;
-  color: white;
+  color: #fff;
 }
 
 /* line 212, foundation/components/_button.scss */
 
 .button.alert {
   background-color: #ec5840;
-  color: white;
+  color: #fff;
 }
 
 /* line 119, foundation/components/_button.scss */
@@ -3176,14 +3846,14 @@ p + .stat {
 .button.alert:hover,
 .button.alert:focus {
   background-color: #da3116;
-  color: white;
+  color: #fff;
 }
 
 /* line 212, foundation/components/_button.scss */
 
 .button.warning {
   background-color: #ffae00;
-  color: white;
+  color: #fff;
 }
 
 /* line 119, foundation/components/_button.scss */
@@ -3191,7 +3861,7 @@ p + .stat {
 .button.warning:hover,
 .button.warning:focus {
   background-color: #cc8b00;
-  color: white;
+  color: #fff;
 }
 
 /* line 229, foundation/components/_button.scss */
@@ -3235,16 +3905,16 @@ p + .stat {
 /* line 234, foundation/components/_button.scss */
 
 .button.hollow.secondary {
-  border: 1px solid #777777;
-  color: #777777;
+  border: 1px solid #777;
+  color: #777;
 }
 
 /* line 139, foundation/components/_button.scss */
 
 .button.hollow.secondary:hover,
 .button.hollow.secondary:focus {
-  border-color: #3b3b3b;
-  color: #3b3b3b;
+  border-color: #3c3c3c;
+  color: #3c3c3c;
 }
 
 /* line 234, foundation/components/_button.scss */
@@ -3486,7 +4156,7 @@ label.middle {
   margin-top: -0.5rem;
   font-size: 0.8125rem;
   font-style: italic;
-  color: #333333;
+  color: #333;
 }
 
 /* line 28, foundation/forms/_input-group.scss */
@@ -3621,7 +4291,7 @@ select {
   background-repeat: no-repeat;
 }
 
-@media screen and (min-width: 0 \0) {
+@media screen and (min-width: 0\0) {
   /* line 60, foundation/forms/_select.scss */
 
   select {
@@ -3754,7 +4424,7 @@ select[multiple] {
   }
 }
 
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+@media screen and (min-width: 64em) and (max-width: 79.9375em) {
   /* line 81, foundation/components/_visibility.scss */
 
   .hide-for-large-only {
@@ -3762,10 +4432,42 @@ select[multiple] {
   }
 }
 
-@media screen and (max-width: 63.9375em), screen and (min-width: 75em) {
+@media screen and (max-width: 63.9375em), screen and (min-width: 80em) {
   /* line 85, foundation/components/_visibility.scss */
 
   .show-for-large-only {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  /* line 72, foundation/components/_visibility.scss */
+
+  .hide-for-xlarge {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 79.9375em) {
+  /* line 76, foundation/components/_visibility.scss */
+
+  .show-for-xlarge {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 80em) and (max-width: 99.9375em) {
+  /* line 81, foundation/components/_visibility.scss */
+
+  .hide-for-xlarge-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 79.9375em), screen and (min-width: 100em) {
+  /* line 85, foundation/components/_visibility.scss */
+
+  .show-for-xlarge-only {
     display: none !important;
   }
 }
@@ -3985,7 +4687,7 @@ select[multiple] {
 /* line 48, foundation/components/_badge.scss */
 
 .badge.secondary {
-  background: #777777;
+  background: #777;
   color: #fefefe;
 }
 
@@ -4149,7 +4851,7 @@ select[multiple] {
 
 .button-group.primary .button {
   background-color: #2199e8;
-  color: white;
+  color: #fff;
 }
 
 /* line 119, foundation/components/_button.scss */
@@ -4157,14 +4859,14 @@ select[multiple] {
 .button-group.primary .button:hover,
 .button-group.primary .button:focus {
   background-color: #147cc0;
-  color: white;
+  color: #fff;
 }
 
 /* line 107, foundation/components/_button-group.scss */
 
 .button-group.secondary .button {
-  background-color: #777777;
-  color: white;
+  background-color: #777;
+  color: #fff;
 }
 
 /* line 119, foundation/components/_button.scss */
@@ -4172,14 +4874,14 @@ select[multiple] {
 .button-group.secondary .button:hover,
 .button-group.secondary .button:focus {
   background-color: #5f5f5f;
-  color: white;
+  color: #fff;
 }
 
 /* line 107, foundation/components/_button-group.scss */
 
 .button-group.success .button {
   background-color: #3adb76;
-  color: white;
+  color: #fff;
 }
 
 /* line 119, foundation/components/_button.scss */
@@ -4187,14 +4889,14 @@ select[multiple] {
 .button-group.success .button:hover,
 .button-group.success .button:focus {
   background-color: #22bb5b;
-  color: white;
+  color: #fff;
 }
 
 /* line 107, foundation/components/_button-group.scss */
 
 .button-group.alert .button {
   background-color: #ec5840;
-  color: white;
+  color: #fff;
 }
 
 /* line 119, foundation/components/_button.scss */
@@ -4202,14 +4904,14 @@ select[multiple] {
 .button-group.alert .button:hover,
 .button-group.alert .button:focus {
   background-color: #da3116;
-  color: white;
+  color: #fff;
 }
 
 /* line 107, foundation/components/_button-group.scss */
 
 .button-group.warning .button {
   background-color: #ffae00;
-  color: white;
+  color: #fff;
 }
 
 /* line 119, foundation/components/_button.scss */
@@ -4217,7 +4919,7 @@ select[multiple] {
 .button-group.warning .button:hover,
 .button-group.warning .button:focus {
   background-color: #cc8b00;
-  color: white;
+  color: #fff;
 }
 
 /* line 71, foundation/components/_button-group.scss */
@@ -4676,7 +5378,7 @@ select[multiple] {
 /* line 49, foundation/components/_label.scss */
 
 .label.secondary {
-  background: #777777;
+  background: #777;
   color: #fefefe;
 }
 
@@ -4854,6 +5556,20 @@ select[multiple] {
   /* line 72, foundation/components/_menu.scss */
 
   .menu.large-vertical > li {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  /* line 67, foundation/components/_menu.scss */
+
+  .menu.xlarge-horizontal > li {
+    display: table-cell;
+  }
+
+  /* line 72, foundation/components/_menu.scss */
+
+  .menu.xlarge-vertical > li {
     display: block;
   }
 }
@@ -5108,6 +5824,36 @@ body {
   /* line 150, foundation/components/_off-canvas.scss */
 
   .position-right.reveal-for-large ~ .off-canvas-content {
+    margin-right: 250px;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  /* line 170, foundation/components/_off-canvas.scss */
+
+  .position-left.reveal-for-xlarge {
+    left: 0;
+    z-index: auto;
+    position: fixed;
+  }
+
+  /* line 150, foundation/components/_off-canvas.scss */
+
+  .position-left.reveal-for-xlarge ~ .off-canvas-content {
+    margin-left: 250px;
+  }
+
+  /* line 174, foundation/components/_off-canvas.scss */
+
+  .position-right.reveal-for-xlarge {
+    right: 0;
+    z-index: auto;
+    position: fixed;
+  }
+
+  /* line 150, foundation/components/_off-canvas.scss */
+
+  .position-right.reveal-for-xlarge ~ .off-canvas-content {
     margin-right: 250px;
   }
 }
@@ -5378,7 +6124,7 @@ body {
 /* line 67, foundation/components/_progress-bar.scss */
 
 .progress.secondary .progress-meter {
-  background-color: #777777;
+  background-color: #777;
 }
 
 /* line 67, foundation/components/_progress-bar.scss */
@@ -5929,7 +6675,7 @@ caption {
 thead,
 tfoot {
   background: #f8f8f8;
-  color: #0a0a0a;
+  color: #444;
 }
 
 /* line 90, foundation/components/_table.scss */
@@ -6363,7 +7109,7 @@ table.hover tr:nth-of-type(even):hover {
 /* line 35, foundation/components/_top-bar.scss */
 
 .top-bar a {
-  color: white;
+  color: #ffffff;
 }
 
 /* line 39, foundation/components/_top-bar.scss */
@@ -6407,7 +7153,7 @@ table.hover tr:nth-of-type(even):hover {
   }
 }
 
-@media screen and (max-width: 74.9375em) {
+@media screen and (max-width: 79.9375em) {
   /* line 52, foundation/components/_top-bar.scss */
 
   .stacked-for-large .top-bar-right {
@@ -6417,6 +7163,20 @@ table.hover tr:nth-of-type(even):hover {
   /* line 56, foundation/components/_top-bar.scss */
 
   .stacked-for-large .top-bar-left {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 99.9375em) {
+  /* line 52, foundation/components/_top-bar.scss */
+
+  .stacked-for-xlarge .top-bar-right {
+    width: 100%;
+  }
+
+  /* line 56, foundation/components/_top-bar.scss */
+
+  .stacked-for-xlarge .top-bar-left {
     width: 100%;
   }
 }
@@ -6455,6 +7215,13 @@ table.hover tr:nth-of-type(even):hover {
 /* Quick fixes */
 
 /* line 3, modules/_fixes.scss */
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* line 8, modules/_fixes.scss */
 
 .row {
   max-width: 80rem;
@@ -6554,20 +7321,10 @@ table.hover tr:nth-of-type(even):hover {
 /* line 8, modules/_footer.scss */
 
 #footer-container #footer {
-  margin-left: -0.625rem;
-  margin-right: -0.625rem;
-  margin-left: 0;
-  margin-right: 0;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
   padding: 1.875rem 0;
-}
-
-@media screen and (min-width: 40em) {
-  /* line 8, modules/_footer.scss */
-
-  #footer-container #footer {
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem;
-  }
 }
 
 /* line 130, foundation/util/_mixins.scss */
@@ -6610,6 +7367,24 @@ table.hover tr:nth-of-type(even):hover {
   }
 }
 
+@media screen and (min-width: 64em) {
+  /* line 1, modules/_sidebar.scss */
+
+  .sidebar {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  /* line 1, modules/_sidebar.scss */
+
+  .sidebar {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+}
+
 /* line 80, foundation/grid/_column.scss */
 
 .sidebar:last-child:not(:first-child) {
@@ -6626,12 +7401,6 @@ table.hover tr:nth-of-type(even):hover {
     float: left;
     margin-top: 1rem;
   }
-
-  /* line 80, foundation/grid/_column.scss */
-
-  .sidebar:last-child:not(:first-child) {
-    float: right;
-  }
 }
 
 @media screen and (min-width: 40em) and (min-width: 40em) {
@@ -6640,6 +7409,32 @@ table.hover tr:nth-of-type(even):hover {
   .sidebar {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
+  }
+}
+
+@media screen and (min-width: 40em) and (min-width: 64em) {
+  /* line 1, modules/_sidebar.scss */
+
+  .sidebar {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 40em) and (min-width: 80em) {
+  /* line 1, modules/_sidebar.scss */
+
+  .sidebar {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  /* line 80, foundation/grid/_column.scss */
+
+  .sidebar:last-child:not(:first-child) {
+    float: right;
   }
 }
 
@@ -6705,20 +7500,10 @@ table.hover tr:nth-of-type(even):hover {
 /* line 1, templates/_page-default.scss */
 
 #page {
-  margin-left: -0.625rem;
-  margin-right: -0.625rem;
-  margin-left: 0;
-  margin-right: 0;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 3rem;
-}
-
-@media screen and (min-width: 40em) {
-  /* line 1, templates/_page-default.scss */
-
-  #page {
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem;
-  }
 }
 
 /* line 130, foundation/util/_mixins.scss */
@@ -6753,6 +7538,24 @@ table.hover tr:nth-of-type(even):hover {
   }
 }
 
+@media screen and (min-width: 64em) {
+  /* line 5, templates/_page-default.scss */
+
+  #page .main-content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  /* line 5, templates/_page-default.scss */
+
+  #page .main-content {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+}
+
 /* line 80, foundation/grid/_column.scss */
 
 #page .main-content:last-child:not(:first-child) {
@@ -6768,12 +7571,6 @@ table.hover tr:nth-of-type(even):hover {
     width: 66.66667%;
     float: left;
   }
-
-  /* line 80, foundation/grid/_column.scss */
-
-  #page .main-content:last-child:not(:first-child) {
-    float: right;
-  }
 }
 
 @media screen and (min-width: 40em) and (min-width: 40em) {
@@ -6785,23 +7582,39 @@ table.hover tr:nth-of-type(even):hover {
   }
 }
 
-/* line 1, templates/_page-full-width.scss */
+@media screen and (min-width: 40em) and (min-width: 64em) {
+  /* line 5, templates/_page-default.scss */
 
-#page-full-width {
-  margin-left: -0.625rem;
-  margin-right: -0.625rem;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 3rem;
+  #page .main-content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 40em) and (min-width: 80em) {
+  /* line 5, templates/_page-default.scss */
+
+  #page .main-content {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
 }
 
 @media screen and (min-width: 40em) {
-  /* line 1, templates/_page-full-width.scss */
+  /* line 80, foundation/grid/_column.scss */
 
-  #page-full-width {
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem;
+  #page .main-content:last-child:not(:first-child) {
+    float: right;
   }
+}
+
+/* line 1, templates/_page-full-width.scss */
+
+#page-full-width {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
 }
 
 /* line 130, foundation/util/_mixins.scss */
@@ -6836,6 +7649,24 @@ table.hover tr:nth-of-type(even):hover {
   }
 }
 
+@media screen and (min-width: 64em) {
+  /* line 5, templates/_page-full-width.scss */
+
+  #page-full-width .main-content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  /* line 5, templates/_page-full-width.scss */
+
+  #page-full-width .main-content {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+}
+
 /* line 80, foundation/grid/_column.scss */
 
 #page-full-width .main-content:last-child:not(:first-child) {
@@ -6845,20 +7676,10 @@ table.hover tr:nth-of-type(even):hover {
 /* line 1, templates/_single-post.scss */
 
 #single-post {
-  margin-left: -0.625rem;
-  margin-right: -0.625rem;
-  margin-left: 0;
-  margin-right: 0;
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 3rem;
-}
-
-@media screen and (min-width: 40em) {
-  /* line 1, templates/_single-post.scss */
-
-  #single-post {
-    margin-left: -0.9375rem;
-    margin-right: -0.9375rem;
-  }
 }
 
 /* line 130, foundation/util/_mixins.scss */
@@ -6893,6 +7714,24 @@ table.hover tr:nth-of-type(even):hover {
   }
 }
 
+@media screen and (min-width: 64em) {
+  /* line 5, templates/_single-post.scss */
+
+  #single-post .main-content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  /* line 5, templates/_single-post.scss */
+
+  #single-post .main-content {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+}
+
 /* line 80, foundation/grid/_column.scss */
 
 #single-post .main-content:last-child:not(:first-child) {
@@ -6908,12 +7747,6 @@ table.hover tr:nth-of-type(even):hover {
     width: 66.66667%;
     float: left;
   }
-
-  /* line 80, foundation/grid/_column.scss */
-
-  #single-post .main-content:last-child:not(:first-child) {
-    float: right;
-  }
 }
 
 @media screen and (min-width: 40em) and (min-width: 40em) {
@@ -6924,3 +7757,31 @@ table.hover tr:nth-of-type(even):hover {
     padding-right: 0.9375rem;
   }
 }
+
+@media screen and (min-width: 40em) and (min-width: 64em) {
+  /* line 5, templates/_single-post.scss */
+
+  #single-post .main-content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 40em) and (min-width: 80em) {
+  /* line 5, templates/_single-post.scss */
+
+  #single-post .main-content {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  /* line 80, foundation/grid/_column.scss */
+
+  #single-post .main-content:last-child:not(:first-child) {
+    float: right;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
