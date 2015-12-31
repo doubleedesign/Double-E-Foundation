@@ -16,39 +16,39 @@
  */
 
 /** Various clean up functions - thanks FoundationPress */
-require_once( 'library/cleanup.php' );
+require_once( 'functions/cleanup.php' );
 
 /** Required for Foundation to work properly - thanks FoundationPress */
-require_once( 'library/foundation.php' );
+require_once( 'functions/foundation.php' );
 
 /** Register all navigation menus - thanks FoundationPress */
-require_once( 'library/navigation.php' );
+require_once( 'functions/navigation.php' );
 
 /** Add menu walkers for top-bar and off-canvas - thanks FoundationPress */
-require_once( 'library/menu-walkers.php' );
+require_once( 'functions/menu-walkers.php' );
 
 /** Create widget areas in sidebar and footer - thanks FoundationPress */
-require_once( 'library/widget-areas.php' );
+require_once( 'functions/widget-areas.php' );
 
 /** Return entry meta information for posts - thanks FoundationPress */
-require_once( 'library/entry-meta.php' );
+require_once( 'functions/entry-meta.php' );
 
 /** Enqueue styles */
-require_once( 'library/enqueue-styles.php' );
+require_once( 'functions/enqueue-styles.php' );
 
 /** Enqueue scripts */
-require_once( 'library/enqueue-scripts.php' );
+require_once( 'functions/enqueue-scripts.php' );
 
 /** Add theme support */
-require_once( 'library/theme-support.php' );
+require_once( 'functions/theme-support.php' );
 
 /** Add Nav Options to Custom - thanks FoundationPress */
-require_once( 'library/custom-nav.php' );
+require_once( 'functions/custom-nav.php' );
 
 /** Change WP's sticky post class - thanks FoundationPress */
-require_once( 'library/sticky-posts.php' );
+require_once( 'functions/sticky-posts.php' );
 
 /** If your site requires protocol relative url's for theme assets, uncomment the line below */
-require_once( 'library/protocol-relative-theme-assets.php' );
+require_once( 'functions/protocol-relative-theme-assets.php' );
 
 ?>

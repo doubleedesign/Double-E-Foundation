@@ -47,6 +47,7 @@
 @import 'components/thumbnail';
 @import 'components/tooltip';
 
+/*
 @mixin foundation-everything($flex: false) {
   @include foundation-global-styles;
   @if not $flex {
@@ -89,3 +90,4 @@
   @include foundation-tooltip;
   @include foundation-top-bar;
 }
+*/
