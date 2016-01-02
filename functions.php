@@ -1,7 +1,5 @@
 <?php
 /**
- * Author: Ole Fredrik Lie
- * URL: http://olefredrik.com
  *
  * FoundationPress functions and definitions
  *
@@ -42,13 +40,19 @@ require_once( 'functions/enqueue-scripts.php' );
 /** Add theme support */
 require_once( 'functions/theme-support.php' );
 
+/** Image-related functions */
+require_once( 'functions/images.php' );
+
 /** Add Nav Options to Custom - thanks FoundationPress */
 require_once( 'functions/custom-nav.php' );
 
 /** Change WP's sticky post class - thanks FoundationPress */
 require_once( 'functions/sticky-posts.php' );
 
-/** If your site requires protocol relative url's for theme assets, uncomment the line below */
+/** If your site requires protocol relative url's for theme assets, uncomment the line below. Also from FoundationPress*/
 require_once( 'functions/protocol-relative-theme-assets.php' );
+
+/** Miscellaneous functions */
+require_once( 'functions/misc.php' );
 
 ?>

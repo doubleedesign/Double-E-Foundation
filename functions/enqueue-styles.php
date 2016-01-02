@@ -1,6 +1,6 @@
 <?php
 /**
- * Enqueue all styles and scripts
+ * Enqueue all styles scripts
  *
  * Learn more about enqueue_script: {@link https://codex.wordpress.org/Function_Reference/wp_enqueue_script}
  *
