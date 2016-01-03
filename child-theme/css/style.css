@@ -6,20 +6,21 @@ Error: File to import not found or unreadable: ../../Double-E-Foundation/scss/gl
          E:/Program Files (x86)/Prepros/gems/gems/neat-1.5.0/app/assets/stylesheets
          E:/Program Files (x86)/Prepros/gems/gems/bitters-0.9.1/app/assets/stylesheets
         on line 11 of _project.scss
-        from line 13 of style.scss
+        from line 14 of style.scss
 
 6: Author:            		Double-E Design
 7: Author URI:         	http://www.doubleedesign.com.au
-8: *\/
-9: 
-10: /* ---------------------------------------------------------------------------- *\/
-11: 
+8: Template: 				Double-E-Foundation
+9: *\/
+10: 
+11: /* ---------------------------------------------------------------------------- *\/
 12: 
-13: @import "project";
+13: 
+14: @import "project";
 
 Backtrace:
 _project.scss:11
-style.scss:13
+style.scss:14
 E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/import_node.rb:67:in `rescue in import'
 E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/import_node.rb:45:in `import'
 E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -70,4 +71,4 @@ E:/Program Files (x86)/Prepros/bin/gems.rb:17:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ../../Double-E-Foundation/scss/global/settings.\A        Load paths:\A          E:/Dropbox/GitHub/Double-E-Foundation/child-theme/scss\A          E:/Program Files (x86)/Prepros/gems/gems/bourbon-3.1.8/app/assets/stylesheets\A          E:/Program Files (x86)/Prepros/gems/gems/neat-1.5.0/app/assets/stylesheets\A          E:/Program Files (x86)/Prepros/gems/gems/bitters-0.9.1/app/assets/stylesheets\A         on line 11 of _project.scss\A         from line 13 of style.scss\A \A 6: Author:            		Double-E Design\A 7: Author URI:         	http://www.doubleedesign.com.au\A 8: */\A 9: \A 10: /* ---------------------------------------------------------------------------- */\A 11: \A 12: \A 13: @import \"project\";"; }
+  content: "Error: File to import not found or unreadable: ../../Double-E-Foundation/scss/global/settings.\A        Load paths:\A          E:/Dropbox/GitHub/Double-E-Foundation/child-theme/scss\A          E:/Program Files (x86)/Prepros/gems/gems/bourbon-3.1.8/app/assets/stylesheets\A          E:/Program Files (x86)/Prepros/gems/gems/neat-1.5.0/app/assets/stylesheets\A          E:/Program Files (x86)/Prepros/gems/gems/bitters-0.9.1/app/assets/stylesheets\A         on line 11 of _project.scss\A         from line 14 of style.scss\A \A 6: Author:            		Double-E Design\A 7: Author URI:         	http://www.doubleedesign.com.au\A 8: Template: 				Double-E-Foundation\A 9: */\A 10: \A 11: /* ---------------------------------------------------------------------------- */\A 12: \A 13: \A 14: @import \"project\";"; }
