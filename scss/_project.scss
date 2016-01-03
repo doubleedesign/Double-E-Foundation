@@ -9,7 +9,7 @@
 
 // Settings
 @import "global/settings"; // Foundation settings file.
-// Project settings are added here in child themes. See the child theme starter folder.
+@import "global/project_settings";
 
 // Foundation mixins & browser resets
 @import 'foundation/foundation';
