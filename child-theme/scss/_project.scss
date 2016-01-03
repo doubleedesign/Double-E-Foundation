@@ -8,15 +8,15 @@
 */
 
 // Settings
-@import "global/settings"; // Foundation settings file.
-// Project settings are added here in child themes. See the child theme starter folder.
+@import "../../Double-E-Foundation/scss/global/settings"; // Foundation settings file.
+@import "global/project_settings"; // Custom settings for this project
 
 // Foundation mixins & browser resets
-@import 'foundation/foundation';
+@import '../../Double-E-Foundation/scss/foundation/foundation';
 
 // WP overrides
-@import "global/wp-admin"; // Fix issues with wp-admin bar positioning
-@import "global/wp-overrides"; // Override the default WordPress styling for some elements
+@import "../../Double-E-Foundation/scss/global/wp-admin"; // Fix issues with wp-admin bar positioning
+@import "../../Double-E-Foundation/scss/global/wp-overrides"; // Override the default WordPress styling for some elements
 
 // Foundation global styles 
 @include foundation-global-styles;

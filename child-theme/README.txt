@@ -1,0 +1,1 @@
+Move this folder to wp-content/themes and rename appropriately.

@@ -1,0 +1,11 @@
+/* Quick fixes */
+
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+.row {
+	max-width: $global-width;
+	margin: 0 auto;
+}
