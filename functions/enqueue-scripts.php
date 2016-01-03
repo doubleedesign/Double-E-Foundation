@@ -21,16 +21,14 @@ if ( ! function_exists( 'doublee_scripts' ) ) :
 	// Foundation JavaScript
 	$theme = wp_get_theme();
 	$version = $theme->get( 'Version' );
-	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/javascript/foundation.js', array('jquery'), $version, true );
-	wp_enqueue_script( 'foundation-init', get_template_directory_uri() . '/assets/javascript/foundationpress/init-foundation.js', array('jquery'), $version, true );
-	
-	// FoundationPress custom JavaScript
-	wp_enqueue_script( 'offCanvas', get_template_directory_uri() . '/assets/javascript/foundationpress/offCanvas.js', array('jquery'), $version, true );
-	wp_enqueue_script( 'stickyFooter', get_template_directory_uri() . '/assets/javascript/foundationpress/stickyfooter.js', array('jquery'), $version, true );
+	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/javascript/min/foundation.min.js', array('jquery'), $version, true );
 	
 	// Other JavaScript tools and libraries
 	wp_enqueue_script( 'whatInput', get_template_directory_uri() . '/assets/javascript/vendor/what-input.min.js', array('jquery'), $version, true );
-
+	
+	// Double-E Foundation custom JavaScript
+	wp_enqueue_script( 'Double-E-Foundation', get_template_directory_uri() . '/assets/javascript/min/doublee.min.js', array('jquery', 'foundation'), $version, true );
+	
 	// Add the comment-reply library on pages where it is necessary
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
