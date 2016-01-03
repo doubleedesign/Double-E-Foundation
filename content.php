@@ -11,17 +11,17 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('main-content'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('entry-content'); ?>>
 
 	<header>
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 		<?php doublee_entry_meta(); ?>
 	</header>
     
-	<div class="entry-content">
-		<?php the_content( __( 'Continue reading...', '' ) ); ?>
-	</div>
-    
+    <div class="entry-content">
+		<?php the_content( __( 'Continue reading <i class="fa fa-angle-right"></i>', '' ) ); ?>
+    </div>
+
 	<footer>
 		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
 	</footer>

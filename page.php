@@ -15,10 +15,10 @@
 
  <?php get_template_part( 'parts/featured-image' ); ?>
 
- <div id="page" class="row" role="main">
+ <div id="page" class="row">
 
 	 <?php while ( have_posts() ) : the_post(); ?>
-       <main <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
+       <main <?php post_class('small-12 medium-8 columns') ?> id="post-<?php the_ID(); ?>">
        
            <header>
                <h1 class="entry-title">

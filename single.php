@@ -12,23 +12,22 @@ get_header(); ?>
 <div id="single-post" class="row">
 
 	<?php while ( have_posts() ) : the_post(); ?>
-        <article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
+        <article <?php post_class('small-12 medium-8 columns') ?> id="post-<?php the_ID(); ?>">
             <header>
                 <?php if (get_field('visual_page_title')) { the_field('visual_page_title'); } else { the_title(); } ?>
                 <?php doublee_entry_meta(); ?>
             </header>
-            <div class="entry-content">
     
             <?php if ( has_post_thumbnail() ) : ?>
-                <div class="row">
-                    <div class="column">
-                        <?php the_post_thumbnail( '', array('class' => 'th') ); ?>
-                    </div>
+                <div class="featured-image-wrapper">
+                    <?php the_post_thumbnail( '', array('class' => 'th') ); ?>
                 </div>
             <?php endif; ?>
     
-            <?php the_content(); ?>
+    		<div class="entry-content">
+            	<?php the_content(); ?>
             </div>
+
             <footer>
                 <?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', '' ), 'after' => '</p></nav>' ) ); ?>
                 <p><?php the_tags(); ?></p>

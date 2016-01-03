@@ -9,15 +9,13 @@ get_header(); ?>
 <div id="page-full-width" >
 
 	<?php while ( have_posts() ) : the_post(); ?>
-      <article <?php post_class('main-content') ?> id="post-<?php the_ID(); ?>">
+      <main <?php post_class('entry-content small-12 columns') ?> id="post-<?php the_ID(); ?>">
       
           <header>
               <h1 class="entry-title"><?php the_title(); ?></h1>
           </header>
 
-          <div class="entry-content">
-              <?php the_content(); ?>
-          </div>
+          <?php the_content(); ?>
           
           <footer>
               <?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', '' ), 'after' => '</p></nav>' ) ); ?>
@@ -26,7 +24,7 @@ get_header(); ?>
 
           <?php comments_template(); ?>
 
-      </article>
+      </main>
     <?php endwhile;?>
 
 
