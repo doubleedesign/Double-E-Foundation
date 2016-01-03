@@ -12,7 +12,7 @@
 ============================================*/
 
 if ( ! function_exists( 'doublee_images' ) ) :
-function foundationkit_images() {
+function doublee_images() {
 	set_post_thumbnail_size(480,480,true);	
 }
 add_action( 'after_setup_theme', 'doublee_images' );
