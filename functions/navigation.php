@@ -40,7 +40,7 @@ if ( ! function_exists( 'foundationpress_mobile_nav' ) ) {
 	function foundationpress_mobile_nav() {
 	    wp_nav_menu(array(
         'container' => false,                           // Remove nav container
-				'menu'           => __( 'mobile-nav', 'foundationpress' ),
+				'menu'           => __( 'mobile-nav', '' ),
 				'menu_class'     => 'vertical menu',
 				'theme_location' => 'mobile-nav',
 				'items_wrap'     => '<ul id="%1$s" class="%2$s show-for-small-only" data-accordion-menu>%3$s</ul>',

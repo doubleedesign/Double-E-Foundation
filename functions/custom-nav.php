@@ -14,13 +14,13 @@ function wpt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_panel( 'mobile_menu_settings', array(
 	  'priority' => 1000,
 	  'theme_supports' => '',
-	  'title' => __( 'Mobile Menu Settings', 'foundationpress' ),
-	  'description' => __( 'Controls the mobile menu', 'foundationpress' ),
+	  'title' => __( 'Mobile Menu Settings', '' ),
+	  'description' => __( 'Controls the mobile menu', '' ),
 	) );
 
 	// Create custom field for mobile navigation layout
 	$wp_customize->add_section( 'mobile_menu_layout' , array(
-		'title'	=> __('Mobile navigation layout','foundationpress'),
+		'title'	=> __('Mobile navigation layout',''),
 		'panel' => 'mobile_menu_settings',
 		'priority' => 1000,
 	));
@@ -29,7 +29,7 @@ function wpt_register_theme_customizer( $wp_customize ) {
 	$wp_customize->add_setting(
 		'wpt_mobile_menu_layout',
 		array(
-			'default'	=> __( 'topbar', 'foundationpress' ),
+			'default'	=> __( 'topbar', '' ),
 		)
 	);
 

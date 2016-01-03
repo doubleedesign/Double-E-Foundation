@@ -61,5 +61,4 @@
 		</nav>
 	</header>
 
-	<section class="row">
-		<?php do_action( 'foundationpress_after_header' ); ?>
+	<section>

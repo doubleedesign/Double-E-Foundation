@@ -1,15 +1,13 @@
 <?php
 /**
- * The sidebar containing the main widget area
+ * The sidebar containing the main widget area, or custom code
  *
  * @package WordPress
- * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
+ * @subpackage Double-E Foundation
+ * @since Double-E Foundation 0.1.4
  */
 
 ?>
-<aside class="sidebar">
-	<?php do_action( 'foundationpress_before_sidebar' ); ?>
+<aside id="sidebar">
 	<?php dynamic_sidebar( 'sidebar-widgets' ); ?>
-	<?php do_action( 'foundationpress_after_sidebar' ); ?>
 </aside>

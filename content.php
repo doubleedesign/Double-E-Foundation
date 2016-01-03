@@ -5,22 +5,25 @@
  * Used for both single and index/archive/search.
  *
  * @package WordPress
- * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
+ * @subpackage Double-E Foundation
+ * @since Double-E Foundation 0.1.4
  */
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('main-content'); ?>>
+
 	<header>
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<?php foundationpress_entry_meta(); ?>
+		<?php doublee_entry_meta(); ?>
 	</header>
+    
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
+		<?php the_content( __( 'Continue reading...', '' ) ); ?>
 	</div>
+    
 	<footer>
 		<?php $tag = get_the_tags(); if ( $tag ) { ?><p><?php the_tags(); ?></p><?php } ?>
 	</footer>
-	<hr />
-</div>
+    
+</article>

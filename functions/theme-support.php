@@ -10,7 +10,7 @@
 if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 function foundationpress_theme_support() {
 	// Add language support
-	load_theme_textdomain( 'foundationpress', get_template_directory() . '/languages' );
+	load_theme_textdomain( '', get_template_directory() . '/languages' );
 
 	// Add menu support
 	add_theme_support( 'menus' );
