@@ -18,10 +18,18 @@ if ( ! function_exists( 'doublee_scripts' ) ) :
 	// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
 	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '2.1.0', false );
 
-	// Load desired Foundation JS components, or all using foundation.js
+	// Foundation JavaScript
 	$theme = wp_get_theme();
 	$version = $theme->get( 'Version' );
 	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/javascript/foundation.js', array('jquery'), $version, true );
+	wp_enqueue_script( 'foundation-init', get_template_directory_uri() . '/assets/javascript/foundationpress/init-foundation.js', array('jquery'), $version, true );
+	
+	// FoundationPress custom JavaScript
+	wp_enqueue_script( 'offCanvas', get_template_directory_uri() . '/assets/javascript/foundationpress/offCanvas.js', array('jquery'), $version, true );
+	wp_enqueue_script( 'stickyFooter', get_template_directory_uri() . '/assets/javascript/foundationpress/stickyfooter.js', array('jquery'), $version, true );
+	
+	// Other JavaScript tools and libraries
+	wp_enqueue_script( 'whatInput', get_template_directory_uri() . '/assets/javascript/vendor/what-input.min.js', array('jquery'), $version, true );
 
 	// Add the comment-reply library on pages where it is necessary
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
