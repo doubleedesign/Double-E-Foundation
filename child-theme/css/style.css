@@ -1,0 +1,73 @@
+/*
+Error: File to import not found or unreadable: ../../Double-E-Foundation/scss/global/settings.
+       Load paths:
+         E:/Dropbox/GitHub/Double-E-Foundation/child-theme/scss
+         E:/Program Files (x86)/Prepros/gems/gems/bourbon-3.1.8/app/assets/stylesheets
+         E:/Program Files (x86)/Prepros/gems/gems/neat-1.5.0/app/assets/stylesheets
+         E:/Program Files (x86)/Prepros/gems/gems/bitters-0.9.1/app/assets/stylesheets
+        on line 11 of _project.scss
+        from line 13 of style.scss
+
+6: Author:            		Double-E Design
+7: Author URI:         	http://www.doubleedesign.com.au
+8: *\/
+9: 
+10: /* ---------------------------------------------------------------------------- *\/
+11: 
+12: 
+13: @import "project";
+
+Backtrace:
+_project.scss:11
+style.scss:13
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/import_node.rb:67:in `rescue in import'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/import_node.rb:45:in `import'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/import_node.rb:28:in `imported_file'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/import_node.rb:37:in `css_import?'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/stack.rb:79:in `block in with_base'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/stack.rb:115:in `with_frame'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/stack.rb:79:in `with_base'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:158:in `visit'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:326:in `map'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/stack.rb:88:in `block in with_import'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/stack.rb:115:in `with_frame'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/stack.rb:88:in `with_import'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/stack.rb:79:in `block in with_base'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/stack.rb:115:in `with_frame'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/stack.rb:79:in `with_base'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:158:in `visit'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:52:in `map'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:157:in `visit'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/visitors/perform.rb:8:in `visit'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/engine.rb:295:in `render_with_sourcemap'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/exec/sass_scss.rb:412:in `run'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/exec/base.rb:52:in `parse'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/lib/sass/exec/base.rb:19:in `parse!'
+E:/Program Files (x86)/Prepros/gems/gems/sass-3.3.0.rc.2/bin/sass:13:in `<top (required)>'
+E:/Program Files (x86)/Prepros/bin/gems.rb:17:in `load'
+E:/Program Files (x86)/Prepros/bin/gems.rb:17:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: ../../Double-E-Foundation/scss/global/settings.\A        Load paths:\A          E:/Dropbox/GitHub/Double-E-Foundation/child-theme/scss\A          E:/Program Files (x86)/Prepros/gems/gems/bourbon-3.1.8/app/assets/stylesheets\A          E:/Program Files (x86)/Prepros/gems/gems/neat-1.5.0/app/assets/stylesheets\A          E:/Program Files (x86)/Prepros/gems/gems/bitters-0.9.1/app/assets/stylesheets\A         on line 11 of _project.scss\A         from line 13 of style.scss\A \A 6: Author:            		Double-E Design\A 7: Author URI:         	http://www.doubleedesign.com.au\A 8: */\A 9: \A 10: /* ---------------------------------------------------------------------------- */\A 11: \A 12: \A 13: @import \"project\";"; }
