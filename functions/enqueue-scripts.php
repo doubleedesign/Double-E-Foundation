@@ -18,12 +18,10 @@ if ( ! function_exists( 'doublee_scripts' ) ) :
 	// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
 	wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '2.1.0', false );
 
-	// Load desired Foundation JS components. More can be found in Double-E-Foundation/assets/javascript.
+	// Load desired Foundation JS components, or all using foundation.js
 	$theme = wp_get_theme();
 	$version = $theme->get( 'Version' );
-	wp_enqueue_script( 'foundation.core', get_template_directory_uri() . '/assets/javascript/foundation.core.js', array('jquery'), $version, true );
-	wp_enqueue_script( 'foundation.dropdown', get_template_directory_uri() . '/assets/javascript/foundation.dropdown.js', array('jquery'), $version, true );
-	wp_enqueue_script( 'foundation.dropdownMenu', get_template_directory_uri() . '/assets/javascript/foundation.dropdownMenu.js', array('jquery'), $version, true );
+	wp_enqueue_script( 'foundation', get_template_directory_uri() . '/assets/javascript/foundation.js', array('jquery'), $version, true );
 
 	// Add the comment-reply library on pages where it is necessary
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
