@@ -6,9 +6,9 @@
 
 ## Foundation version?
 
-<p>Zurb Foundation 6.1.1.</p>
+<p>Zurb Foundation 6.2.1 as of Double-E-Foundation 1.0.8.</p>
 
-## License
+## Licence
 
 <p>General Public License (GPL) v2</a>.</p>
 
