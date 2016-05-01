@@ -4,13 +4,13 @@ Theme Name:         	Double-E Foundation
 Theme URI:          	http://www.leesaward.com.au
 Github Theme URI:   	https://github.com/doubleedesign/Double-E-Foundation
 Description:        	Double-E Foundation is a WordPress starter theme based on Foundation 6 by Zurb and FoundationPress for WordPress, designed to be child-themed.
-Version:            	1.0.8
+Version:            	1.0.10
 Foundation version: 	6.2.1
 Author:            		Leesa Ward / Double-E Design
 Author URI:         	http://www.doubleedesign.com.au
 
-License:            	GNU General Public License v2 or later
-License URI: 			http://www.gnu.org/licenses/gpl-2.0.html
+Licence:            	GNU General Public License v2 or later
+Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 */
 /* ---------------------------------------------------------------------------- */
 /*
@@ -556,7 +556,7 @@ button {
 }
 
 .row {
-  max-width: 80rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2049,7 +2049,7 @@ a img {
 }
 
 hr {
-  max-width: 80rem;
+  max-width: 75rem;
   height: 0;
   border-right: 0;
   border-top: 0;
@@ -2431,8 +2431,8 @@ p + .stat {
 }
 
 .button.hollow.secondary:hover, .button.hollow.secondary:focus {
-  border-color: #3c3c3c;
-  color: #3c3c3c;
+  border-color: #3b3b3b;
+  color: #3b3b3b;
 }
 
 .button.hollow.success {
@@ -3385,7 +3385,7 @@ select[multiple] {
   border: 1px solid #cacaca;
   border-radius: 0;
   display: block;
-  font-size: 16rem;
+  font-size: 1rem;
   padding: 1rem;
   position: absolute;
   visibility: hidden;
@@ -4574,7 +4574,7 @@ body.is-reveal-open {
 @media screen and (min-width: 40em) {
   .reveal {
     width: 600px;
-    max-width: 80rem;
+    max-width: 75rem;
   }
 }
 
@@ -4593,21 +4593,21 @@ body.is-reveal-open {
 @media screen and (min-width: 40em) {
   .reveal.tiny {
     width: 30%;
-    max-width: 80rem;
+    max-width: 75rem;
   }
 }
 
 @media screen and (min-width: 40em) {
   .reveal.small {
     width: 50%;
-    max-width: 80rem;
+    max-width: 75rem;
   }
 }
 
 @media screen and (min-width: 40em) {
   .reveal.large {
     width: 90%;
-    max-width: 80rem;
+    max-width: 75rem;
   }
 }
 
@@ -5122,6 +5122,10 @@ table.hover tr:nth-of-type(even):hover {
   background-color: #121212;
 }
 
+.top-bar ul ul {
+  background-color: #e6e6e6;
+}
+
 .top-bar input {
   max-width: 200px;
   margin-right: 1rem;
@@ -5260,7 +5264,7 @@ body {
 }
 
 #footer-container #footer {
-  max-width: 80rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
   padding: 1.875rem 0;
@@ -5394,7 +5398,7 @@ body {
 }
 
 #page {
-  max-width: 80rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem;
@@ -5478,7 +5482,7 @@ body {
 }
 
 #page-full-width {
-  max-width: 80rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem;
@@ -5526,7 +5530,7 @@ body {
 }
 
 #single-post {
-  max-width: 80rem;
+  max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem;
