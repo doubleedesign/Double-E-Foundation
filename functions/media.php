@@ -52,14 +52,14 @@ function doublee_auto_featured_image() {
       }
    }
 }
-// Temporarily generate all featured images
-add_action('the_post', 'auto_featured_image');
+// Temporarily generate all featured images if you need to
+//add_action('the_post', 'doublee_auto_featured_image');
 // For new posts
-add_action('save_post', 'auto_featured_image'); 
-add_action('draft_to_publish', 'auto_featured_image'); 
-add_action('new_to_publish', 'auto_featured_image'); 
-add_action('pending_to_publish', 'auto_featured_image'); 
-add_action('future_to_publish', 'auto_featured_image');
+add_action('save_post', 'doublee_auto_featured_image'); 
+add_action('draft_to_publish', 'doublee_auto_featured_image'); 
+add_action('new_to_publish', 'doublee_auto_featured_image'); 
+add_action('pending_to_publish', 'doublee_auto_featured_image'); 
+add_action('future_to_publish', 'doublee_auto_featured_image');
 
 
 /* ==========================================
