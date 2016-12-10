@@ -39,7 +39,7 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 @include foundation-global-styles;
 
 // Foundation components
-@include foundation-grid;  /*alternatively, foundation-flex-grid*/
+@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
