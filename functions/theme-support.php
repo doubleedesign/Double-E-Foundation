@@ -4,11 +4,11 @@
  *
  * @package WordPress
  * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
+ * @since Double-E Foundation 2.0
  */
 
 if ( ! function_exists( 'foundationpress_theme_support' ) ) :
-function foundationpress_theme_support() {
+function doublee_theme_support() {
 	// Add language support
 	load_theme_textdomain( '', get_template_directory() . '/languages' );
 
@@ -21,11 +21,18 @@ function foundationpress_theme_support() {
 	// Add post thumbnail support: http://codex.wordpress.org/Post_Thumbnails
 	add_theme_support( 'post-thumbnails' );
 
-	// RSS thingy
+	// RSS 
 	add_theme_support( 'automatic-feed-links' );
 
-	// Add post formarts support: http://codex.wordpress.org/Post_Formats
+	// Add post formats support: http://codex.wordpress.org/Post_Formats
 	add_theme_support( 'post-formats', array('aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat') );
+	
+	// Use HTML5 for some things that don't use it by default
+	add_theme_support( 'html5', array(
+		'gallery',
+		'search-form',
+		'caption'
+	));
 
 	// Declare WooCommerce support per http://docs.woothemes.com/document/third-party-custom-theme-compatibility/
 	add_theme_support( 'woocommerce' );
