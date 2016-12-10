@@ -11,12 +11,16 @@
 	IMAGE SIZES
 ============================================*/
 
+// Set post thumbnail size and add additional image sizes
 if ( ! function_exists( 'doublee_images' ) ) :
-function doublee_images() {
-	set_post_thumbnail_size(480,480,true);	
-}
-add_action( 'after_setup_theme', 'doublee_images' );
+	function doublee_images() {
+		set_post_thumbnail_size(480,480,true);	
+	}
+	add_action( 'after_setup_theme', 'doublee_images' );
 endif;
+
+// Increase max srcset width to bigger than its default of 1600
+add_filter('max_srcset_image_width', function($max_srcset_image_width, $size_array){ return 2000; }, 10, 2);
 
 
 /* ==========================================

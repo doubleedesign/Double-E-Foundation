@@ -55,4 +55,7 @@ require_once( 'functions/protocol-relative-theme-assets.php' );
 /** Miscellaneous functions */
 require_once( 'functions/misc.php' );
 
+/** WooCommerce functions if you're using it */
+//require_once('functions/woocommerce.php');
+
 ?>
