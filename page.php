@@ -8,7 +8,7 @@
  *
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 0.1.4
+ * @since Double-E-Foundation 2.0
  */
 
  get_header(); ?>
