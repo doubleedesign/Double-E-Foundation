@@ -3,8 +3,8 @@ Theme Name:         	Double-E Foundation
 Theme URI:          	http://www.leesaward.com.au
 Github Theme URI:   	https://github.com/doubleedesign/Double-E-Foundation
 Description:        	Double-E Foundation is a WordPress starter theme based on Foundation 6 by Zurb and FoundationPress for WordPress, designed to be child-themed.
-Version:            	1.1
-Foundation version: 	6.2.1
+Version:            	2.0
+Foundation version: 	6.2.4
 Author:            		Leesa Ward / Double-E Design
 Author URI:         	http://www.doubleedesign.com.au
 
@@ -15,4 +15,89 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 /* ---------------------------------------------------------------------------- */
 
 
-@import "project"; 
+/*
+  Foundation for Sites components:
+  Import the building blocks you need for your project.
+  Reducing the number of imported components will optimize page speed.
+  ---------------------------------------------------------------------
+  The Foundation framework is built by Zurb
+  Licensed under MIT Open Source
+*/
+
+// Settings
+@import "foundation/settings/settings"; // Foundation default settings
+@import "global/project_settings"; // Override settings
+
+// Foundation mixins & browser resets
+@import 'foundation/foundation';
+
+// WP overrides
+@import "global/wp-admin"; // Fix issues with wp-admin bar positioning
+@import "global/wp-overrides"; // Override the default WordPress styling for some elements
+
+// Foundation global styles 
+@include foundation-global-styles;
+
+// Foundation components
+@include foundation-grid;  /*alternatively, foundation-flex-grid*/
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-close-button;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-flex-video;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-menu;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+
+// Motion UI
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
+
+/*
+  Site custom styles:
+  Add your scss files below to structure your project styles
+*/
+
+// Components
+@import "theme/components/buttons";
+@import "theme/components/featured-image";
+
+// General Layout
+@import "theme/layout/fixes";
+@import "theme/layout/topbar";
+@import "theme/layout/sidebar";
+@import "theme/layout/footer";
+@import "theme/layout/offcanvas";
+
+// Site modules
+
+// Templates
+@import "templates/page-default";
+@import "templates/page-full-width";
+@import "templates/page-home";
+@import "templates/single-post";
