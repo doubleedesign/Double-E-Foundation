@@ -40,6 +40,9 @@ require_once( 'functions/enqueue-scripts.php' );
 /** Add theme support */
 require_once( 'functions/theme-support.php' );
 
+/** Visual page title field */
+require_once ('functions/visual-page-title.php'); 
+
 /** Image-related functions */
 require_once( 'functions/media.php' );
 
