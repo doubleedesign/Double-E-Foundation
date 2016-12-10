@@ -1,12 +1,12 @@
 ## Hi there!
 
-<p>This is a starter theme for WordPress based on Foundation 6 which started as a fork of <a href="https://github.com/olefredrik">Ole Fredrik Lie's FoundationPress</a>.</p>
+<p>This is a starter WordPress theme that uses the Zurb Foundation 6 front-end framework.</p>
 
-<p>I started with version 2.2.0 of the awesome FoundationPress starter theme (a Foundation 6 version), and customised it to my usual needs and workflow (rearranged stuff, removed stuff I didn't need, added some nifty functions, etc). I generally do not sync with FoundationPress anymore as this project has taken on a life of its own for me.</p>
+<p>This project started as a fork of <a href="https://github.com/olefredrik">Ole Fredrik Lie's FoundationPress</a> but has taken on a life of its own.</p>
 
 ## Foundation version?
 
-<p>Zurb Foundation 6.2.1 as of Double-E-Foundation 1.0.8.</p>
+<p>Zurb Foundation 6.2.4 as of Double-E-Foundation 2.0 (December 11, 2016).</p>
 
 ## Licence
 
@@ -18,9 +18,11 @@
 
 <ul>
 	<li><a href="http://www.cuttingedgevideo.com.au">Cutting Edge Video Productions</a></li>
-	<li>Love TEAse - online tea store using WooCommerce (in final stages of development - link coming soon)</li>
+	<li><a href="https://www.lovetease.com.au">Love TEAse - online tea store using WooCommerce</a></li>
 	<li>Oliver-Ramsay Security (in final stages of development - link coming soon)</li>
-	<li>Lynriz Debutante Presentations (in development - link coming soon)</li>
+	<li><a href="http://www.lynrizdebs.com.au">Lynriz Debutante Presentations</a></li>
+	<li><a href="http://www.bhwcc.org.au">Box Hill Wesley Calisthenics Club</a></li>
+	<li><a href="http://www.volairecalisthenics.com.au">Volaire Calisthenics College</a></li>
 </ul>
 
 <p><strong>Examples of sites built using FoundationPress, which inspired this project</strong></p>
