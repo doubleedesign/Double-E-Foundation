@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 0.1.3
+ * @since Double-E-Foundation 2.0
  */
 
 /* ==========================================
@@ -24,5 +24,17 @@ function add_slug_class_to_menu_item($output){
 	return $output;
 }
 add_filter('wp_nav_menu', 'add_slug_class_to_menu_item');
+
+
+
+/* ==========================================
+	MOVE YOAST SEO TO THE BOTTOM OF EDIT SCREENS
+============================================*/
+
+add_filter( 'wpseo_metabox_prio', 'doublee_move_yoast_seo_metabox' );
+function doublee_move_yoast_seo_metabox() {
+	return 'low';
+}
+
 
 ?>
