@@ -63,11 +63,18 @@ class doublee_visual_page_title {
 	}
 
 	public function save_metabox( $post_id, $post ) {
+		
+		// Allow certain HTML tags
+		$doublee_vpt_allowed_html = array(
+			'em' => array(),
+			'strong' => array(),
+			'span' => array(),
+		);
 
-		// Sanitize user input.
-		$doublee_new_visual_page_title_entry = isset( $_POST[ 'doublee_visual-page-title-entry' ] ) ? sanitize_text_field( $_POST[ 'doublee_visual-page-title-entry' ] ) : '';
+		// Sanitize user input using wp_kses instead of sanitize_text_field to allow the above HTML to be used
+		$doublee_new_visual_page_title_entry = isset( $_POST[ 'doublee_visual-page-title-entry' ] ) ? wp_kses( $_POST[ 'doublee_visual-page-title-entry' ], $doublee_vpt_allowed_html ) : '';
 
-		// Update the meta field in the database.
+		// Update the meta field in the database
 		update_post_meta( $post_id, 'doublee_visual-page-title-entry', $doublee_new_visual_page_title_entry );
 
 	}
