@@ -7,7 +7,7 @@
  * @since Double-E Foundation 2.0
  */
 
-if ( ! function_exists( 'foundationpress_theme_support' ) ) :
+if ( ! function_exists( 'doublee_theme_support' ) ) :
 function doublee_theme_support() {
 	// Add language support
 	load_theme_textdomain( '', get_template_directory() . '/languages' );
@@ -38,6 +38,6 @@ function doublee_theme_support() {
 	add_theme_support( 'woocommerce' );
 }
 
-add_action( 'after_setup_theme', 'foundationpress_theme_support' );
+add_action( 'after_setup_theme', 'doublee_theme_support' );
 endif;
 ?>
