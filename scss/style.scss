@@ -26,14 +26,14 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 
 // Settings
 @import "foundation/settings/settings"; // Foundation default settings
-@import "global/project_settings"; // Override settings
+@import "theme/global/project_settings"; // Override settings
 
 // Foundation mixins & browser resets
 @import 'foundation/foundation';
 
 // WP overrides
-@import "global/wp-admin"; // Fix issues with wp-admin bar positioning
-@import "global/wp-overrides"; // Override the default WordPress styling for some elements
+@import "theme/global/wp-admin"; // Fix issues with wp-admin bar positioning
+@import "theme/global/wp-overrides"; // Override the default WordPress styling for some elements
 
 // Foundation global styles 
 @include foundation-global-styles;
@@ -92,12 +92,12 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 @import "theme/layout/topbar";
 @import "theme/layout/sidebar";
 @import "theme/layout/footer";
-@import "theme/layout/offcanvas";
+@import "theme/layout/off-canvas";
 
 // Site modules
 
 // Templates
-@import "templates/page-default";
-@import "templates/page-full-width";
-@import "templates/page-home";
-@import "templates/single-post";
+@import "theme/templates/page-default";
+@import "theme/templates/page-full-width";
+@import "theme/templates/page-home";
+@import "theme/templates/single-post";
