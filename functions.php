@@ -41,7 +41,7 @@ require_once( 'functions/enqueue-scripts.php' );
 require_once( 'functions/theme-support.php' );
 
 /** Image-related functions */
-require_once( 'functions/images.php' );
+require_once( 'functions/media.php' );
 
 /** Add Nav Options to Custom - thanks FoundationPress */
 require_once( 'functions/custom-nav.php' );

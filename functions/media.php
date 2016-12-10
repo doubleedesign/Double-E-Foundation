@@ -1,10 +1,10 @@
 <?php
 /**
- * Image-related functions
+ * Media-related functions
  *
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 0.1.3
+ * @since Double-E-Foundation 2.0
  */
 
 /* ==========================================
@@ -37,7 +37,7 @@ add_filter('the_content','doublee_linked_images_class');
 	IF NO FEATURED IMAGE SET, USE FIRST ATTACHMENT
 ============================================*/
 
-function auto_featured_image() {
+function doublee_auto_featured_image() {
    global $post;
    if (!has_post_thumbnail($post->ID)) {
       $attached_image = get_children( "post_parent=$post->ID&post_type=attachment&post_mime_type=image&numberposts=1" );
@@ -60,11 +60,11 @@ add_action('future_to_publish', 'auto_featured_image');
 
 /* ==========================================
 	ENABLE CAPTIONS ON FEATURED IMAGES
-	Template usage: the_post_thumbnail_caption();
+	Template usage: doublee_post_thumbnail_caption();
 ============================================*/
 
 /* Function to display caption on featured image, when called in template*/
-function the_post_thumbnail_caption() {
+function doublee_post_thumbnail_caption() {
   global $post;
 
   $thumbnail_id    = get_post_thumbnail_id($post->ID);
