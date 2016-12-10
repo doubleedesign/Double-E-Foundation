@@ -14,7 +14,7 @@ get_header(); ?>
 	<?php while ( have_posts() ) : the_post(); ?>
         <article <?php post_class('small-12 medium-8 columns') ?> id="post-<?php the_ID(); ?>">
             <header>
-                <?php if (get_field('visual_page_title')) { the_field('visual_page_title'); } else { the_title(); } ?>
+				<h1><?php the_title(); ?></h1>
                 <?php doublee_entry_meta(); ?>
             </header>
     
