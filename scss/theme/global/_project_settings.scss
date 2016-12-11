@@ -98,6 +98,7 @@ $anchor-color: $primary-color;
 $anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
 $anchor-text-decoration: none;
 $anchor-text-decoration-hover: none;
+$anchor-transition: all 0.3s ease;
 
 /* Breadcrumbs */
 $breadcrumbs-margin: 0 0 $global-margin 0;
@@ -108,6 +109,17 @@ $breadcrumbs-item-color-disabled: $medium-gray;
 $breadcrumbs-item-margin: 0.75rem;
 $breadcrumbs-item-uppercase: true;
 $breadcrumbs-item-slash: true;
+
+/*===========================================================
+	TOP BAR
+===========================================================*/
+
+$topbar-padding: 0.5rem;
+$topbar-background: #222;
+$topbar-submenu-background: $topbar-background;
+$topbar-title-spacing: 1rem;
+$topbar-input-width: 200px;
+$topbar-unstack-breakpoint: medium;
 
 /*===========================================================
 	BUTTONS

@@ -84,20 +84,21 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
   Add your scss files below to structure your project styles
 */
 
-// Components
+// Theme Components
 @import "theme/components/buttons";
 @import "theme/components/featured-image";
 
-// General Layout
+// Theme General Layout
+@import "theme/layout/general";
 @import "theme/layout/fixes";
 @import "theme/layout/topbar";
 @import "theme/layout/sidebar";
 @import "theme/layout/footer";
 @import "theme/layout/off-canvas";
 
-// Site modules
+// Theme Modules
 
-// Templates
+// Theme Templates
 @import "theme/templates/page-default";
 @import "theme/templates/page-full-width";
 @import "theme/templates/page-home";
