@@ -1,5 +1,13 @@
 #top-bar {
 	
+	#site-navigation {
+		display: none;
+		
+		@include breakpoint(medium up) {
+			display: block;
+		}
+	}
+	
 	ul.menu {
 		
 		> li {

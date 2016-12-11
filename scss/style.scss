@@ -78,8 +78,9 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 @include foundation-top-bar;
 
 // Motion UI
-//@include motion-ui-transitions;
-//@include motion-ui-animations;
+@import "extras/motion-ui/motion-ui";
+@include motion-ui-transitions;
+@include motion-ui-animations;
 
 /*
   Site custom styles:

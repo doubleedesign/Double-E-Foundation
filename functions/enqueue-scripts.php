@@ -25,6 +25,7 @@ if ( ! function_exists( 'doublee_scripts' ) ) :
 	
 	// Other JavaScript tools and libraries
 	wp_enqueue_script( 'whatInput', get_template_directory_uri() . '/assets/javascript/vendor/what-input.min.js', array('jquery'), $version, true );
+	wp_enqueue_script( 'motion-ui', get_template_directory_uri() . '/assets/javascript/vendor/motion-ui.js', array('jquery'), $version, true );
 	
 	// Theme custom JavaScript
 	wp_enqueue_script( 'Theme', get_template_directory_uri() . '/assets/javascript/min/doublee.min.js', array('jquery', 'foundation'), $version, true );
