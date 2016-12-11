@@ -33,7 +33,6 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 /*===========================================================
 	TYPOGRAPHY
 ===========================================================*/
-/*My way of renaming Foundation's variables*/
 /*Headings*/
 /* Paragraphs*/
 /* Lists */
@@ -494,8 +493,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: normal;
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.45;
   color: #444;
   background: #fefefe;
   -webkit-font-smoothing: antialiased;
@@ -1788,7 +1787,7 @@ i {
 
 strong,
 b {
-  font-weight: bold;
+  font-weight: 700;
   line-height: inherit;
 }
 
@@ -2490,7 +2489,7 @@ label {
   display: block;
   margin: 0;
   font-size: 0.875rem;
-  font-weight: normal;
+  font-weight: 400;
   line-height: 1.8;
   color: #0a0a0a;
 }
@@ -4753,7 +4752,7 @@ table tfoot {
 }
 
 table caption {
-  font-weight: bold;
+  font-weight: 700;
   padding: 0.5rem 0.625rem 0.625rem;
 }
 
@@ -4777,7 +4776,7 @@ table thead td,
 table tfoot th,
 table tfoot td {
   padding: 0.5rem 0.625rem 0.625rem;
-  font-weight: bold;
+  font-weight: 700;
   text-align: left;
 }
 

@@ -26,6 +26,7 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 
 // Settings
 @import "foundation/settings/settings"; // Foundation default settings
+@import "theme/fonts"; // Theme fonts
 @import "theme/global/project_settings"; // Override settings
 
 // Foundation mixins & browser resets
