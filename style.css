@@ -40,6 +40,9 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 /* Links */
 /* Breadcrumbs */
 /*===========================================================
+	TOP BAR
+===========================================================*/
+/*===========================================================
 	BUTTONS
 ===========================================================*/
 /*===========================================================
@@ -5054,7 +5057,7 @@ table.hover tbody tr:nth-of-type(even):hover {
 }
 
 .top-bar {
-  padding: 0;
+  padding: 0.5rem;
 }
 
 .top-bar::before, .top-bar::after {
@@ -5068,11 +5071,7 @@ table.hover tbody tr:nth-of-type(even):hover {
 
 .top-bar,
 .top-bar ul {
-  background-color: #121212;
-}
-
-.top-bar ul ul {
-  background-color: #e6e6e6;
+  background-color: #222;
 }
 
 .top-bar input {
@@ -5165,6 +5164,10 @@ table.hover tbody tr:nth-of-type(even):hover {
   #featured-hero {
     height: 25rem;
   }
+}
+
+#content {
+  margin: 3rem 0;
 }
 
 /* Quick fixes */
@@ -5341,221 +5344,6 @@ body {
   color: #B9B9B9;
 }
 
-#page {
-  max-width: 75rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
-}
-
-#page::before, #page::after {
-  content: ' ';
-  display: table;
-}
-
-#page::after {
-  clear: both;
-}
-
-#page .main-content {
-  width: 100%;
-  float: left;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-}
-
-@media screen and (min-width: 40em) {
-  #page .main-content {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-  }
-}
-
-@media screen and (min-width: 64em) {
-  #page .main-content {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-}
-
-@media screen and (min-width: 80em) {
-  #page .main-content {
-    padding-left: 1.5625rem;
-    padding-right: 1.5625rem;
-  }
-}
-
-#page .main-content:last-child:not(:first-child) {
-  float: right;
-}
-
-@media screen and (min-width: 40em) {
-  #page .main-content {
-    width: 66.66667%;
-    float: left;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-  }
-}
-
-@media screen and (min-width: 40em) and (min-width: 40em) {
-  #page .main-content {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-  }
-}
-
-@media screen and (min-width: 40em) and (min-width: 64em) {
-  #page .main-content {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-}
-
-@media screen and (min-width: 40em) and (min-width: 80em) {
-  #page .main-content {
-    padding-left: 1.5625rem;
-    padding-right: 1.5625rem;
-  }
-}
-
-@media screen and (min-width: 40em) {
-  #page .main-content:last-child:not(:first-child) {
-    float: right;
-  }
-}
-
-#page-full-width {
-  max-width: 75rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
-}
-
-#page-full-width::before, #page-full-width::after {
-  content: ' ';
-  display: table;
-}
-
-#page-full-width::after {
-  clear: both;
-}
-
-#page-full-width .main-content {
-  width: 100%;
-  float: left;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-}
-
-@media screen and (min-width: 40em) {
-  #page-full-width .main-content {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-  }
-}
-
-@media screen and (min-width: 64em) {
-  #page-full-width .main-content {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-}
-
-@media screen and (min-width: 80em) {
-  #page-full-width .main-content {
-    padding-left: 1.5625rem;
-    padding-right: 1.5625rem;
-  }
-}
-
-#page-full-width .main-content:last-child:not(:first-child) {
-  float: right;
-}
-
 /* CSS Document */
-#single-post {
-  max-width: 75rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3rem;
-}
-
-#single-post::before, #single-post::after {
-  content: ' ';
-  display: table;
-}
-
-#single-post::after {
-  clear: both;
-}
-
-#single-post .main-content {
-  width: 100%;
-  float: left;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-}
-
-@media screen and (min-width: 40em) {
-  #single-post .main-content {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-  }
-}
-
-@media screen and (min-width: 64em) {
-  #single-post .main-content {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-}
-
-@media screen and (min-width: 80em) {
-  #single-post .main-content {
-    padding-left: 1.5625rem;
-    padding-right: 1.5625rem;
-  }
-}
-
-#single-post .main-content:last-child:not(:first-child) {
-  float: right;
-}
-
-@media screen and (min-width: 40em) {
-  #single-post .main-content {
-    width: 66.66667%;
-    float: left;
-    padding-left: 0.625rem;
-    padding-right: 0.625rem;
-  }
-}
-
-@media screen and (min-width: 40em) and (min-width: 40em) {
-  #single-post .main-content {
-    padding-left: 0.9375rem;
-    padding-right: 0.9375rem;
-  }
-}
-
-@media screen and (min-width: 40em) and (min-width: 64em) {
-  #single-post .main-content {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-}
-
-@media screen and (min-width: 40em) and (min-width: 80em) {
-  #single-post .main-content {
-    padding-left: 1.5625rem;
-    padding-right: 1.5625rem;
-  }
-}
-
-@media screen and (min-width: 40em) {
-  #single-post .main-content:last-child:not(:first-child) {
-    float: right;
-  }
-}
 
 /*# sourceMappingURL=style.css.map */
