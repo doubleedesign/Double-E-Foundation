@@ -135,6 +135,20 @@ $dropdownmenu-background: $white;
 $dropdownmenu-border: 1px solid $medium-gray;
 
 /*===========================================================
+	OFF CANVAS MENU IF SELECTED
+===========================================================*/
+
+$offcanvas-size: 250px;
+$offcanvas-background: $topbar-background;
+$offcanvas-zindex: -1;
+$offcanvas-transition-length: 0.5s;
+$offcanvas-transition-timing: ease;
+$offcanvas-fixed-reveal: true;
+$offcanvas-exit-background: rgba($white, 0.25);
+$maincontent-class: 'off-canvas-content';
+$maincontent-shadow: 0 0 10px rgba($black, 0.5);
+
+/*===========================================================
 	BUTTONS
 ===========================================================*/
 

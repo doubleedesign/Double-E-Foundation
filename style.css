@@ -13,6 +13,7 @@ Licence:            	GNU General Public License v2 or later
 Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 */
 /* ---------------------------------------------------------------------------- */
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 /*
   Foundation for Sites components:
   Import the building blocks you need for your project.
@@ -41,6 +42,9 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 /* Breadcrumbs */
 /*===========================================================
 	TOP BAR
+===========================================================*/
+/*===========================================================
+	OFF CANVAS MENU IF SELECTED
 ===========================================================*/
 /*===========================================================
 	BUTTONS
@@ -4015,7 +4019,7 @@ body {
 
 .off-canvas {
   position: absolute;
-  background: #e6e6e6;
+  background: #222;
   z-index: -1;
   max-height: 100%;
   overflow-y: auto;
