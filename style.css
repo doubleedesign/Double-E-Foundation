@@ -1803,12 +1803,12 @@ h4,
 h5,
 h6 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 700;
   font-style: normal;
   color: inherit;
   text-rendering: optimizeLegibility;
   margin-top: 0;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1rem;
   line-height: 1.2;
 }
 

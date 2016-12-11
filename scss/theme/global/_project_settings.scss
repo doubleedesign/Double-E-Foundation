@@ -52,8 +52,11 @@ $global-weight-bold: 700;
 $global-lineheight: 1.45;
 
 /*Headings*/
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-bold;
+$header-font-style: normal;
 $header-lineheight: 1.2;
-$header-margin-bottom: rem-calc(30);
+$header-margin-bottom: $global-margin;
 $header-sizes: (
   small: (
     'h1': 24,
