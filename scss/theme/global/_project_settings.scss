@@ -41,6 +41,14 @@ $success-color: #3adb76;
 $warning-color: #ffae00;
 $alert-color: #ec5840;
 
+$foundation-palette: (
+	primary: $primary-color,
+	secondary: $secondary-color,
+	success: $success-color,
+	warning: $warning-color,
+	alert: $alert-color,
+) !global;
+
 /*===========================================================
 	TYPOGRAPHY
 ===========================================================*/
