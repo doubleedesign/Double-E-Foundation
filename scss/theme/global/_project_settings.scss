@@ -21,9 +21,9 @@ $breakpoints: (
   medium: 640px,
   large: 1024px,
   xlarge: 1280px,
-  xxlarge: 1600px,
+  xxlarge: 1800px,
 );
-$breakpoint-classes: (small medium large xlarge);
+$breakpoint-classes: (small medium large xlarge xxlarge);
 
 /* Top Bar */
 $topbar-padding: 0;
