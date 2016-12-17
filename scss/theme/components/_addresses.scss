@@ -1,0 +1,44 @@
+address {
+	font-style: normal;
+	margin-bottom: $global-margin/2;
+	font-weight: $global-weight-normal;
+	
+	div {
+		&[itemprop=streetAddress], &[itemprop=addressLocality] {
+			&:after {
+				content:", ";
+			}
+		}
+		&[itemprop=addressLocality], &[itemprop=addressRegion], &[itemprop=postalCode] {
+			display:inline-block;
+		}
+		&[itemprop=postalCode] {
+			margin-bottom: $global-margin/3;
+		}
+		&[itemprop=telephone], &[itemprop=faxNumber], &[itemprop=email] {
+			margin-bottom: $global-margin/3;
+			
+			&:before {
+				font-weight: $global-weight-bold;
+				font-family: $header-font-family;
+			}
+		}
+		&[itemprop=telephone] {
+			&:before {
+				content:"T: ";
+			}
+		}
+		&[itemprop=faxNumber] {
+			&:before {
+				content:"F: ";
+			}
+		}
+		&[itemprop=email] {
+			word-break:break-word;
+			&:before {
+				content:"E: ";
+			}
+		}
+	}
+
+}

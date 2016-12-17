@@ -88,7 +88,9 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 */
 
 // Theme Components
+@import "theme/components/links";
 @import "theme/components/buttons";
+@import "theme/components/addresses";
 @import "theme/components/featured-image";
 @import "theme/components/galleries";
 

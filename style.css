@@ -6570,6 +6570,10 @@ table.hover tbody tr:nth-of-type(even):hover {
   Site custom styles:
   Add your scss files below to structure your project styles
 */
+a {
+  transition: all 0.3s ease;
+}
+
 .sites-button {
   background: #FF6908;
   font-size: 1.25rem;
@@ -6577,6 +6581,49 @@ table.hover tbody tr:nth-of-type(even):hover {
   box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
   border-radius: 3px;
   border: none;
+}
+
+address {
+  font-style: normal;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+address div[itemprop=streetAddress]:after, address div[itemprop=addressLocality]:after {
+  content: ", ";
+}
+
+address div[itemprop=addressLocality], address div[itemprop=addressRegion], address div[itemprop=postalCode] {
+  display: inline-block;
+}
+
+address div[itemprop=postalCode] {
+  margin-bottom: 0.33333rem;
+}
+
+address div[itemprop=telephone], address div[itemprop=faxNumber], address div[itemprop=email] {
+  margin-bottom: 0.33333rem;
+}
+
+address div[itemprop=telephone]:before, address div[itemprop=faxNumber]:before, address div[itemprop=email]:before {
+  font-weight: 700;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+address div[itemprop=telephone]:before {
+  content: "T: ";
+}
+
+address div[itemprop=faxNumber]:before {
+  content: "F: ";
+}
+
+address div[itemprop=email] {
+  word-break: break-word;
+}
+
+address div[itemprop=email]:before {
+  content: "E: ";
 }
 
 #featured-hero {
