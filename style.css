@@ -6598,6 +6598,181 @@ table.hover tbody tr:nth-of-type(even):hover {
   }
 }
 
+.gallery {
+  line-height: 0;
+}
+
+.gallery a, .gallery a:hover, .gallery a:focus {
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+.gallery .gallery-item {
+  padding: 0.33333rem !important;
+  margin: 0 !important;
+  float: none !important;
+  display: inline-block !important;
+  position: relative !important;
+}
+
+.gallery .gallery-item img {
+  display: block;
+  border: none !important;
+  width: 100%;
+  height: auto;
+}
+
+.gallery .gallery-item .gallery-caption {
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
+  font-size: 1em;
+  line-height: 1.45;
+  background: rgba(33, 153, 232, 0.5);
+  padding: 0.33333rem;
+  color: #FFF;
+  width: 100%;
+  font-style: normal;
+  opacity: 0;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+
+.gallery .gallery-item:hover,
+.gallery .gallery-item .gallery-caption {
+  opacity: 1;
+  z-index: 1000;
+}
+
+.gallery br {
+  display: none !important;
+}
+
+.gallery.gallery-columns-1 .gallery-item, .gallery.gallery-columns-2 .gallery-item, .gallery.gallery-columns-3 .gallery-item {
+  width: 33.33333%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+@media screen and (min-width: 40em) {
+  .gallery.gallery-columns-1 .gallery-item, .gallery.gallery-columns-2 .gallery-item, .gallery.gallery-columns-3 .gallery-item {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .gallery.gallery-columns-1 .gallery-item, .gallery.gallery-columns-2 .gallery-item, .gallery.gallery-columns-3 .gallery-item {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .gallery.gallery-columns-1 .gallery-item, .gallery.gallery-columns-2 .gallery-item, .gallery.gallery-columns-3 .gallery-item {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+}
+
+.gallery.gallery-columns-1 .gallery-item:last-child:not(:first-child), .gallery.gallery-columns-2 .gallery-item:last-child:not(:first-child), .gallery.gallery-columns-3 .gallery-item:last-child:not(:first-child) {
+  float: right;
+}
+
+.gallery.gallery-columns-4 .gallery-item {
+  width: 25%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+@media screen and (min-width: 40em) {
+  .gallery.gallery-columns-4 .gallery-item {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .gallery.gallery-columns-4 .gallery-item {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .gallery.gallery-columns-4 .gallery-item {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+}
+
+.gallery.gallery-columns-4 .gallery-item:last-child:not(:first-child) {
+  float: right;
+}
+
+.gallery.gallery-columns-5 .gallery-item {
+  width: 20%;
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+}
+
+.gallery.gallery-columns-6 .gallery-item {
+  width: 16.66667%;
+  float: left;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+@media screen and (min-width: 40em) {
+  .gallery.gallery-columns-6 .gallery-item {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .gallery.gallery-columns-6 .gallery-item {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .gallery.gallery-columns-6 .gallery-item {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+}
+
+.gallery.gallery-columns-6 .gallery-item:last-child:not(:first-child) {
+  float: right;
+}
+
+.gallery.gallery-columns-7 .gallery-item {
+  width: 14.28%;
+  -webkit-flex-basis: 14.28;
+      -ms-flex-preferred-size: 14.28;
+          flex-basis: 14.28;
+}
+
+.gallery.gallery-columns-8 .gallery-item {
+  width: 12.5%;
+  -webkit-flex-basis: 12.5%;
+      -ms-flex-preferred-size: 12.5%;
+          flex-basis: 12.5%;
+}
+
+.gallery.gallery-columns-9 .gallery-item {
+  width: 11.11%;
+  -webkit-flex-basis: 11.11%;
+      -ms-flex-preferred-size: 11.11%;
+          flex-basis: 11.11%;
+}
+
 #content {
   margin: 3rem 0;
 }
