@@ -6630,18 +6630,13 @@ address div[itemprop=email]:before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  margin: 0 0 2rem;
   position: relative;
-  height: 12.5rem;
-}
-
-.no-featured-image-set {
-  height: 1rem !important;
+  height: 18.75rem;
 }
 
 @media screen and (min-width: 40em) {
   #featured-hero {
-    height: 25rem;
+    height: 24.0625rem;
   }
 }
 

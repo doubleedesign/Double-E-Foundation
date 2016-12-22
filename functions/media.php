@@ -15,6 +15,7 @@
 if ( ! function_exists( 'doublee_images' ) ) :
 	function doublee_images() {
 		set_post_thumbnail_size(480,480,true);	
+		add_image_size('banner',1920,580,true);
 	}
 	add_action( 'after_setup_theme', 'doublee_images' );
 endif;
