@@ -6,7 +6,7 @@
 .woocommerce-demo-store {
 	
 	.demo_store {
-		@extend .callout, .warning.callout;
+		@extend .warning.callout;
 		position:fixed;
 		top:0;
 		width:100%;
@@ -28,13 +28,13 @@
 	
 	/* WooCommerce Feedback (Results, Added to Cart Confirmations, etc) */
 	.woocommerce-message, .woocommerce-result-count, .woocommerce-info {
-		@extend .callout,.primary.callout;
+		@extend .primary.callout;
 		display: flex;
 		margin-bottom: $global-margin;
 		align-items: center;
 		
 		a {
-			@extend .button, .button.secondary, .button.small;
+			@extend .button.secondary, .button.small;
 			order: 9999;
 			margin-left: auto;
 		}
@@ -42,7 +42,7 @@
 	
 	/* WooCommerce Errors */
 	.woocommerce-error {
-		@extend .callout, .alert.callout;
+		@extend .alert.callout;
 	}
 	
 	/* WooCommerce Product Sorting Select Box */
@@ -595,13 +595,12 @@
 				}
 				button {
 					&[type=submit] {
-						@extend .button, .button.primary;
+						@extend .button.primary;
 					}
 				}
 			}
 			/* Stock Levels / Status */
 			.stock {
-				@extend .callout;
 				display: inline-block;
 				
 				&.in-stock {
@@ -888,14 +887,12 @@
 
 							&[type=submit] {
 								@include grid-row(5);
-								@extend .button;
 								@extend .button.secondary;
 							}
 						}
 					}
 					input {
 						&[name=update_cart] {
-							@extend .button;
 							@extend .button.accent;
 							
 							@include breakpoint(medium up) {
@@ -958,7 +955,6 @@
 							}
 						}
 						button {
-							@extend .button;
 							@extend .button.secondary;
 							margin:0;
 						}
@@ -971,7 +967,6 @@
 	.wc-proceed-to-checkout {
 		text-align:right;
 		a {
-			@extend .button;
 			@extend .button.primary;
 			
 			br {
@@ -1080,20 +1075,15 @@
 							//@extend small;
 							
 							&.short {
-								@extend .callout;
 								@extend .alert.callout;
 							}
 							&.bad {
-								@extend .callout;
 								@extend .alert.callout;
-
 							}
 							&.good {
-								@extend .callout;
 								@extend .warning.callout;
 							}
 							&.strong {
-								@extend .callout;
 								@extend .success.callout;
 							}
 						}
@@ -1315,6 +1305,7 @@
 				abbr {
 					border:0;
 					font-size:0.9em;
+
 				}
 				label {
 					margin:0;
