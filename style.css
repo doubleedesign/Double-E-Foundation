@@ -6574,13 +6574,33 @@ a {
   transition: all 0.3s ease;
 }
 
-.sites-button {
-  background: #FF6908;
-  font-size: 1.25rem;
-  font-weight: bold;
-  box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
-  border-radius: 3px;
-  border: none;
+/*===================================
+	BUTTONS
+====================================*/
+.button {
+  border: 1px solid #ec5840;
+  color: #ec5840;
+  background: #fefefe;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  line-height: 0;
+  padding: 1rem;
+  padding-top: 1.25rem;
+}
+
+.button:hover, .button:focus {
+  color: #fefefe;
+  background: #ec5840;
+  border-color: #ec5840;
+  border-bottom-color: #ec5840;
+}
+
+.button.accent {
+  background: #ffae00;
+}
+
+.button.accent:hover, .button.accent:focus {
+  background: #e69d00;
 }
 
 address {
