@@ -28,7 +28,7 @@ if ( ! function_exists( 'doublee_scripts' ) ) :
 	wp_enqueue_script( 'motion-ui', get_template_directory_uri() . '/assets/javascript/vendor/motion-ui.js', array('jquery'), $version, true );
 	
 	// Theme custom JavaScript
-	wp_enqueue_script( 'Theme', get_template_directory_uri() . '/assets/javascript/min/doublee.min.js', array('jquery', 'foundation'), $version, true );
+	wp_enqueue_script( 'Theme', get_template_directory_uri() . '/assets/javascript/min/theme.min.js', array('jquery', 'foundation'), $version, true );
 	
 	// Add the comment-reply library on pages where it is necessary
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
