@@ -11,19 +11,6 @@
 	ul.menu {
 		
 		> li {
-
-			&:hover,
-			&.active {
-
-				> a {
-					color: $menu-item-color-active;
-					background: $menu-item-background-active;
-					
-					&:after {
-						border-color: $menu-item-color-active transparent transparent;
-					}
-				}
-			}
 			
 			a {
 				padding: $global-padding;
@@ -55,6 +42,8 @@
 				left: 0;
 				right: auto;
 				border: 0;
+				opacity: 0;
+				transition: $anchor-transition; 
 				
 				li, li a {
 					line-height: $global-lineheight;
@@ -68,7 +57,27 @@
 					}
 				}
 				
+			}
+			
+			&:hover,
+			&.active {
+
+				> a {
+					color: $menu-item-color-active;
+					background: $menu-item-background-active;
+					
+					&:after {
+						border-color: $menu-item-color-active transparent transparent;
+					}
+				}
+			}
+			
+			&:hover,
+			&:focus {
 				
+				> ul.dropdown.menu {
+					opacity: 1.0;
+				}
 			}
 			
 		}
