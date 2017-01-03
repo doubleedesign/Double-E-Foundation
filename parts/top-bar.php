@@ -6,7 +6,7 @@
 					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
 				</ul>
 			</div>
-			<nav id="site-navigation" class="top-bar-right" data-toggler data-animate="fade-in fade-out">
+			<nav id="site-navigation" class="top-bar-right" data-toggler>
 				<?php doublee_top_bar_menu(); ?>
 
 				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>

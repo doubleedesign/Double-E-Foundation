@@ -3,12 +3,14 @@
  * Template part for off canvas menu
  *
  * @package WordPress
- * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
+ * @subpackage Double-E Foundation
+ * @since Double-E Foundation 2.0
  */
 
 ?>
 
-<nav class="vertical menu" data-accordion-menu role="navigation">
-  <?php foundationpress_mobile_nav(); ?>
-</nav>
+<div id="mobile-topbar-menu">
+	<nav class="vertical menu" data-accordion-menu role="navigation">
+	  <?php foundationpress_mobile_nav(); ?>
+	</nav>
+</div>

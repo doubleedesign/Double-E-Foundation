@@ -32,11 +32,12 @@
 
 	<header id="masthead" class="site-header" role="banner">
 	
-		<div class="title-bar show-for-small-only" data-toggle="site-navigation">
-			<button class="menu-icon" type="button" data-toggle="offCanvas"><i class="fa fa-bars"></i></button>
-			<div class="title-bar-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</div>
+		<div class="title-bar show-for-small-only">
+			<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) { ?>
+				<button class="menu-icon" type="button" data-toggle="offCanvas"><i class="fa fa-bars"></i></button>
+			<?php } else { ?>
+				<button class="menu-icon" type="button"><i class="fa fa-bars"></i>Menu</button>
+			<?php } ?>
 		</div>
 
 		<?php get_template_part('parts/top-bar'); ?>
