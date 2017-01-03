@@ -26,6 +26,10 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
   Licensed under MIT Open Source
 */
 
+// Custom functions and mixins
+@import "theme/functions"; 
+@import "theme/mixins"; 
+
 // Settings
 @import "foundation/settings/settings"; // Foundation default settings
 @import "theme/fonts"; // Theme fonts
