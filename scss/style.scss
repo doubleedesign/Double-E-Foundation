@@ -3,8 +3,8 @@ Theme Name:         	Double-E Foundation
 Theme URI:          	http://www.leesaward.com.au
 Github Theme URI:   	https://github.com/doubleedesign/Double-E-Foundation
 Description:        	Double-E Foundation is a WordPress starter theme using Zurb Foundation 6.
-Version:            	2.0
-Foundation version: 	6.2.4
+Version:            	2.1
+Foundation version: 	6.3.0
 Author:            		Leesa Ward / Double-E Design
 Author URI:         	http://www.doubleedesign.com.au
 
@@ -95,7 +95,6 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 @import "theme/components/links";
 @import "theme/components/buttons";
 @import "theme/components/addresses";
-@import "theme/components/featured-image";
 @import "theme/components/galleries";
 
 // Theme General Layout
@@ -106,7 +105,8 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 @import "theme/layout/footer";
 @import "theme/layout/off-canvas";
 
-// Theme Modules
+// Template Parts
+@import "theme/template-parts/featured-image";
 
 // Theme Templates
 @import "theme/templates/page-default";
