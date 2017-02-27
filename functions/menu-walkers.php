@@ -3,7 +3,7 @@
  * Customize the output of menus for Foundation top bar
  *
  * @package WordPress
- * @subpackage FoundationPress
+ * @subpackage Double-E Foundation
  * @since FoundationPress 1.0.0
  */
 

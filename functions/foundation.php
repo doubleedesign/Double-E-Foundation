@@ -3,7 +3,7 @@
  * Foundation PHP template
  *
  * @package WordPress
- * @subpackage FoundationPress
+ * @subpackage Double-E Foundation
  * @since FoundationPress 1.0.0
  */
 

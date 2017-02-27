@@ -3,7 +3,7 @@
  * Register theme support for languages, menus, post-thumbnails, post-formats etc.
  *
  * @package WordPress
- * @subpackage FoundationPress
+ * @subpackage Double-E Foundation
  * @since Double-E Foundation 2.0
  */
 

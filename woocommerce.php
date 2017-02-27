@@ -3,7 +3,7 @@
  * Basic WooCommerce support
  *
  * @package WordPress
- * @subpackage FoundationPress
+ * @subpackage Double-E Foundation
  * @since FoundationPress 1.0.0
  */
 

@@ -5,8 +5,8 @@
  * Displays all of the head element and everything up until the "container" div.
  *
  * @package WordPress
- * @subpackage FoundationPress
- * @since FoundationPress 1.0.0
+ * @subpackage Double-E Foundation
+ * @since Double-E Foundation 2.1
  */
 
 ?>
