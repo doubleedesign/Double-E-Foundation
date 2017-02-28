@@ -636,7 +636,7 @@ button {
 }
 
 .row {
-  max-width: 75rem;
+  max-width: 80rem;
   margin-right: auto;
   margin-left: auto;
   display: -webkit-flex;
@@ -7533,7 +7533,7 @@ body {
 }
 
 #footer-container #footer {
-  max-width: 75rem;
+  max-width: 80rem;
   margin-right: auto;
   margin-left: auto;
   padding: 1.875rem 0;
