@@ -81,10 +81,12 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 @include foundation-tooltip;
 @include foundation-top-bar;
 
-// Motion UI
-@import "extras/motion-ui/motion-ui";
-@include motion-ui-transitions;
-@include motion-ui-animations;
+/* 
+  Third-party libraries
+  Add third-party CSS libraries that are not part of Foundation here
+*/
+
+@include "vendor/animate";
 
 /*
   Site custom styles:
