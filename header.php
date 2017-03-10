@@ -39,7 +39,7 @@ $parent_class = 'parent-'.$parent->post_name;
 	<body id="<?php echo $slug; ?>" <?php body_class($browser . ' ' . $parent_class); ?>>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) { ?>
-	<div class="off-canvas-wrapper">
+	<div class="off-canvas-wrapper fadeIn animated">
 		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 		<?php get_template_part( 'parts/mobile-off-canvas' ); ?>
 	<?php } ?>
