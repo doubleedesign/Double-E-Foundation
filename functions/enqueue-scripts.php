@@ -27,10 +27,39 @@ if ( ! function_exists( 'doublee_scripts' ) ) :
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+		
+		// Async or defer scripts
+		
+			// jQuery
+			add_filter('script_loader_tag', 'jquery_async', 10, 2);
+			function jquery_async($tag, $handle) {
+				if ( 'jquery' !== $handle)
+				return $tag;
+				return str_replace( ' src', ' async src', $tag );
+			}
+
+			// Theme JS
+			add_filter('script_loader_tag', 'themejs_defer', 10, 2);
+			function themejs_defer($tag, $handle) {
+				if ( 'theme' !== $handle)
+				return $tag;
+				return str_replace( ' src', ' defer src', $tag );
+			}
+
+			// WP-Embed
+			add_filter('script_loader_tag', 'embedjs_defer', 10, 2);
+			function embedjs_defer($tag, $handle) {
+				if ( 'wp-embed' !== $handle)
+				return $tag;
+				return str_replace( ' src', ' defer src', $tag );
+			}
 
 	}
 
 	add_action( 'wp_enqueue_scripts', 'doublee_scripts' );
+
 endif;
+
+
 
 ?>
