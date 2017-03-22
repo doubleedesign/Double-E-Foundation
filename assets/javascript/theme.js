@@ -1,3 +1,6 @@
+//@prepros-prepend foundation.js
+//@prepros-prepend vendor/what-input.min.js
+
 $(document).ready(function() {
 	
 	"use strict";
