@@ -4,27 +4,45 @@
  *
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 2.0
+ * @since Double-E-Foundation 2.1.3
  */
 
 /* ==========================================
 	ADD SLUGS TO NAVIGATION MENU ITEMS
 ============================================*/
-
-function add_slug_class_to_menu_item($output){
-	$ps = get_option('permalink_structure');
-	if(!empty($ps)){
-		$idstr = preg_match_all('/<li id="menu-item-(\d+)/', $output, $matches);
-		foreach($matches[1] as $mid){
-			$id = get_post_meta($mid, '_menu_item_object_id', true);
-			$slug = basename(get_permalink($id));
-			$output = preg_replace('/menu-item-'.$mid.'">/', 'menu-item-'.$mid.' menu-item-'.$slug.'">', $output, 1);
-		}
-	}
-	return $output;
+function elcck_nav_id_filter( $id, $item ) {
+	// Get the menu item title and put it into lowercase
+	$slug = strtolower($item->title);
+	// Remove ampersands
+	$slug = str_replace('&', '', $slug); 
+	$slug = str_replace('#038;', '', $slug); 
+	// Replace spaces with hyphens
+	$slug = preg_replace('#[ -]+#', '-', $slug);
+	// Add the final slug
+	return 'menu-item-'.$slug;
 }
-add_filter('wp_nav_menu', 'add_slug_class_to_menu_item');
+add_filter( 'nav_menu_item_id', 'elcck_nav_id_filter', 10, 2 );
 
+
+/* ==========================================
+	ADD PARENT PAGE SLUG TO THE BODY CLASS
+	(Adds both to the parent page itself and its child pages)
+============================================*/
+function elcck_body_class_section($classes) {  
+	global $wpdb, $post;  
+	$current_page_id = $post->ID;
+	if (is_page()) {  
+		if ($post->post_parent) {  
+			$parent  = end(get_post_ancestors($current_page_id));  
+		} else {  
+			$parent = $post->ID;  
+		}  
+		$post_data = get_post($parent, ARRAY_A);  
+		$classes[] = 'section-' . $post_data['post_name'];  
+	}  
+	return $classes;  
+}  
+add_filter('body_class','elcck_body_class_section'); 
 
 
 /* ==========================================
