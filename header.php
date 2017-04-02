@@ -41,7 +41,7 @@ $parent_class = 'parent-'.$parent->post_name;
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) { ?>
 	<div class="off-canvas-wrapper fadeIn animated">
 		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-		<?php get_template_part( 'parts/mobile-off-canvas' ); ?>
+		<?php get_template_part( 'template-parts/mobile-off-canvas' ); ?>
 	<?php } ?>
 
 	<header id="masthead" class="site-header" role="banner">
