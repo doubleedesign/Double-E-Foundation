@@ -21,7 +21,7 @@ if ( ! function_exists( 'doublee_scripts' ) ) :
 		// Theme JavaScript - includes foundation.js and others compiled into it
 		$theme = wp_get_theme();
 		$version = $theme->get( 'Version' );
-		wp_enqueue_script( 'Theme', get_template_directory_uri() . '/assets/javascript/min/theme.min.js', array('jquery', 'foundation'), $version, true );
+		wp_enqueue_script( 'Theme', get_template_directory_uri() . '/assets/javascript/min/theme.min.js', array('jquery'), $version, true );
 
 		// Add the comment-reply library on pages where it is necessary
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
