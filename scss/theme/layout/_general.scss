@@ -2,6 +2,27 @@
 	margin: $global-margin*3 0;
 }
 
+.skip-to-content {
+	height: 0;
+	display: block;
+	padding: 0;
+	background: $topbar-background;
+	color: $white;
+	line-height: 0;
+	font-size: 0;
+	
+	&:active,
+	&:hover,
+	&:focus {
+		background: $accent-color;
+		color: $white;
+		height: auto;
+		padding: $global-padding;
+		line-height: 1;
+		font-size: 1rem;
+	}
+}
+
 .wf-loading {
 
 	body {
