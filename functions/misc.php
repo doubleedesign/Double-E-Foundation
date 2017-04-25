@@ -29,7 +29,7 @@ add_filter( 'nav_menu_css_class', 'doublee_menu_classes', 10, 3 );
 	ADD PARENT PAGE SLUG TO THE BODY CLASS
 	(Adds both to the parent page itself and its child pages)
 ============================================*/
-function elcck_body_class_section($classes) {  
+function doublee_body_class_section($classes) {  
 	global $wpdb, $post;  
 	$current_page_id = $post->ID;
 	if (is_page()) {  
@@ -43,7 +43,7 @@ function elcck_body_class_section($classes) {
 	}  
 	return $classes;  
 }  
-add_filter('body_class','elcck_body_class_section'); 
+add_filter('body_class', 'doublee_body_class_section'); 
 
 
 /* ==========================================
