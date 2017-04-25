@@ -10,8 +10,8 @@
 /* ==========================================
 	ADD SLUGS TO NAVIGATION MENU ITEMS
 ============================================*/
-function elcck_nav_id_filter( $id, $item ) {
-	// Get the menu item title and put it into lowercase
+function doublee_menu_classes( $atts, $item, $args ) {
+    // Get the menu item title and put it into lowercase
 	$slug = strtolower($item->title);
 	// Remove ampersands
 	$slug = str_replace('&', '', $slug); 
@@ -19,9 +19,10 @@ function elcck_nav_id_filter( $id, $item ) {
 	// Replace spaces with hyphens
 	$slug = preg_replace('#[ -]+#', '-', $slug);
 	// Add the final slug
-	return 'menu-item-'.$slug;
+	$atts['class'] = 'menu-item-'.$slug;
+    return $atts;
 }
-add_filter( 'nav_menu_item_id', 'elcck_nav_id_filter', 10, 2 );
+add_filter( 'nav_menu_css_class', 'doublee_menu_classes', 10, 3 );
 
 
 /* ==========================================
