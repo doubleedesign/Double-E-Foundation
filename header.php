@@ -56,7 +56,7 @@ $parent_class = 'parent-'.$parent->post_name;
 			<?php } ?>
 		</div>
 
-		<?php get_template_part('parts/top-bar'); ?>
+		<?php get_template_part('template-parts/top-bar'); ?>
 		
 	</header>
 
