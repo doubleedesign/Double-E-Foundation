@@ -4695,7 +4695,7 @@ select[multiple] {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background: #222;
+  background: #e6e6e6;
 }
 
 [data-whatinput='mouse'] .off-canvas {
@@ -4724,7 +4724,7 @@ select[multiple] {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  background: #222;
+  background: #e6e6e6;
 }
 
 [data-whatinput='mouse'] .off-canvas-absolute {
