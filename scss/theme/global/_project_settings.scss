@@ -8,13 +8,6 @@ $global-width: rem-calc(1280);
 $grid-row-width: $global-width;
 $global-margin: 1rem;
 $global-padding: 1rem;
-$grid-column-responsive-gutter: (
-  small: 	20px,
-  medium: 	30px,
-  large: 	40px,
-  xlarge: 	50px
-);
-$gutter: 	$grid-column-responsive-gutter; /*Just a bit of shorthand*/
 
 /* Breakpoints */
 $breakpoints: (
