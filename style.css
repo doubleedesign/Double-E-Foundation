@@ -8184,6 +8184,24 @@ address div[itemprop=email]:before {
   content: "E: ";
 }
 
+ul.social {
+  margin-left: 0;
+}
+
+ul.social li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+ul.social li:last-of-type {
+  margin-right: 0;
+}
+
+ul.social li i {
+  font-size: 1.5em;
+}
+
 .gallery {
   line-height: 0;
 }

@@ -1,0 +1,17 @@
+ul.social {
+	margin-left: 0;
+	
+	li {
+		list-style: none;
+		display: inline-block;
+		margin-right: $global-margin/2;
+		
+		&:last-of-type {
+			margin-right: 0;
+		}
+		
+		i {
+			font-size: 1.5em;
+		}
+	}
+}
