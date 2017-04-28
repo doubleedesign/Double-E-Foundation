@@ -3,30 +3,4 @@
 ====================================*/
 
 .button {
-	border: 1px solid $alert-color;
-	color: $alert-color;
-	background: $white;
-	text-transform: uppercase;
-	border-radius: $global-padding/2;
-	line-height: 0;
-	padding: $global-padding;
-	//padding-top: $global-padding*$global-lineheight;
-	padding-top: 1.25rem;
-	
-	&:hover,
-	&:focus {
-		color: $white;
-		background: $alert-color;
-		border-color: $alert-color;
-		border-bottom-color: $alert-color;
-	}
-	
-	&.accent {
-		background: $accent-color;
-		
-		&:hover,
-		&:focus {
-			background: darken($accent-color,5%);
-		}
-	}
 }

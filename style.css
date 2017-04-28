@@ -8115,32 +8115,6 @@ a {
 /*===================================
 	BUTTONS
 ====================================*/
-.button {
-  border: 1px solid #ec5840;
-  color: #ec5840;
-  background: #fefefe;
-  text-transform: uppercase;
-  border-radius: 0.5rem;
-  line-height: 0;
-  padding: 1rem;
-  padding-top: 1.25rem;
-}
-
-.button:hover, .button:focus {
-  color: #fefefe;
-  background: #ec5840;
-  border-color: #ec5840;
-  border-bottom-color: #ec5840;
-}
-
-.button.accent {
-  background: #ffae00;
-}
-
-.button.accent:hover, .button.accent:focus {
-  background: #e69d00;
-}
-
 address {
   font-style: normal;
   margin-bottom: 0.5rem;
