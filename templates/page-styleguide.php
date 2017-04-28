@@ -233,12 +233,6 @@
 					</div>
 
 					<div class="callout secondary">
-						<h4>This is a primary callout</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur faucibus orci vel commodo. Ut a orci dolor. Vivamus suscipit dictum erat, at mollis quam mattis quis.</p>
-						<a href="#">This is a link inside a callout</a>
-					</div>
-
-					<div class="callout secondary">
 						<h4>This is a secondary callout</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur faucibus orci vel commodo. Ut a orci dolor. Vivamus suscipit dictum erat, at mollis quam mattis quis.</p>
 						<a href="#">This is a link inside a callout</a>
