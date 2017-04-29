@@ -1,2 +1,205 @@
-/* CSS Document */
+#page.styleguide {
+	
+	.entry-content {
+		
+		section {
+			margin-bottom: $global-margin*2;
+			padding: $global-padding;
+			
+			&:nth-of-type(even) {
+				background: #EEE;
+			}
+		}
+		
+		#fonts {
+			list-style: none;
+			margin: $global-margin*2 0;
+			
+			li {
+				display: block;
 
+				&.heading {
+					&:after {
+					  content: '#{$header-font-family}';
+					  display: inline-block;
+					}
+				}
+
+				&.body {
+					&:after {
+					  content: '#{$body-font-family}';
+					  display: inline-block;
+					}
+				}
+			}
+		}
+		
+		#breakpoints {
+			list-style: none;
+			margin: $global-margin*2 0;
+			
+			li {
+				display: block;
+
+				&.medium {
+					&:after {
+					  content: "#{map-get($breakpoints,'medium')}";
+					  display: inline-block;
+					}
+				}
+				
+				&.large {
+					&:after {
+					  content: "#{map-get($breakpoints,'large')}";
+					  display: inline-block;
+					}
+				}
+				
+				&.xlarge {
+					&:after {
+					  content: "#{map-get($breakpoints,'xlarge')}";
+					  display: inline-block;
+					}
+				}
+				
+				&.xxlarge {
+					&:after {
+					  content: "#{map-get($breakpoints,'xxlarge')}";
+					  display: inline-block;
+					}
+				}
+			}
+		}
+		
+		#grid {
+			list-style: none;
+			margin: $global-margin*2 0;
+			
+			li {
+				display: block;
+
+				&.maxwidth {
+					&:after {
+					  content: '#{$grid-row-width}';
+					  display: inline-block;
+					}
+				}
+				
+				&.small-gutter {
+					&:after {
+					  content: "#{map-get($grid-column-gutter,'small')}";
+					  display: inline-block;
+					}
+				}
+				
+				&.medium-gutter {
+					&:after {
+					  content: "#{map-get($grid-column-gutter,'medium')}";
+					  display: inline-block;
+					}
+				}
+				
+				&.large-gutter {
+					&:after {
+					  content: "#{map-get($grid-column-gutter,'large')}";
+					  display: inline-block;
+					}
+				}
+				
+				&.xlarge-gutter {
+					&:after {
+					  content: "#{map-get($grid-column-gutter,'xlarge')}";
+					  display: inline-block;
+					}
+				}
+				
+				&.xxlarge-gutter {
+					&:after {
+					  content: "#{map-get($grid-column-gutter,'xxlarge')}";
+					  display: inline-block;
+					}
+				}
+			}
+		}
+		
+		#colors {
+			list-style: none;
+			margin-left: 0;
+			
+			li {
+				padding: $global-padding;
+				text-align: center;
+				color: $white;
+				margin-bottom: $global-margin;
+
+				&.primary {
+					background-color: $primary-color;
+					padding: $global-padding*3 $global-padding;
+					font-size: rem-calc(20);
+					
+					&:after {
+						content: '#{$primary-color}';
+						display: block;
+					}
+				}
+				
+				&.secondary {
+					background-color: $secondary-color;
+					padding: $global-padding*3 $global-padding;
+					font-size: rem-calc(20);
+					
+					&:after {
+						content: '#{$secondary-color}';
+						display: block;
+					}
+				}
+				
+				&.success {
+					background-color: $success-color;
+					
+					&:after {
+						content: '#{$success-color}';
+						display: block;
+					}
+				}
+				
+				&.warning {
+					background-color: $warning-color;
+					
+					&:after {
+						content: '#{$warning-color}';
+						display: block;
+					}
+				}
+				
+				&.alert {
+					background-color: $alert-color;
+					
+					&:after {
+						content: '#{$alert-color}';
+						display: block;
+					}
+				}
+				
+				&.accent {
+					background-color: $accent-color;
+					
+					&:after {
+						content: '#{$accent-color}';
+						display: block;
+					}
+				}
+				
+				&.body {
+					background-color: $body-font-color;
+					
+					&:after {
+						content: '#{$body-font-color}';
+						display: block;
+					}
+				}
+
+			}
+		}
+	}
+}
