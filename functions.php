@@ -55,6 +55,9 @@ require_once( 'functions/sticky-posts.php' );
 /** If your site requires protocol relative url's for theme assets, uncomment the line below. Also from FoundationPress*/
 require_once( 'functions/protocol-relative-theme-assets.php' );
 
+/** Featured image banner */
+require_once( 'functions/featured-image-banner.php'); 
+
 /** Miscellaneous functions */
 require_once( 'functions/misc.php' );
 

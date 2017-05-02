@@ -2558,22 +2558,22 @@ p + .stat {
 }
 
 .button.primary {
-  background-color: #1779ba;
-  color: #fff;
+  background-color: #2199e8;
+  color: #000;
 }
 
 .button.primary:hover, .button.primary:focus {
-  background-color: #126195;
-  color: #fff;
+  background-color: #147cc0;
+  color: #000;
 }
 
 .button.secondary {
-  background-color: #767676;
+  background-color: #777;
   color: #000;
 }
 
 .button.secondary:hover, .button.secondary:focus {
-  background-color: #5e5e5e;
+  background-color: #5f5f5f;
   color: #000;
 }
 
@@ -2598,12 +2598,12 @@ p + .stat {
 }
 
 .button.alert {
-  background-color: #cc4b37;
+  background-color: #ec5840;
   color: #000;
 }
 
 .button.alert:hover, .button.alert:focus {
-  background-color: #a53b2a;
+  background-color: #da3116;
   color: #000;
 }
 
@@ -2623,8 +2623,8 @@ p + .stat {
 }
 
 .button.disabled.primary, .button.disabled.primary:hover, .button.disabled.primary:focus, .button[disabled].primary, .button[disabled].primary:hover, .button[disabled].primary:focus {
-  background-color: #1779ba;
-  color: #fff;
+  background-color: #2199e8;
+  color: #000;
 }
 
 .button.disabled.secondary, .button[disabled].secondary {
@@ -2633,7 +2633,7 @@ p + .stat {
 }
 
 .button.disabled.secondary, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-  background-color: #767676;
+  background-color: #777;
   color: #000;
 }
 
@@ -2663,7 +2663,7 @@ p + .stat {
 }
 
 .button.disabled.alert, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert, .button[disabled].alert:hover, .button[disabled].alert:focus {
-  background-color: #cc4b37;
+  background-color: #ec5840;
   color: #000;
 }
 
@@ -2691,33 +2691,33 @@ p + .stat {
 }
 
 .button.hollow.primary {
-  border: 1px solid #1779ba;
-  color: #1779ba;
+  border: 1px solid #2199e8;
+  color: #2199e8;
 }
 
 .button.hollow.primary:hover, .button.hollow.primary:focus {
-  border-color: #0c3d5d;
-  color: #0c3d5d;
+  border-color: #0c4d78;
+  color: #0c4d78;
 }
 
 .button.hollow.primary:hover.disabled, .button.hollow.primary:hover[disabled], .button.hollow.primary:focus.disabled, .button.hollow.primary:focus[disabled] {
-  border: 1px solid #1779ba;
-  color: #1779ba;
+  border: 1px solid #2199e8;
+  color: #2199e8;
 }
 
 .button.hollow.secondary {
-  border: 1px solid #767676;
-  color: #767676;
+  border: 1px solid #777;
+  color: #777;
 }
 
 .button.hollow.secondary:hover, .button.hollow.secondary:focus {
-  border-color: #3b3b3b;
-  color: #3b3b3b;
+  border-color: #3c3c3c;
+  color: #3c3c3c;
 }
 
 .button.hollow.secondary:hover.disabled, .button.hollow.secondary:hover[disabled], .button.hollow.secondary:focus.disabled, .button.hollow.secondary:focus[disabled] {
-  border: 1px solid #767676;
-  color: #767676;
+  border: 1px solid #777;
+  color: #777;
 }
 
 .button.hollow.success {
@@ -2751,18 +2751,18 @@ p + .stat {
 }
 
 .button.hollow.alert {
-  border: 1px solid #cc4b37;
-  color: #cc4b37;
+  border: 1px solid #ec5840;
+  color: #ec5840;
 }
 
 .button.hollow.alert:hover, .button.hollow.alert:focus {
-  border-color: #67251a;
-  color: #67251a;
+  border-color: #881f0e;
+  color: #881f0e;
 }
 
 .button.hollow.alert:hover.disabled, .button.hollow.alert:hover[disabled], .button.hollow.alert:focus.disabled, .button.hollow.alert:focus[disabled] {
-  border: 1px solid #cc4b37;
-  color: #cc4b37;
+  border: 1px solid #ec5840;
+  color: #ec5840;
 }
 
 .button.clear {
@@ -2781,22 +2781,22 @@ p + .stat {
 
 .button.clear.primary {
   border: 1px solid transparent;
-  color: #1779ba;
+  color: #2199e8;
 }
 
 .button.clear.primary:hover, .button.clear.primary:focus {
   border-color: transparent;
-  color: #0c3d5d;
+  color: #0c4d78;
 }
 
 .button.clear.secondary {
   border: 1px solid transparent;
-  color: #767676;
+  color: #777;
 }
 
 .button.clear.secondary:hover, .button.clear.secondary:focus {
   border-color: transparent;
-  color: #3b3b3b;
+  color: #3c3c3c;
 }
 
 .button.clear.success {
@@ -2821,12 +2821,12 @@ p + .stat {
 
 .button.clear.alert {
   border: 1px solid transparent;
-  color: #cc4b37;
+  color: #ec5840;
 }
 
 .button.clear.alert:hover, .button.clear.alert:focus {
   border-color: transparent;
-  color: #67251a;
+  color: #881f0e;
 }
 
 .button.dropdown::after {
@@ -2850,11 +2850,11 @@ p + .stat {
 }
 
 .button.dropdown.hollow.primary::after {
-  border-top-color: #1779ba;
+  border-top-color: #2199e8;
 }
 
 .button.dropdown.hollow.secondary::after {
-  border-top-color: #767676;
+  border-top-color: #777;
 }
 
 .button.dropdown.hollow.success::after {
@@ -2866,7 +2866,7 @@ p + .stat {
 }
 
 .button.dropdown.hollow.alert::after {
-  border-top-color: #cc4b37;
+  border-top-color: #ec5840;
 }
 
 .button.arrow-only::after {
@@ -8514,7 +8514,181 @@ body {
   }
 }
 
-/* CSS Document */
+#page.styleguide .entry-content section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+#page.styleguide .entry-content section:nth-of-type(even) {
+  background: #EEE;
+}
+
+#page.styleguide .entry-content #fonts {
+  list-style: none;
+  margin: 2rem 0;
+}
+
+#page.styleguide .entry-content #fonts li {
+  display: block;
+}
+
+#page.styleguide .entry-content #fonts li.heading:after {
+  content: "Helvetica Neue, Helvetica, Roboto, Arial, sans-serif";
+  display: inline-block;
+}
+
+#page.styleguide .entry-content #fonts li.body:after {
+  content: "Helvetica Neue, Helvetica, Roboto, Arial, sans-serif";
+  display: inline-block;
+}
+
+#page.styleguide .entry-content #breakpoints {
+  list-style: none;
+  margin: 2rem 0;
+}
+
+#page.styleguide .entry-content #breakpoints li {
+  display: block;
+}
+
+#page.styleguide .entry-content #breakpoints li.medium:after {
+  content: "640px";
+  display: inline-block;
+}
+
+#page.styleguide .entry-content #breakpoints li.large:after {
+  content: "1024px";
+  display: inline-block;
+}
+
+#page.styleguide .entry-content #breakpoints li.xlarge:after {
+  content: "1280px";
+  display: inline-block;
+}
+
+#page.styleguide .entry-content #breakpoints li.xxlarge:after {
+  content: "1800px";
+  display: inline-block;
+}
+
+#page.styleguide .entry-content #grid {
+  list-style: none;
+  margin: 2rem 0;
+}
+
+#page.styleguide .entry-content #grid li {
+  display: block;
+}
+
+#page.styleguide .entry-content #grid li.maxwidth:after {
+  content: "80rem";
+  display: inline-block;
+}
+
+#page.styleguide .entry-content #grid li.small-gutter:after {
+  content: "20px";
+  display: inline-block;
+}
+
+#page.styleguide .entry-content #grid li.medium-gutter:after {
+  content: "30px";
+  display: inline-block;
+}
+
+#page.styleguide .entry-content #grid li.large-gutter:after {
+  content: "";
+  display: inline-block;
+}
+
+#page.styleguide .entry-content #grid li.xlarge-gutter:after {
+  content: "";
+  display: inline-block;
+}
+
+#page.styleguide .entry-content #grid li.xxlarge-gutter:after {
+  content: "";
+  display: inline-block;
+}
+
+#page.styleguide .entry-content #colors {
+  list-style: none;
+  margin-left: 0;
+}
+
+#page.styleguide .entry-content #colors li {
+  padding: 1rem;
+  text-align: center;
+  color: #fefefe;
+  margin-bottom: 1rem;
+}
+
+#page.styleguide .entry-content #colors li.primary {
+  background-color: #2199e8;
+  padding: 3rem 1rem;
+  font-size: 1.25rem;
+}
+
+#page.styleguide .entry-content #colors li.primary:after {
+  content: "#2199e8";
+  display: block;
+}
+
+#page.styleguide .entry-content #colors li.secondary {
+  background-color: #777;
+  padding: 3rem 1rem;
+  font-size: 1.25rem;
+}
+
+#page.styleguide .entry-content #colors li.secondary:after {
+  content: "#777";
+  display: block;
+}
+
+#page.styleguide .entry-content #colors li.success {
+  background-color: #3adb76;
+}
+
+#page.styleguide .entry-content #colors li.success:after {
+  content: "#3adb76";
+  display: block;
+}
+
+#page.styleguide .entry-content #colors li.warning {
+  background-color: #ffae00;
+}
+
+#page.styleguide .entry-content #colors li.warning:after {
+  content: "#ffae00";
+  display: block;
+}
+
+#page.styleguide .entry-content #colors li.alert {
+  background-color: #ec5840;
+}
+
+#page.styleguide .entry-content #colors li.alert:after {
+  content: "#ec5840";
+  display: block;
+}
+
+#page.styleguide .entry-content #colors li.accent {
+  background-color: #ffae00;
+}
+
+#page.styleguide .entry-content #colors li.accent:after {
+  content: "#ffae00";
+  display: block;
+}
+
+#page.styleguide .entry-content #colors li.body {
+  background-color: #444;
+}
+
+#page.styleguide .entry-content #colors li.body:after {
+  content: "#444";
+  display: block;
+}
+
 /* CSS Document */
 
 /*# sourceMappingURL=style.css.map */
