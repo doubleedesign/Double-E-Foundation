@@ -56,4 +56,36 @@ function doublee_move_yoast_seo_metabox() {
 }
 
 
+/* ==========================================
+	STRIP HEADINGS FROM EXCERPTS AND SET THE LENGTH
+	Template usage: echo doublee_custom_excerpt() instead of the_excerpt()
+	This will ignore manual excerpts so best to run a has_excerpt() check to output the manual excerpt first
+============================================*/
+
+function doublee_custom_excerpt() {
+	 // Retrieve the excerpt content
+	 $text = get_the_content(); 
+	 // Remove shortcode tags from the given content
+	 $text = strip_shortcodes( $text );
+	 $text = apply_filters('the_content', $text);
+	 $text = str_replace(']]>', ']]&gt;', $text);
+
+	 // Regular expression that strips the header tags and their content
+	 $regex = '#(<h([1-6])[^>]*>)\s?(.*)?\s?(<\/h\2>)#';
+	 $text = preg_replace($regex,'', $text);
+
+	 // Set the word count
+	 $excerpt_word_count = 30; // WP default is 55
+	 $excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
+
+	 // Set the ending
+	 $excerpt_end = '...'; // The WP default is [...]
+	 $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
+
+	 $excerpt = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+	 return wpautop(apply_filters('wp_trim_excerpt', $excerpt, $raw_excerpt));
+}
+
+
+
 ?>
