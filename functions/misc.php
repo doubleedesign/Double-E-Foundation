@@ -49,7 +49,6 @@ add_filter('body_class', 'doublee_body_class_section');
 /* ==========================================
 	MOVE YOAST SEO TO THE BOTTOM OF EDIT SCREENS
 ============================================*/
-
 add_filter( 'wpseo_metabox_prio', 'doublee_move_yoast_seo_metabox' );
 function doublee_move_yoast_seo_metabox() {
 	return 'low';
@@ -61,7 +60,6 @@ function doublee_move_yoast_seo_metabox() {
 	Template usage: echo doublee_custom_excerpt() instead of the_excerpt()
 	This will ignore manual excerpts so best to run a has_excerpt() check to output the manual excerpt first
 ============================================*/
-
 function doublee_custom_excerpt() {
 	 // Retrieve the excerpt content
 	 $text = get_the_content(); 
