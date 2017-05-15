@@ -5,3 +5,83 @@
 	font-family: "FontAwesome";
 	content: $icon;
 }
+
+/*==============================================
+	GUTTER PADDING ON TOP AND BOTTOM
+	Uses the $grid-column-gutter map 
+	to set responsive top and bottom padding on an element
+==============================================*/
+@mixin grid-gutter-padding-top-bottom {
+	padding-top: map-get($grid-column-gutter,'small'); 
+	padding-bottom: map-get($grid-column-gutter,'small'); 
+
+	@include breakpoint(medium up) {
+		padding-top: map-get($grid-column-gutter,'medium'); 
+		padding-bottom: map-get($grid-column-gutter,'medium'); 
+	}
+
+	@include breakpoint(large up) {
+		padding-top: map-get($grid-column-gutter,'large'); 
+		padding-bottom: map-get($grid-column-gutter,'large'); 
+	}
+
+	@include breakpoint(xlarge up) {
+		padding-top: map-get($grid-column-gutter,'xlarge');
+		padding-bottom: map-get($grid-column-gutter,'xlarge');
+	}
+
+	@include breakpoint(xxlarge up) {
+		padding-top: map-get($grid-column-gutter,'xxlarge'); 
+		padding-bottom: map-get($grid-column-gutter,'xxlarge'); 
+	}
+}
+
+/*==============================================
+	GUTTER MARGIN BOTTOM
+	Uses the $grid-column-gutter map 
+	to set a responsive bottom margin on an element
+==============================================*/
+@mixin grid-gutter-margin-bottom {
+	margin-bottom: map-get($grid-column-gutter,'small'); 
+
+	@include breakpoint(medium up) {
+		margin-bottom: map-get($grid-column-gutter,'medium'); 
+	}
+
+	@include breakpoint(large up) {
+		margin-bottom: map-get($grid-column-gutter,'large'); 
+	}
+
+	@include breakpoint(xlarge up) {
+		margin-bottom: map-get($grid-column-gutter,'xlarge');
+	}
+
+	@include breakpoint(xxlarge up) {
+		margin-bottom: map-get($grid-column-gutter,'xxlarge'); 
+	}
+}
+
+/*==============================================
+	GUTTER MARGIN TOP
+	Uses the $grid-column-gutter map 
+	to set a responsive top margin on an element
+==============================================*/
+@mixin grid-gutter-margin-top {
+	margin-top: map-get($grid-column-gutter,'small'); 
+
+	@include breakpoint(medium up) {
+		margin-top: map-get($grid-column-gutter,'medium'); 
+	}
+
+	@include breakpoint(large up) {
+		margin-top: map-get($grid-column-gutter,'large'); 
+	}
+
+	@include breakpoint(xlarge up) {
+		margin-top: map-get($grid-column-gutter,'xlarge');
+	}
+
+	@include breakpoint(xxlarge up) {
+		margin-top: map-get($grid-column-gutter,'xxlarge'); 
+	}
+}
