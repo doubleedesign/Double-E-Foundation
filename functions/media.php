@@ -81,19 +81,41 @@ function doublee_post_thumbnail_caption() {
 }
 
 /* ==========================================
-	OTHER IMAGE FUNCTIONS
-============================================*/
+	MISC IMAGE FUNCTIONS
+===========================================*/
 
 // Always default to 'None' when inserting images
-function doublee_image_setup() {$image_set = get_option( 'image_default_link_type' );if ($image_set !== 'none') {update_option('image_default_link_type', 'none');}}add_action('admin_init', 'doublee_image_setup', 10);
+function doublee_image_setup() {
+	$image_set = get_option( 'image_default_link_type' );
+	if ($image_set !== 'none') {
+		update_option('image_default_link_type', 'none');
+	}
+}
+add_action('admin_init', 'doublee_image_setup', 10);
 
 // Always default to 'Media File' when inserting galleries
 add_filter('shortcode_atts_gallery', function( $out ){$out['link'] = 'file'; return $out; });
 
 // Identify external links automatically and open them in a new window - add class "ext"
-function doublee_change_target($content){return preg_replace_callback('/<a[^>]+/', 'doublee_target_callback', $content);}function doublee_target_callback($matches){$link = $matches[0];$mu_url = get_bloginfo('url');if (strpos($link, 'target') === false){$link = preg_replace("%(href=\S(?!$mu_url))%i", 'target="_blank" class="ext" $1', $link);}elseif (preg_match("%href=\S(?!$mu_url)%i", $link)){$link = preg_replace('/target=S(?!_blank)\S*/i', 'target="_blank" class="ext"', $link);} return $link;}add_filter('the_content', 'doublee_change_target');
+function doublee_change_target($content){
+	return preg_replace_callback('/<a[^>]+/', 'doublee_target_callback', $content);
+}
+function doublee_target_callback($matches){
+	$link = $matches[0];$mu_url = get_bloginfo('url');
+	if (strpos($link, 'target') === false){
+		$link = preg_replace("%(href=\S(?!$mu_url))%i", 'target="_blank" class="ext" $1', $link);}
+	elseif (preg_match("%href=\S(?!$mu_url)%i", $link)){
+		$link = preg_replace('/target=S(?!_blank)\S*/i', 'target="_blank" class="ext"', $link);
+	} 
+	return $link;
+}
+add_filter('the_content', 'doublee_change_target');
 
 // Filter <p> tags from images and iframes
-function doublee_p_filter($content) { $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content); return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content); } add_filter('the_content', 'doublee_p_filter'); 
+function doublee_p_filter($content) { 
+	$content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content); 
+	return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content); 
+} 
+add_filter('the_content', 'doublee_p_filter'); 
 
 ?>
