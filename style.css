@@ -4,7 +4,7 @@ Theme Name:         	Double-E Foundation
 Theme URI:          	http://www.leesaward.com.au
 GitHub Theme URI:   	https://github.com/doubleedesign/Double-E-Foundation
 Description:        	Double-E Foundation is a WordPress starter theme using Zurb Foundation 6.
-Version:            	2.2.2
+Version:            	2.2.3
 Foundation version: 	6.3.1
 Author:            		Leesa Ward / Double-E Design
 Author URI:         	http://www.doubleedesign.com.au
@@ -24,6 +24,21 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 */
 /*==============================================
 	ICON MIXIN
+==============================================*/
+/*==============================================
+	GUTTER PADDING ON TOP AND BOTTOM
+	Uses the $grid-column-gutter map 
+	to set responsive top and bottom padding on an element
+==============================================*/
+/*==============================================
+	GUTTER MARGIN BOTTOM
+	Uses the $grid-column-gutter map 
+	to set a responsive bottom margin on an element
+==============================================*/
+/*==============================================
+	GUTTER MARGIN TOP
+	Uses the $grid-column-gutter map 
+	to set a responsive top margin on an element
 ==============================================*/
 /*===========================================================
 	STRUCTURE
@@ -672,22 +687,22 @@ textarea {
 
 @media print, screen and (min-width: 64em) {
   .row .row {
-    margin-right: -0.9375rem;
-    margin-left: -0.9375rem;
+    margin-right: -1.25rem;
+    margin-left: -1.25rem;
   }
 }
 
 @media screen and (min-width: 80em) {
   .row .row {
-    margin-right: -0.9375rem;
-    margin-left: -0.9375rem;
+    margin-right: -1.5625rem;
+    margin-left: -1.5625rem;
   }
 }
 
 @media screen and (min-width: 112.5em) {
   .row .row {
-    margin-right: -0.9375rem;
-    margin-left: -0.9375rem;
+    margin-right: -1.875rem;
+    margin-left: -1.875rem;
   }
 }
 
@@ -733,6 +748,27 @@ textarea {
   .column, .columns {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .column, .columns {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .column, .columns {
+    padding-right: 1.5625rem;
+    padding-left: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 112.5em) {
+  .column, .columns {
+    padding-right: 1.875rem;
+    padding-left: 1.875rem;
   }
 }
 
@@ -1543,8 +1579,8 @@ textarea {
     padding-left: 0;
   }
   .large-uncollapse > .column, .large-uncollapse > .columns {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
   }
 }
 
@@ -1799,8 +1835,8 @@ textarea {
     padding-left: 0;
   }
   .xlarge-uncollapse > .column, .xlarge-uncollapse > .columns {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
+    padding-right: 1.5625rem;
+    padding-left: 1.5625rem;
   }
 }
 
@@ -2055,8 +2091,8 @@ textarea {
     padding-left: 0;
   }
   .xxlarge-uncollapse > .column, .xxlarge-uncollapse > .columns {
-    padding-right: 0.9375rem;
-    padding-left: 0.9375rem;
+    padding-right: 1.875rem;
+    padding-left: 1.875rem;
   }
 }
 
@@ -2077,6 +2113,33 @@ textarea {
 @media print, screen and (min-width: 40em) {
   .column-block {
     margin-bottom: 1.875rem;
+  }
+  .column-block > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .column-block {
+    margin-bottom: 2.5rem;
+  }
+  .column-block > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .column-block {
+    margin-bottom: 3.125rem;
+  }
+  .column-block > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 112.5em) {
+  .column-block {
+    margin-bottom: 3.75rem;
   }
   .column-block > :last-child {
     margin-bottom: 0;
@@ -8272,6 +8335,27 @@ ul.social li i {
   }
 }
 
+@media print, screen and (min-width: 64em) {
+  .gallery.gallery-columns-1 .gallery-item, .gallery.gallery-columns-2 .gallery-item, .gallery.gallery-columns-3 .gallery-item {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .gallery.gallery-columns-1 .gallery-item, .gallery.gallery-columns-2 .gallery-item, .gallery.gallery-columns-3 .gallery-item {
+    padding-right: 1.5625rem;
+    padding-left: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 112.5em) {
+  .gallery.gallery-columns-1 .gallery-item, .gallery.gallery-columns-2 .gallery-item, .gallery.gallery-columns-3 .gallery-item {
+    padding-right: 1.875rem;
+    padding-left: 1.875rem;
+  }
+}
+
 .gallery.gallery-columns-1 .gallery-item:last-child:not(:first-child), .gallery.gallery-columns-2 .gallery-item:last-child:not(:first-child), .gallery.gallery-columns-3 .gallery-item:last-child:not(:first-child) {
   float: right;
 }
@@ -8287,6 +8371,27 @@ ul.social li i {
   .gallery.gallery-columns-4 .gallery-item {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .gallery.gallery-columns-4 .gallery-item {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .gallery.gallery-columns-4 .gallery-item {
+    padding-right: 1.5625rem;
+    padding-left: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 112.5em) {
+  .gallery.gallery-columns-4 .gallery-item {
+    padding-right: 1.875rem;
+    padding-left: 1.875rem;
   }
 }
 
@@ -8311,6 +8416,27 @@ ul.social li i {
   .gallery.gallery-columns-6 .gallery-item {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .gallery.gallery-columns-6 .gallery-item {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .gallery.gallery-columns-6 .gallery-item {
+    padding-right: 1.5625rem;
+    padding-left: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 112.5em) {
+  .gallery.gallery-columns-6 .gallery-item {
+    padding-right: 1.875rem;
+    padding-left: 1.875rem;
   }
 }
 
@@ -8464,6 +8590,27 @@ body {
   }
 }
 
+@media print, screen and (min-width: 64em) {
+  .sidebar {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .sidebar {
+    padding-right: 1.5625rem;
+    padding-left: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 112.5em) {
+  .sidebar {
+    padding-right: 1.875rem;
+    padding-left: 1.875rem;
+  }
+}
+
 .sidebar:last-child:not(:first-child) {
   float: right;
 }
@@ -8482,6 +8629,27 @@ body {
   .sidebar {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
+  }
+}
+
+@media print, screen and (min-width: 40em) and (min-width: 64em) {
+  .sidebar {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 40em) and (min-width: 80em) {
+  .sidebar {
+    padding-right: 1.5625rem;
+    padding-left: 1.5625rem;
+  }
+}
+
+@media screen and (min-width: 40em) and (min-width: 112.5em) {
+  .sidebar {
+    padding-right: 1.875rem;
+    padding-left: 1.875rem;
   }
 }
 
@@ -8627,17 +8795,17 @@ body {
 }
 
 #page.styleguide .entry-content #grid li.large-gutter:after {
-  content: "";
+  content: "40px";
   display: inline-block;
 }
 
 #page.styleguide .entry-content #grid li.xlarge-gutter:after {
-  content: "";
+  content: "50px";
   display: inline-block;
 }
 
 #page.styleguide .entry-content #grid li.xxlarge-gutter:after {
-  content: "";
+  content: "60px";
   display: inline-block;
 }
 
