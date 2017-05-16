@@ -83,8 +83,10 @@ require_once( 'functions/featured-image-banner.php');
 /** WooCommerce functions if you're using it */
 //require_once('functions/woocommerce.php');
 
+/** WooCommerce functions for non-eCommerce / product catalogue sites */
+//require_once('functions/woocommerce-catalogue.php');
+
 /** Miscellaneous functions */
 require_once( 'functions/misc.php' );
-
 
 ?>
