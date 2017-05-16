@@ -10,58 +10,81 @@
  * @link https://codex.wordpress.org/Theme_Development
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 0.0.2
+ * @since Double-E-Foundation 2.2.3
  */
 
-/** Various clean up functions - thanks FoundationPress */
-require_once( 'functions/cleanup.php' );
+/* ==========================================
+	GENERAL SETUP
+===========================================*/
 
 /** Required for Foundation to work properly - thanks FoundationPress */
-require_once( 'functions/foundation.php' );
+require_once( 'functions/setup/foundation.php' );
 
-/** Register all navigation menus - thanks FoundationPress */
-require_once( 'functions/navigation.php' );
+/** If your site requires protocol relative URLs for theme assets, uncomment the line below. Also from FoundationPress*/
+require_once( 'functions/setup/protocol-relative-theme-assets.php' );
 
-/** Add menu walkers for top-bar and off-canvas - thanks FoundationPress */
-require_once( 'functions/menu-walkers.php' );
+/** Various clean up functions - thanks FoundationPress */
+require_once( 'functions/setup/cleanup.php' );
 
-/** Create widget areas in sidebar and footer - thanks FoundationPress */
-require_once( 'functions/widget-areas.php' );
+/** Change WP's sticky post class - thanks FoundationPress */
+require_once( 'functions/setup/sticky-posts.php' );
 
-/** Return entry meta information for posts - thanks FoundationPress */
-require_once( 'functions/entry-meta.php' );
+/** Declare theme support for various WordPress features */
+require_once( 'functions/setup/theme-support.php' );
+
+/** Widget areas if required */
+require_once( 'functions/setup/widget-areas.php' );
 
 /** Enqueue styles */
-require_once( 'functions/enqueue-styles.php' );
+require_once( 'functions/setup/enqueue-styles.php' );
 
 /** Enqueue scripts */
-require_once( 'functions/enqueue-scripts.php' );
+require_once( 'functions/setup/enqueue-scripts.php' );
 
-/** Add theme support */
-require_once( 'functions/theme-support.php' );
 
-/** Meta fields */
-require_once ('functions/meta/visual-page-title.php'); 
+/* ==========================================
+	NAVIGATION
+===========================================*/
+
+/** Add Nav Options to Customiser - thanks FoundationPress */
+require_once( 'functions/navigation/custom-nav.php' );
+
+/** Register all navigation menus */
+require_once( 'functions/navigation/register-menus.php' );
+
+/** Add menu walkers for top-bar and off-canvas - thanks FoundationPress */
+require_once( 'functions/navigation/menu-walkers.php' );
+
+/** Add classes to menu items */
+require_once( 'functions/navigation/menu-classes.php' );
+
+
+/* ==========================================
+	METABOXES
+===========================================*/
+
+/** Meta fields/boxes */
+require_once ('functions/metaboxes/visual-page-title.php'); 
+
+
+/* ==========================================
+	TEMPLATE DEVELOPMENT FUNCTIONS
+===========================================*/
+
+/** Developer functions - general functions/tools for theme/template development */ 
+require_once( 'functions/developer.php' );
 
 /** Image-related functions */
 require_once( 'functions/media.php' );
 
-/** Add Nav Options to Custom - thanks FoundationPress */
-require_once( 'functions/custom-nav.php' );
-
-/** Change WP's sticky post class - thanks FoundationPress */
-require_once( 'functions/sticky-posts.php' );
-
-/** If your site requires protocol relative url's for theme assets, uncomment the line below. Also from FoundationPress*/
-require_once( 'functions/protocol-relative-theme-assets.php' );
-
 /** Featured image banner */
 require_once( 'functions/featured-image-banner.php'); 
+
+/** WooCommerce functions if you're using it */
+//require_once('functions/woocommerce.php');
 
 /** Miscellaneous functions */
 require_once( 'functions/misc.php' );
 
-/** WooCommerce functions if you're using it */
-//require_once('functions/woocommerce.php');
 
 ?>
