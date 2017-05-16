@@ -18,7 +18,7 @@
            <header>
                <h1 class="entry-title">
                     <?php
-				   		$visual_page_title = get_post_meta( $post->ID, 'stm_visual-page-title-entry', true ); 
+				   		$visual_page_title = get_post_meta( $post->ID, 'doublee_visual-page-title-entry', true ); 
 				   		if (!empty($visual_page_title)) {
 							echo $visual_page_title. ' Heading 1';
 						} else {
