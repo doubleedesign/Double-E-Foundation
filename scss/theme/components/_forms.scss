@@ -1,5 +1,9 @@
 form {
 	
+	.ninja-forms-req-symbol {
+		color: $alert-color;
+	}
+	
 	.nf-error-msg {
 		@extend .callout, .alert.callout;
 	}

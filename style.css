@@ -8209,6 +8209,10 @@ a {
 /*===================================
 	BUTTONS
 ====================================*/
+form .ninja-forms-req-symbol {
+  color: #ec5840;
+}
+
 form .nf-after-field .nf-error-msg {
   margin-right: 0;
 }
