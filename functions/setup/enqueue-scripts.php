@@ -16,7 +16,7 @@ if ( ! function_exists( 'doublee_scripts' ) ) :
 		wp_deregister_script( 'jquery' );
 
 		// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
-		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', array(), '2.1.0', false );
+		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), '2.2.4', false );
 
 		// Theme JavaScript - includes foundation.js and others compiled into it
 		$theme = wp_get_theme();
@@ -29,14 +29,6 @@ if ( ! function_exists( 'doublee_scripts' ) ) :
 		}
 		
 		// Async or defer scripts
-		
-			// jQuery
-			add_filter('script_loader_tag', 'jquery_async', 10, 2);
-			function jquery_async($tag, $handle) {
-				if ( 'jquery' !== $handle)
-				return $tag;
-				return str_replace( ' src', ' async src', $tag );
-			}
 
 			// Theme JS
 			add_filter('script_loader_tag', 'themejs_defer', 10, 2);
