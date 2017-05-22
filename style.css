@@ -2574,7 +2574,7 @@ p + .stat {
   }
 }
 
-.button {
+.button, form input[type=button] {
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 1rem 0;
@@ -2592,307 +2592,307 @@ p + .stat {
   color: #fff;
 }
 
-[data-whatinput='mouse'] .button {
+[data-whatinput='mouse'] .button, [data-whatinput='mouse'] form input[type=button], form [data-whatinput='mouse'] input[type=button] {
   outline: 0;
 }
 
-.button:hover, .button:focus {
+.button:hover, form input[type=button]:hover, .button:focus, form input[type=button]:focus {
   background-color: #1583cc;
   color: #fff;
 }
 
-.button.tiny {
+.button.tiny, form input.tiny[type=button] {
   font-size: 0.6rem;
 }
 
-.button.small {
+.button.small, form input.small[type=button] {
   font-size: 0.75rem;
 }
 
-.button.large {
+.button.large, form input.large[type=button] {
   font-size: 1.25rem;
 }
 
-.button.expanded {
+.button.expanded, form input.expanded[type=button] {
   display: block;
   width: 100%;
   margin-right: 0;
   margin-left: 0;
 }
 
-.button.primary {
+.button.primary, form input.primary[type=button] {
   background-color: #2199e8;
   color: #000;
 }
 
-.button.primary:hover, .button.primary:focus {
+.button.primary:hover, form input.primary[type=button]:hover, .button.primary:focus, form input.primary[type=button]:focus {
   background-color: #147cc0;
   color: #000;
 }
 
-.button.secondary {
+.button.secondary, form input.secondary[type=button] {
   background-color: #777;
   color: #000;
 }
 
-.button.secondary:hover, .button.secondary:focus {
+.button.secondary:hover, form input.secondary[type=button]:hover, .button.secondary:focus, form input.secondary[type=button]:focus {
   background-color: #5f5f5f;
   color: #000;
 }
 
-.button.success {
+.button.success, form input.success[type=button] {
   background-color: #3adb76;
   color: #000;
 }
 
-.button.success:hover, .button.success:focus {
+.button.success:hover, form input.success[type=button]:hover, .button.success:focus, form input.success[type=button]:focus {
   background-color: #22bb5b;
   color: #000;
 }
 
-.button.warning {
+.button.warning, form input.warning[type=button] {
   background-color: #ffae00;
   color: #000;
 }
 
-.button.warning:hover, .button.warning:focus {
+.button.warning:hover, form input.warning[type=button]:hover, .button.warning:focus, form input.warning[type=button]:focus {
   background-color: #cc8b00;
   color: #000;
 }
 
-.button.alert {
+.button.alert, form input[type=button] {
   background-color: #ec5840;
   color: #000;
 }
 
-.button.alert:hover, .button.alert:focus {
+.button.alert:hover, form input[type=button]:hover, .button.alert:focus, form input[type=button]:focus {
   background-color: #da3116;
   color: #000;
 }
 
-.button.disabled, .button[disabled] {
+.button.disabled, form input.disabled[type=button], .button[disabled], form input[disabled][type=button] {
   opacity: 0.25;
   cursor: not-allowed;
 }
 
-.button.disabled, .button.disabled:hover, .button.disabled:focus, .button[disabled], .button[disabled]:hover, .button[disabled]:focus {
+.button.disabled, form input.disabled[type=button], .button.disabled:hover, form input.disabled[type=button]:hover, .button.disabled:focus, form input.disabled[type=button]:focus, .button[disabled], form input[disabled][type=button], .button[disabled]:hover, form input[disabled][type=button]:hover, .button[disabled]:focus, form input[disabled][type=button]:focus {
   background-color: #2199e8;
   color: #fff;
 }
 
-.button.disabled.primary, .button[disabled].primary {
+.button.disabled.primary, form input.disabled.primary[type=button], .button[disabled].primary, form input[disabled].primary[type=button] {
   opacity: 0.25;
   cursor: not-allowed;
 }
 
-.button.disabled.primary, .button.disabled.primary:hover, .button.disabled.primary:focus, .button[disabled].primary, .button[disabled].primary:hover, .button[disabled].primary:focus {
+.button.disabled.primary, form input.disabled.primary[type=button], .button.disabled.primary:hover, form input.disabled.primary[type=button]:hover, .button.disabled.primary:focus, form input.disabled.primary[type=button]:focus, .button[disabled].primary, form input[disabled].primary[type=button], .button[disabled].primary:hover, form input[disabled].primary[type=button]:hover, .button[disabled].primary:focus, form input[disabled].primary[type=button]:focus {
   background-color: #2199e8;
   color: #000;
 }
 
-.button.disabled.secondary, .button[disabled].secondary {
+.button.disabled.secondary, form input.disabled.secondary[type=button], .button[disabled].secondary, form input[disabled].secondary[type=button] {
   opacity: 0.25;
   cursor: not-allowed;
 }
 
-.button.disabled.secondary, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+.button.disabled.secondary, form input.disabled.secondary[type=button], .button.disabled.secondary:hover, form input.disabled.secondary[type=button]:hover, .button.disabled.secondary:focus, form input.disabled.secondary[type=button]:focus, .button[disabled].secondary, form input[disabled].secondary[type=button], .button[disabled].secondary:hover, form input[disabled].secondary[type=button]:hover, .button[disabled].secondary:focus, form input[disabled].secondary[type=button]:focus {
   background-color: #777;
   color: #000;
 }
 
-.button.disabled.success, .button[disabled].success {
+.button.disabled.success, form input.disabled.success[type=button], .button[disabled].success, form input[disabled].success[type=button] {
   opacity: 0.25;
   cursor: not-allowed;
 }
 
-.button.disabled.success, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success, .button[disabled].success:hover, .button[disabled].success:focus {
+.button.disabled.success, form input.disabled.success[type=button], .button.disabled.success:hover, form input.disabled.success[type=button]:hover, .button.disabled.success:focus, form input.disabled.success[type=button]:focus, .button[disabled].success, form input[disabled].success[type=button], .button[disabled].success:hover, form input[disabled].success[type=button]:hover, .button[disabled].success:focus, form input[disabled].success[type=button]:focus {
   background-color: #3adb76;
   color: #000;
 }
 
-.button.disabled.warning, .button[disabled].warning {
+.button.disabled.warning, form input.disabled.warning[type=button], .button[disabled].warning, form input[disabled].warning[type=button] {
   opacity: 0.25;
   cursor: not-allowed;
 }
 
-.button.disabled.warning, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning, .button[disabled].warning:hover, .button[disabled].warning:focus {
+.button.disabled.warning, form input.disabled.warning[type=button], .button.disabled.warning:hover, form input.disabled.warning[type=button]:hover, .button.disabled.warning:focus, form input.disabled.warning[type=button]:focus, .button[disabled].warning, form input[disabled].warning[type=button], .button[disabled].warning:hover, form input[disabled].warning[type=button]:hover, .button[disabled].warning:focus, form input[disabled].warning[type=button]:focus {
   background-color: #ffae00;
   color: #000;
 }
 
-.button.disabled.alert, .button[disabled].alert {
+.button.disabled.alert, form input.disabled[type=button], .button[disabled].alert, form input[disabled][type=button] {
   opacity: 0.25;
   cursor: not-allowed;
 }
 
-.button.disabled.alert, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert, .button[disabled].alert:hover, .button[disabled].alert:focus {
+.button.disabled.alert, form input.disabled[type=button], .button.disabled.alert:hover, form input.disabled[type=button]:hover, .button.disabled.alert:focus, form input.disabled[type=button]:focus, .button[disabled].alert, form input[disabled][type=button], .button[disabled].alert:hover, form input[disabled][type=button]:hover, .button[disabled].alert:focus, form input[disabled][type=button]:focus {
   background-color: #ec5840;
   color: #000;
 }
 
-.button.hollow {
+.button.hollow, form input.hollow[type=button] {
   border: 1px solid #2199e8;
   color: #2199e8;
 }
 
-.button.hollow, .button.hollow:hover, .button.hollow:focus {
+.button.hollow, form input.hollow[type=button], .button.hollow:hover, form input.hollow[type=button]:hover, .button.hollow:focus, form input.hollow[type=button]:focus {
   background-color: transparent;
 }
 
-.button.hollow.disabled, .button.hollow.disabled:hover, .button.hollow.disabled:focus, .button.hollow[disabled], .button.hollow[disabled]:hover, .button.hollow[disabled]:focus {
+.button.hollow.disabled, form input.hollow.disabled[type=button], .button.hollow.disabled:hover, form input.hollow.disabled[type=button]:hover, .button.hollow.disabled:focus, form input.hollow.disabled[type=button]:focus, .button.hollow[disabled], form input.hollow[disabled][type=button], .button.hollow[disabled]:hover, form input.hollow[disabled][type=button]:hover, .button.hollow[disabled]:focus, form input.hollow[disabled][type=button]:focus {
   background-color: transparent;
 }
 
-.button.hollow:hover, .button.hollow:focus {
+.button.hollow:hover, form input.hollow[type=button]:hover, .button.hollow:focus, form input.hollow[type=button]:focus {
   border-color: #0c4d78;
   color: #0c4d78;
 }
 
-.button.hollow:hover.disabled, .button.hollow:hover[disabled], .button.hollow:focus.disabled, .button.hollow:focus[disabled] {
+.button.hollow:hover.disabled, form input.hollow[type=button]:hover.disabled, .button.hollow:hover[disabled], form input.hollow[type=button]:hover[disabled], .button.hollow:focus.disabled, form input.hollow[type=button]:focus.disabled, .button.hollow:focus[disabled], form input.hollow[type=button]:focus[disabled] {
   border: 1px solid #2199e8;
   color: #2199e8;
 }
 
-.button.hollow.primary {
+.button.hollow.primary, form input.hollow.primary[type=button] {
   border: 1px solid #2199e8;
   color: #2199e8;
 }
 
-.button.hollow.primary:hover, .button.hollow.primary:focus {
+.button.hollow.primary:hover, form input.hollow.primary[type=button]:hover, .button.hollow.primary:focus, form input.hollow.primary[type=button]:focus {
   border-color: #0c4d78;
   color: #0c4d78;
 }
 
-.button.hollow.primary:hover.disabled, .button.hollow.primary:hover[disabled], .button.hollow.primary:focus.disabled, .button.hollow.primary:focus[disabled] {
+.button.hollow.primary:hover.disabled, form input.hollow.primary[type=button]:hover.disabled, .button.hollow.primary:hover[disabled], form input.hollow.primary[type=button]:hover[disabled], .button.hollow.primary:focus.disabled, form input.hollow.primary[type=button]:focus.disabled, .button.hollow.primary:focus[disabled], form input.hollow.primary[type=button]:focus[disabled] {
   border: 1px solid #2199e8;
   color: #2199e8;
 }
 
-.button.hollow.secondary {
+.button.hollow.secondary, form input.hollow.secondary[type=button] {
   border: 1px solid #777;
   color: #777;
 }
 
-.button.hollow.secondary:hover, .button.hollow.secondary:focus {
+.button.hollow.secondary:hover, form input.hollow.secondary[type=button]:hover, .button.hollow.secondary:focus, form input.hollow.secondary[type=button]:focus {
   border-color: #3c3c3c;
   color: #3c3c3c;
 }
 
-.button.hollow.secondary:hover.disabled, .button.hollow.secondary:hover[disabled], .button.hollow.secondary:focus.disabled, .button.hollow.secondary:focus[disabled] {
+.button.hollow.secondary:hover.disabled, form input.hollow.secondary[type=button]:hover.disabled, .button.hollow.secondary:hover[disabled], form input.hollow.secondary[type=button]:hover[disabled], .button.hollow.secondary:focus.disabled, form input.hollow.secondary[type=button]:focus.disabled, .button.hollow.secondary:focus[disabled], form input.hollow.secondary[type=button]:focus[disabled] {
   border: 1px solid #777;
   color: #777;
 }
 
-.button.hollow.success {
+.button.hollow.success, form input.hollow.success[type=button] {
   border: 1px solid #3adb76;
   color: #3adb76;
 }
 
-.button.hollow.success:hover, .button.hollow.success:focus {
+.button.hollow.success:hover, form input.hollow.success[type=button]:hover, .button.hollow.success:focus, form input.hollow.success[type=button]:focus {
   border-color: #157539;
   color: #157539;
 }
 
-.button.hollow.success:hover.disabled, .button.hollow.success:hover[disabled], .button.hollow.success:focus.disabled, .button.hollow.success:focus[disabled] {
+.button.hollow.success:hover.disabled, form input.hollow.success[type=button]:hover.disabled, .button.hollow.success:hover[disabled], form input.hollow.success[type=button]:hover[disabled], .button.hollow.success:focus.disabled, form input.hollow.success[type=button]:focus.disabled, .button.hollow.success:focus[disabled], form input.hollow.success[type=button]:focus[disabled] {
   border: 1px solid #3adb76;
   color: #3adb76;
 }
 
-.button.hollow.warning {
+.button.hollow.warning, form input.hollow.warning[type=button] {
   border: 1px solid #ffae00;
   color: #ffae00;
 }
 
-.button.hollow.warning:hover, .button.hollow.warning:focus {
+.button.hollow.warning:hover, form input.hollow.warning[type=button]:hover, .button.hollow.warning:focus, form input.hollow.warning[type=button]:focus {
   border-color: #805700;
   color: #805700;
 }
 
-.button.hollow.warning:hover.disabled, .button.hollow.warning:hover[disabled], .button.hollow.warning:focus.disabled, .button.hollow.warning:focus[disabled] {
+.button.hollow.warning:hover.disabled, form input.hollow.warning[type=button]:hover.disabled, .button.hollow.warning:hover[disabled], form input.hollow.warning[type=button]:hover[disabled], .button.hollow.warning:focus.disabled, form input.hollow.warning[type=button]:focus.disabled, .button.hollow.warning:focus[disabled], form input.hollow.warning[type=button]:focus[disabled] {
   border: 1px solid #ffae00;
   color: #ffae00;
 }
 
-.button.hollow.alert {
+.button.hollow.alert, form input.hollow[type=button] {
   border: 1px solid #ec5840;
   color: #ec5840;
 }
 
-.button.hollow.alert:hover, .button.hollow.alert:focus {
+.button.hollow.alert:hover, form input.hollow[type=button]:hover, .button.hollow.alert:focus, form input.hollow[type=button]:focus {
   border-color: #881f0e;
   color: #881f0e;
 }
 
-.button.hollow.alert:hover.disabled, .button.hollow.alert:hover[disabled], .button.hollow.alert:focus.disabled, .button.hollow.alert:focus[disabled] {
+.button.hollow.alert:hover.disabled, form input.hollow[type=button]:hover.disabled, .button.hollow.alert:hover[disabled], form input.hollow[type=button]:hover[disabled], .button.hollow.alert:focus.disabled, form input.hollow[type=button]:focus.disabled, .button.hollow.alert:focus[disabled], form input.hollow[type=button]:focus[disabled] {
   border: 1px solid #ec5840;
   color: #ec5840;
 }
 
-.button.clear {
+.button.clear, form input.clear[type=button] {
   border: 1px solid transparent;
   color: #2199e8;
 }
 
-.button.clear, .button.clear:hover, .button.clear:focus {
+.button.clear, form input.clear[type=button], .button.clear:hover, form input.clear[type=button]:hover, .button.clear:focus, form input.clear[type=button]:focus {
   background-color: transparent;
 }
 
-.button.clear:hover, .button.clear:focus {
+.button.clear:hover, form input.clear[type=button]:hover, .button.clear:focus, form input.clear[type=button]:focus {
   border-color: transparent;
   color: #0c4d78;
 }
 
-.button.clear.primary {
+.button.clear.primary, form input.clear.primary[type=button] {
   border: 1px solid transparent;
   color: #2199e8;
 }
 
-.button.clear.primary:hover, .button.clear.primary:focus {
+.button.clear.primary:hover, form input.clear.primary[type=button]:hover, .button.clear.primary:focus, form input.clear.primary[type=button]:focus {
   border-color: transparent;
   color: #0c4d78;
 }
 
-.button.clear.secondary {
+.button.clear.secondary, form input.clear.secondary[type=button] {
   border: 1px solid transparent;
   color: #777;
 }
 
-.button.clear.secondary:hover, .button.clear.secondary:focus {
+.button.clear.secondary:hover, form input.clear.secondary[type=button]:hover, .button.clear.secondary:focus, form input.clear.secondary[type=button]:focus {
   border-color: transparent;
   color: #3c3c3c;
 }
 
-.button.clear.success {
+.button.clear.success, form input.clear.success[type=button] {
   border: 1px solid transparent;
   color: #3adb76;
 }
 
-.button.clear.success:hover, .button.clear.success:focus {
+.button.clear.success:hover, form input.clear.success[type=button]:hover, .button.clear.success:focus, form input.clear.success[type=button]:focus {
   border-color: transparent;
   color: #157539;
 }
 
-.button.clear.warning {
+.button.clear.warning, form input.clear.warning[type=button] {
   border: 1px solid transparent;
   color: #ffae00;
 }
 
-.button.clear.warning:hover, .button.clear.warning:focus {
+.button.clear.warning:hover, form input.clear.warning[type=button]:hover, .button.clear.warning:focus, form input.clear.warning[type=button]:focus {
   border-color: transparent;
   color: #805700;
 }
 
-.button.clear.alert {
+.button.clear.alert, form input.clear[type=button] {
   border: 1px solid transparent;
   color: #ec5840;
 }
 
-.button.clear.alert:hover, .button.clear.alert:focus {
+.button.clear.alert:hover, form input.clear[type=button]:hover, .button.clear.alert:focus, form input.clear[type=button]:focus {
   border-color: transparent;
   color: #881f0e;
 }
 
-.button.dropdown::after {
+.button.dropdown::after, form input.dropdown[type=button]::after {
   display: block;
   width: 0;
   height: 0;
@@ -2908,31 +2908,31 @@ p + .stat {
   margin-left: 1em;
 }
 
-.button.dropdown.hollow::after {
+.button.dropdown.hollow::after, form input.dropdown.hollow[type=button]::after {
   border-top-color: #2199e8;
 }
 
-.button.dropdown.hollow.primary::after {
+.button.dropdown.hollow.primary::after, form input.dropdown.hollow.primary[type=button]::after {
   border-top-color: #2199e8;
 }
 
-.button.dropdown.hollow.secondary::after {
+.button.dropdown.hollow.secondary::after, form input.dropdown.hollow.secondary[type=button]::after {
   border-top-color: #777;
 }
 
-.button.dropdown.hollow.success::after {
+.button.dropdown.hollow.success::after, form input.dropdown.hollow.success[type=button]::after {
   border-top-color: #3adb76;
 }
 
-.button.dropdown.hollow.warning::after {
+.button.dropdown.hollow.warning::after, form input.dropdown.hollow.warning[type=button]::after {
   border-top-color: #ffae00;
 }
 
-.button.dropdown.hollow.alert::after {
+.button.dropdown.hollow.alert::after, form input.dropdown.hollow[type=button]::after {
   border-top-color: #ec5840;
 }
 
-.button.arrow-only::after {
+.button.arrow-only::after, form input.arrow-only[type=button]::after {
   top: -0.1em;
   float: none;
   margin-left: 0;
@@ -3637,7 +3637,7 @@ select[multiple] {
   }
 }
 
-.callout {
+.callout, form .nf-error-msg {
   position: relative;
   margin: 0 0 1rem 0;
   padding: 1rem;
@@ -3647,47 +3647,47 @@ select[multiple] {
   color: #0a0a0a;
 }
 
-.callout > :first-child {
+.callout > :first-child, form .nf-error-msg > :first-child {
   margin-top: 0;
 }
 
-.callout > :last-child {
+.callout > :last-child, form .nf-error-msg > :last-child {
   margin-bottom: 0;
 }
 
-.callout.primary {
+.callout.primary, form .primary.nf-error-msg {
   background-color: #def0fc;
   color: #0a0a0a;
 }
 
-.callout.secondary {
+.callout.secondary, form .secondary.nf-error-msg {
   background-color: #ebebeb;
   color: #0a0a0a;
 }
 
-.callout.success {
+.callout.success, form .success.nf-error-msg {
   background-color: #e1faea;
   color: #0a0a0a;
 }
 
-.callout.warning {
+.callout.warning, form .warning.nf-error-msg {
   background-color: #fff3d9;
   color: #0a0a0a;
 }
 
-.callout.alert {
+.callout.alert, form .nf-error-msg {
   background-color: #fce6e2;
   color: #0a0a0a;
 }
 
-.callout.small {
+.callout.small, form .small.nf-error-msg {
   padding-top: 0.5rem;
   padding-right: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 0.5rem;
 }
 
-.callout.large {
+.callout.large, form .large.nf-error-msg {
   padding-top: 3rem;
   padding-right: 3rem;
   padding-bottom: 3rem;
@@ -5089,7 +5089,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   margin-right: 0;
 }
 
-.top-bar input.button {
+.top-bar input.button, .top-bar form input[type=button], form .top-bar input[type=button] {
   width: auto;
 }
 
@@ -8209,6 +8209,14 @@ a {
 /*===================================
 	BUTTONS
 ====================================*/
+form .nf-after-field .nf-error-msg {
+  margin-right: 0;
+}
+
+form .nf-error .ninja-forms-field {
+  border-color: #ec5840;
+}
+
 address {
   font-style: normal;
   margin-bottom: 0.5rem;

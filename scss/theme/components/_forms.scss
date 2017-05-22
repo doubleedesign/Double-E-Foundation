@@ -1,0 +1,24 @@
+form {
+	
+	.nf-error-msg {
+		@extend .callout, .alert.callout;
+	}
+	
+	.nf-after-field {
+		
+		.nf-error-msg {
+			margin-right: 0;
+		}
+	}
+	
+	.nf-error  {
+		
+		.ninja-forms-field {
+			border-color: $alert-color;
+		}
+	}
+	
+	input[type=button] {
+		@extend .button, .button.alert; 
+	}
+}
