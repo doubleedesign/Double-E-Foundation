@@ -11,7 +11,7 @@
 	<li>Uses Foundation's <strong>Flexbox</strong> grid and utilises flexbox throughout.</li>
 	<li>Handy template development functions:
 		<ul>
-			<li><strong>Content splitter:</strong> Allows you to use the <! --more--> tag in the WordPress editor to split the content into an array and output each section in different places in a template.</li>
+			<li><strong>Content splitter:</strong> Allows you to use the 'read more' tag in the WordPress editor to split the content into an array and output each section in different places in a template.</li>
 			<li><strong>Gallery / content splitter: </strong> Enables you to separate out galleries inserted in the WordPress editor to display them separately in the template.</li>
 			<li><strong>Featured image banner with basic image size checker</strong> that will check if a featured image has been set and whether or not it meets dimension requirements before being displayed; if it does not exist or meet requirements, the same checks will be run on the parent page and its image used if it meets requirements; if there is no parent page or requirements are ot met, a default image is used.</li>
 			<li><strong>Dynamic featured image banner</strong> that loads different sized images (as CSS backgrounds) according to the viewport size; if a page's image doesn't meet size requirements, the parent image will be used, and if there is no parent or that image isn't large enough either, a default image will be used.</li>
