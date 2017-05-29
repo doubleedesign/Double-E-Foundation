@@ -143,12 +143,18 @@ function doublee_get_shortcodes( $the_content ) {
 /* ==========================================
 	EXCERPT CUSTOMISER
 	Strip headings and set the length
-	Template usage: echo doublee_custom_excerpt() instead of the_excerpt()
-	This will ignore manual excerpts so best to run a has_excerpt() check to output the manual excerpt first
+	Template usage: 
+	// Check for a manually-set excerpt first
+	if(has_excerpt()) {
+		the_excerpt();
+		// You can also use the function to shorten the manual excerpt:
+		// doublee_custom_excerpt(get_the_excerpt()); 
+	} else {
+		doublee_custom_excerpt(get_the_content()); 
+	}
 ============================================*/
-function doublee_custom_excerpt() {
-	 // Retrieve the excerpt content
-	 $text = get_the_content(); 
+function doublee_custom_excerpt($text) {
+
 	 // Remove shortcode tags from the given content
 	 $text = strip_shortcodes( $text );
 	 $text = apply_filters('the_content', $text);
