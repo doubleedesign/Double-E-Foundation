@@ -24,7 +24,7 @@
 
 ## What version are ya up to?
 
-<p>2.2.3 as of May 16, 2017.</p>
+<p>2.2.4 as of June 13, 2017.</p>
 
 ## Foundation version?
 
