@@ -8,8 +8,8 @@
  */
 
 // Pagination.
-if ( ! function_exists( 'foundationpress_pagination' ) ) :
-function foundationpress_pagination() {
+if ( ! function_exists( 'doublee_pagination' ) ) :
+function doublee_pagination() {
 	global $wp_query;
 
 	$big = 999999999; // This needs to be an unlikely integer
@@ -29,14 +29,14 @@ function foundationpress_pagination() {
 
 	$paginate_links = str_replace( "<ul class='page-numbers'>", "<ul class='pagination'>", $paginate_links );
 	$paginate_links = str_replace( '<li><span class="page-numbers dots">', "<li><a href='#'>", $paginate_links );
-	$paginate_links = str_replace( "<li><span class='page-numbers current'>", "<li class='current'><a href='#'>", $paginate_links );
+	$paginate_links = str_replace( "<li><span class='page-numbers current'>", "<li class='current'>", $paginate_links );
 	$paginate_links = str_replace( '</span>', '</a>', $paginate_links );
 	$paginate_links = str_replace( "<li><a href='#'>&hellip;</a></li>", "<li><span class='dots'>&hellip;</span></li>", $paginate_links );
 	$paginate_links = preg_replace( '/\s*page-numbers/', '', $paginate_links );
 
 	// Display the pagination if more than one page is found.
 	if ( $paginate_links ) {
-		echo '<div class="pagination-centered">';
+		echo '<div class="pagination-centered row align-center">';
 		echo $paginate_links;
 		echo '</div><!--// end .pagination -->';
 	}

@@ -1,0 +1,6 @@
+.pagination {
+	
+	.current {
+		display: inline-block !important; // always show, even on mobile (where the others are hidden)
+	}
+}

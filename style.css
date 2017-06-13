@@ -8209,6 +8209,10 @@ a {
 /*===================================
 	BUTTONS
 ====================================*/
+.pagination .current {
+  display: inline-block !important;
+}
+
 form .ninja-forms-req-symbol {
   color: #ec5840;
 }
