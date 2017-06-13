@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 2.2.3
+ * @since Double-E-Foundation 2.2.4
  */
 
 /* ==========================================
@@ -26,6 +26,26 @@ function doublee_body_class_section($classes) {
 	return $classes;  
 }  
 add_filter('body_class', 'doublee_body_class_section'); 
+
+
+/* ==========================================
+	ALLOW SHORTCODES IN CATEGORY/TERM DESCRIPTIONS
+============================================*/
+add_filter( 'term_description', 'do_shortcode');
+
+
+/* ==========================================
+	REMOVE EXTRANEOUS P TAGS FROM SHORTCODES
+============================================*/
+// Remove wpautop from wherever it is
+remove_filter('the_content', 'wpautop');
+remove_filter('term_description', 'wpautop');
+// Add it pack at priority 99
+add_filter('the_content', 'wpautop', 99);
+add_filter('term_description', 'wpautop', 99);
+// Run shortcode_unautop after wpautop
+add_filter('the_content', 'shortcode_unautop', 100);
+add_filter('term_description', 'shortcode_unautop', 100);
 
 
 /* ==========================================
