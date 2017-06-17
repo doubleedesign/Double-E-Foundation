@@ -11,6 +11,8 @@
 
 function doublee_featured_image() { 
 	
+	global $post;
+	
 	/* Variables used throughout banner. Theoretically, this is all you should have to edit to customise the banner. */
 		$default_banner = get_stylesheet_directory_uri().'/assets/images/default-banner.jpg';
 

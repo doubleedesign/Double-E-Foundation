@@ -173,7 +173,7 @@ function doublee_custom_excerpt($text) {
 	 $excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
 
 	 $excerpt = wp_trim_words( $text, $excerpt_length, $excerpt_more );
-	 return wpautop(apply_filters('wp_trim_excerpt', $excerpt, $raw_excerpt));
+	 return wpautop(apply_filters('wp_trim_excerpt', $excerpt));
 }
 
 
