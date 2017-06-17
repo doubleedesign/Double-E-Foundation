@@ -10,6 +10,8 @@
 
  get_header(); ?>
 
+ <?php get_template_part('template-parts/featured-image-banner'); ?>
+
  <div id="page" class="styleguide row">
 
 	 <?php while ( have_posts() ) : the_post(); ?>
