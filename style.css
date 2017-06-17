@@ -8612,6 +8612,14 @@ a {
 /*===================================
 	BUTTONS
 ====================================*/
+.button.success, form input.success[type=button], .button.alert, form input[type=button] {
+  color: #fefefe;
+}
+
+.button.success:hover, form input.success[type=button]:hover, .button.success:focus, form input.success[type=button]:focus, .button.alert:hover, form input[type=button]:hover, .button.alert:focus, form input[type=button]:focus {
+  color: #fefefe;
+}
+
 .card-wrapper {
   margin-bottom: 20px;
 }

@@ -3,4 +3,13 @@
 ====================================*/
 
 .button {
+	
+	&.success, &.alert {
+		color: $white;
+		
+		&:hover,
+		&:focus {
+			color: $white;
+		}
+	}
 }
