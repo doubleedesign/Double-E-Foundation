@@ -11,7 +11,7 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since Double-E Foundation 0.1.4
+ * @since Double-E Foundation 2.3.0
  */
 
 get_header(); ?>
@@ -19,17 +19,17 @@ get_header(); ?>
 <div id="page" class="row" role="main">
 
 	<main class="small-12 medium-8 columns">
-	<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) { ?>
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php get_template_part( 'template-parts/excerpt', get_post_format() ); ?>
 		<?php endwhile; ?>
 
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
 
-		<?php endif; // End have_posts() check. ?>
+		<?php } // End have_posts() check. ?>
 
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
 		<?php if ( function_exists( 'doublee_pagination' ) ) { doublee_pagination(); } else if ( is_paged() ) { ?>
@@ -38,7 +38,6 @@ get_header(); ?>
 				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', '' ) ); ?></div>
 			</nav>
 		<?php } ?>
-
 	</main>
     
 	<?php get_sidebar(); ?>
