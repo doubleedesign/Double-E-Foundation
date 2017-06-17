@@ -14,9 +14,10 @@
 function doublee_body_class_section($classes) {  
 	global $wpdb, $post;  
 	$current_page_id = $post->ID;
+	$ancestors = get_post_ancestors($current_page_id);
 	if (is_page()) {  
 		if ($post->post_parent) {  
-			$parent  = end(get_post_ancestors($current_page_id));  
+			$parent  = end($ancestors);  
 		} else {  
 			$parent = $post->ID;  
 		}  
