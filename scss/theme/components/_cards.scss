@@ -4,5 +4,20 @@
 	.card {
 		height: 100%;
 		margin-bottom: 0;
+		position: relative;
+		
+		.meta {
+			position: absolute;
+			top: $global-margin/3;
+			right: $global-margin*2;
+		}
+		
+		.label {
+			margin-left: $global-margin/3;
+			
+			a, i {
+				color: $white;
+			}
+		}
 	}
 }

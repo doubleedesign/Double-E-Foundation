@@ -8643,6 +8643,21 @@ a {
 .card-wrapper .card {
   height: 100%;
   margin-bottom: 0;
+  position: relative;
+}
+
+.card-wrapper .card .meta {
+  position: absolute;
+  top: 0.33333rem;
+  right: 2rem;
+}
+
+.card-wrapper .card .label {
+  margin-left: 0.33333rem;
+}
+
+.card-wrapper .card .label a, .card-wrapper .card .label i {
+  color: #fefefe;
 }
 
 .callout, form .nf-error-msg {
@@ -8963,6 +8978,59 @@ ul.social li i {
   display: none;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
+}
+
+#children {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 40em) {
+  #children {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  #children {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  #children {
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 112.5em) {
+  #children {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  #children {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  #children {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  #children {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 112.5em) {
+  #children {
+    margin-bottom: 60px;
+  }
 }
 
 /* Quick fixes */

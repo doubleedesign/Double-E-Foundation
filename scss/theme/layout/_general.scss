@@ -42,3 +42,8 @@
 		}
 	}
 }
+
+#children {
+	@include grid-gutter-margin-top;
+	@include grid-gutter-margin-bottom;
+}
