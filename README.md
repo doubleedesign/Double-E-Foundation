@@ -27,6 +27,7 @@
 <ul>
 	<li>Add breadcrumbs</li>
 	<li>Add icons to the excerpt cards for more post formats</li>
+	<li>Add and style WooCommerce test content</li>
 	<li>Improve the banner image checker, particularly the fallbacks</li>
 </ul>
 
