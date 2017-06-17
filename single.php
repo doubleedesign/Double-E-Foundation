@@ -9,12 +9,14 @@
 
 get_header(); ?>
 
+<?php get_template_part('template-parts/featured-image-banner'); ?>
+
 <div id="single-post" class="row">
 
 	<?php while ( have_posts() ) : the_post(); ?>
         <article <?php post_class('small-12 medium-8 columns') ?> id="post-<?php the_ID(); ?>">
             <header>
-				<h1><?php the_title(); ?></h1>
+		    <h2><?php the_title(); ?></h2>
                 <?php doublee_entry_meta(); ?>
             </header>
     

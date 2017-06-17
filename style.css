@@ -8929,10 +8929,6 @@ ul.social li i {
   flex-basis: 11.11%;
 }
 
-#content {
-  margin: 3rem 0;
-}
-
 .skip-to-content {
   height: 0;
   display: block;
@@ -9196,6 +9192,10 @@ body {
   color: #fefefe;
 }
 
+#footer-container #footer ul.menu li a {
+  background: transparent !important;
+}
+
 #footer-container #footer ul.menu li:first-of-type a {
   padding-left: 0;
 }
@@ -9216,12 +9216,41 @@ body {
   background-repeat: no-repeat;
   position: relative;
   height: 18.75rem;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 40em) {
+  #featured-hero {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  #featured-hero {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  #featured-hero {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 112.5em) {
+  #featured-hero {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (min-width: 40em) {
   #featured-hero {
     height: 24.0625rem;
   }
+}
+
+#featured-hero > .row {
+  height: 100%;
 }
 
 #page.styleguide .entry-content section {

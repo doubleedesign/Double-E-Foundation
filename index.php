@@ -16,6 +16,8 @@
 
 get_header(); ?>
 
+<?php get_template_part('template-parts/featured-image-banner'); ?>
+
 <div id="page" class="archive">
 	
 	<main class="row">
