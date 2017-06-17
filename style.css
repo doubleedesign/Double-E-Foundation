@@ -8980,8 +8980,28 @@ body {
   margin: 0 auto;
 }
 
+.title-bar .menu-icon {
+  color: #fefefe;
+}
+
+.title-bar .menu-icon i {
+  padding-right: 0.5rem;
+}
+
 #top-bar #logo {
   height: 100%;
+}
+
+#top-bar #logo a {
+  padding: 1rem 0;
+  display: block;
+  text-align: center;
+}
+
+@media screen and (min-width: 64em) {
+  #top-bar #logo a {
+    text-align: left;
+  }
 }
 
 #top-bar #site-navigation {

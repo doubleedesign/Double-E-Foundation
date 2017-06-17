@@ -1,7 +1,28 @@
+.title-bar {
+	
+	.menu-icon {
+		color: $white;
+		
+		i {
+			padding-right: $global-padding/2;
+		}
+	}
+}
+
 #top-bar {
 	
 	#logo {
 		height: 100%;
+		
+		a {
+			padding: $global-padding 0;
+			display: block;
+			text-align: center;
+			
+			@include breakpoint(large up) {
+				text-align: left;
+			}
+		}
 	}
 	
 	#site-navigation {

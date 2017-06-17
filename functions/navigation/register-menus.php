@@ -58,7 +58,7 @@ if ( ! function_exists( 'doublee_footer_menu' ) ) {
 		wp_nav_menu(array(
 			'container' 			=> false,                         
 			'menu_class' 			=> 'menu',           			
-			'items_wrap'     			=> '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+			'items_wrap'     			=> '<ul id="%1$s" class="%2$s row is-collapse-child">%3$s</ul>',
 			'theme_location'			=> 'footer-menu',              
 			'depth' 				=> 1,                             
 			'fallback_cb' 			=> false,                       
