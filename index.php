@@ -16,9 +16,16 @@
 
 get_header(); ?>
 
-<div id="page" class="row" role="main">
+<div id="page" class="archive">
+	
+	<main class="row">
+		<div class="small-12 medium-8 columns">
+			<?php echo term_description(); ?>
+		</div>
+		<?php get_sidebar(); ?>
+	</main>
 
-	<main class="small-12 medium-8 columns">
+	<div class="row">
 	<?php if ( have_posts() ) { ?>
 
 		<?php /* Start the Loop */ ?>
@@ -38,10 +45,8 @@ get_header(); ?>
 				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', '' ) ); ?></div>
 			</nav>
 		<?php } ?>
-	</main>
+	</div>
     
-	<?php get_sidebar(); ?>
-
 </div>
 
 <?php get_footer(); ?>
