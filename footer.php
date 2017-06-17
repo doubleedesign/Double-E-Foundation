@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since FoundationPress 2.2.4
+ * @since FoundationPress 2.3.0
  */
 
 ?>
@@ -14,10 +14,10 @@
 		</section>
 		<div id="footer-container">
 			<footer id="footer" class="row align-middle align-justify">
-				<div class="small-12 large-9 columns">
+				<div class="small-12 large-expand columns">
 					<?php doublee_footer_menu(); ?>
 				</div>
-				<div class="small-12 large-3 columns">
+				<div class="shrink columns">
 					<small>Website by <a href="http://www.doubleedesign.com.au">Double-E Design</a>.</small>
 				</div>
 			</footer>

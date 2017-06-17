@@ -1,6 +1,36 @@
 #footer-container {
-	@include grid-gutter-margin-top
+	@include grid-gutter-margin-top;
+	padding: $global-padding/2 0;
+	background: $secondary-color;
 
 	#footer {
+		
+		* {
+			color: rgba($white,0.8);
+		}
+		
+		a {
+				
+			&:hover,
+			&:focus {
+				color: $white;
+			}
+		}
+		
+		ul.menu {
+			
+			li {
+
+				&:first-of-type {
+
+					a {
+						padding-left: 0;
+
+					}
+				}
+
+				
+			}
+		}
 	}
 }

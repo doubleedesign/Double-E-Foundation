@@ -9115,6 +9115,8 @@ body {
 
 #footer-container {
   margin-top: 20px;
+  padding: 0.5rem 0;
+  background: #777;
 }
 
 @media screen and (min-width: 40em) {
@@ -9139,6 +9141,18 @@ body {
   #footer-container {
     margin-top: 60px;
   }
+}
+
+#footer-container #footer * {
+  color: rgba(254, 254, 254, 0.8);
+}
+
+#footer-container #footer a:hover, #footer-container #footer a:focus {
+  color: #fefefe;
+}
+
+#footer-container #footer ul.menu li:first-of-type a {
+  padding-left: 0;
 }
 
 .off-canvas ul#menu-main-menu {
