@@ -13,8 +13,13 @@
 
 		</section>
 		<div id="footer-container">
-			<footer id="footer" class="row">
-				
+			<footer id="footer" class="row align-middle align-justify">
+				<div class="small-12 large-9 columns">
+					<?php doublee_footer_menu(); ?>
+				</div>
+				<div class="small-12 large-3 columns">
+					<small>Website by <a href="http://www.doubleedesign.com.au">Double-E Design</a>.</small>
+				</div>
 			</footer>
 		</div>
 
