@@ -4454,8 +4454,8 @@ select[multiple] {
   z-index: 1;
   display: none;
   min-width: 200px;
-  border: 1px solid #cacaca;
-  background: #fefefe;
+  border: 0;
+  background: #2199e8;
 }
 
 .is-dropdown-submenu .is-dropdown-submenu-parent > a::after {
@@ -4485,7 +4485,7 @@ select[multiple] {
 }
 
 .is-dropdown-submenu .is-dropdown-submenu {
-  margin-top: -1px;
+  margin-top: 0;
 }
 
 .is-dropdown-submenu > li {
@@ -5459,7 +5459,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 }
 
 .top-bar {
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .top-bar::before, .top-bar::after {
@@ -5473,7 +5473,11 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 
 .top-bar,
 .top-bar ul {
-  background-color: #222;
+  background-color: #fefefe;
+}
+
+.top-bar ul ul {
+  background-color: #2199e8;
 }
 
 .top-bar input {
@@ -8920,7 +8924,7 @@ ul.social li i {
   height: 0;
   display: block;
   padding: 0;
-  background: #222;
+  background: #fefefe;
   color: #fefefe;
   line-height: 0;
   font-size: 0;
@@ -8963,6 +8967,10 @@ body {
   margin: 0 auto;
 }
 
+#top-bar #logo {
+  height: 100%;
+}
+
 #top-bar #site-navigation {
   display: none;
 }
@@ -8994,6 +9002,19 @@ body {
   right: 1rem;
 }
 
+#top-bar ul.menu > li:hover > a, #top-bar ul.menu > li.active > a {
+  color: #fefefe;
+  background: #2199e8;
+}
+
+#top-bar ul.menu > li:hover > a:after, #top-bar ul.menu > li.active > a:after {
+  border-color: #fefefe transparent transparent;
+}
+
+#top-bar ul.menu > li:hover > ul.dropdown.menu, #top-bar ul.menu > li:focus > ul.dropdown.menu {
+  opacity: 1.0;
+}
+
 #top-bar ul.menu > li ul.dropdown.menu {
   left: 0;
   right: auto;
@@ -9014,19 +9035,11 @@ body {
 
 #top-bar ul.menu > li ul.dropdown.menu li a {
   padding: 0.5rem 1rem;
-}
-
-#top-bar ul.menu > li:hover > a, #top-bar ul.menu > li.active > a {
   color: #fefefe;
-  background: #2199e8;
 }
 
-#top-bar ul.menu > li:hover > a:after, #top-bar ul.menu > li.active > a:after {
-  border-color: #fefefe transparent transparent;
-}
-
-#top-bar ul.menu > li:hover > ul.dropdown.menu, #top-bar ul.menu > li:focus > ul.dropdown.menu {
-  opacity: 1.0;
+#top-bar ul.menu > li ul.dropdown.menu li a:hover, #top-bar ul.menu > li ul.dropdown.menu li a:focus {
+  background: #147dc2;
 }
 
 .sidebar {

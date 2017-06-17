@@ -1,5 +1,9 @@
 #top-bar {
 	
+	#logo {
+		height: 100%;
+	}
+	
 	#site-navigation {
 		display: none;
 		
@@ -37,28 +41,6 @@
 				}
 			}
 
-
-			ul.dropdown.menu {
-				left: 0;
-				right: auto;
-				border: 0;
-				opacity: 0;
-				transition: $anchor-transition; 
-				
-				li, li a {
-					line-height: $global-lineheight;
-				}
-				
-				li {
-					font-size: 0.9em;
-					
-					a {
-						padding: $global-padding/2 $global-padding;
-					}
-				}
-				
-			}
-			
 			&:hover,
 			&.active {
 
@@ -78,6 +60,33 @@
 				> ul.dropdown.menu {
 					opacity: 1.0;
 				}
+			}
+			
+			ul.dropdown.menu {
+				left: 0;
+				right: auto;
+				border: 0;
+				opacity: 0;
+				transition: $anchor-transition; 
+				
+				li, li a {
+					line-height: $global-lineheight;
+				}
+				
+				li {
+					font-size: 0.9em;
+					
+					a {
+						padding: $global-padding/2 $global-padding;
+						color: $menu-item-color-active;
+						
+						&:hover,
+						&:focus {
+							background: darken($menu-item-background-active, 10%);
+						}
+					}
+				}
+				
 			}
 			
 		}

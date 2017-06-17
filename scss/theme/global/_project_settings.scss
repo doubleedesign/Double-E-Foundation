@@ -128,9 +128,9 @@ $breadcrumbs-item-slash: true;
 	TOP BAR
 ===========================================================*/
 
-$topbar-padding: 0.5rem;
-$topbar-background: #222;
-$topbar-submenu-background: $topbar-background;
+$topbar-padding: 0.5rem 0;
+$topbar-background: $white;
+$topbar-submenu-background: map-get($foundation-palette, primary);
 $topbar-title-spacing: 1rem;
 $topbar-input-width: 200px;
 $topbar-unstack-breakpoint: medium;
@@ -145,8 +145,8 @@ $menu-icon-spacing: 0.25rem;
 $dropdownmenu-arrows: true;
 $dropdownmenu-arrow-color: $anchor-color;
 $dropdownmenu-min-width: 200px;
-$dropdownmenu-background: $white;
-$dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-background: $menu-item-background-active;
+$dropdownmenu-border: 0;
 
 /*===========================================================
 	OFF CANVAS MENU IF SELECTED
