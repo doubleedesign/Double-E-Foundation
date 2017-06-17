@@ -36,15 +36,17 @@ get_header(); ?>
 			get_template_part( 'content', 'none' );
 		} // End have_posts() check. 
 		?>
-
-		<?php /* Display navigation to next/previous pages when applicable */ ?>
-		<?php if ( function_exists( 'doublee_pagination' ) ) { doublee_pagination(); } else if ( is_paged() ) { ?>
-			<nav id="post-nav">
-				<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', '' ) ); ?></div>
-				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', '' ) ); ?></div>
-			</nav>
-		<?php } ?>
 	</div>
+	
+	<?php // Display navigation to next/previous pages when applicable 
+	if ( function_exists( 'doublee_pagination' ) ) { 
+		doublee_pagination(); 
+	} else if ( is_paged() ) { ?>
+		<nav id="post-nav" class="row align-center align-justify">
+			<div class="post-previous columns"><?php next_posts_link( __( '&larr; Older posts', '' ) ); ?></div>
+			<div class="post-next columnns"><?php previous_posts_link( __( 'Newer posts &rarr;', '' ) ); ?></div>
+		</nav>
+	<?php } ?>
     
 </div>
 
