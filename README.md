@@ -31,6 +31,8 @@
 	<li>Add icons to the excerpt cards for more post formats</li>
 	<li>Add and style WooCommerce test content</li>
 	<li>Improve the banner image checker, particularly the fallbacks</li>
+	<li>Fix the third-level menus in the top bar</li>
+	<li>Fix the auto featured image function, it currently errors on irrelevant admin pages</li>
 </ul>
 
 ## What version are ya up to?
