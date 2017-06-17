@@ -4,6 +4,8 @@
 
 <p>This project started as a fork of <a href="https://github.com/olefredrik">Ole Fredrik Lie's FoundationPress</a> but has taken on a life of its own.</p>
 
+<p><strong>Demo:</strong> <a href="http://foundation.doublee-dev.com.au">foundation.doublee-dev.com.au</a></p>
+
 ## Features 
 
 <ul>
