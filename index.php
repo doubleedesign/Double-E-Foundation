@@ -20,23 +20,22 @@ get_header(); ?>
 	
 	<main class="row">
 		<div class="small-12 medium-8 columns">
-			<?php echo term_description(); ?>
+			<?php //echo term_description(); ?>
 		</div>
 		<?php get_sidebar(); ?>
 	</main>
 
 	<div class="row">
-	<?php if ( have_posts() ) { ?>
-
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'template-parts/excerpt', get_post_format() ); ?>
-		<?php endwhile; ?>
-
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php } // End have_posts() check. ?>
+		<?php 
+		if ( have_posts() ) {
+			// Start the Loop 
+			while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/excerpt', get_post_format() );
+			endwhile; 
+		} else {
+			get_template_part( 'content', 'none' );
+		} // End have_posts() check. 
+		?>
 
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
 		<?php if ( function_exists( 'doublee_pagination' ) ) { doublee_pagination(); } else if ( is_paged() ) { ?>
