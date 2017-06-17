@@ -1,0 +1,8 @@
+.card-wrapper {
+	@include grid-gutter-margin-bottom;
+	
+	.card {
+		height: 100%;
+		margin-bottom: 0;
+	}
+}

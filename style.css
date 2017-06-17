@@ -8609,6 +8609,39 @@ a {
 /*===================================
 	BUTTONS
 ====================================*/
+.card-wrapper {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 40em) {
+  .card-wrapper {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .card-wrapper {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 80em) {
+  .card-wrapper {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 112.5em) {
+  .card-wrapper {
+    margin-bottom: 60px;
+  }
+}
+
+.card-wrapper .card {
+  height: 100%;
+  margin-bottom: 0;
+}
+
 .pagination .current {
   display: inline-block !important;
 }
