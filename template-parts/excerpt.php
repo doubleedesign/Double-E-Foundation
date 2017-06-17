@@ -1,3 +1,13 @@
+<?php
+/**
+ * The template part for displaying excerpts
+ 
+ * @package WordPress
+ * @subpackage Double-E-Foundation
+ * @since Double-E-Foundation 2.3.0
+ */
+?>
+
 <div class="card-wrapper small-12 medium-6 large-4 columns">
 
 	<div class="card">

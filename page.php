@@ -23,13 +23,13 @@
            <header>
                <h1 class="entry-title">
                     <?php
-				   		$visual_page_title = get_post_meta( $post->ID, 'doublee_visual-page-title-entry', true ); 
-				   		if (!empty($visual_page_title)) {
-							echo $visual_page_title; 
-						} else {
-							the_title(); 
-						}
-				   	?>
+				$visual_page_title = get_post_meta( $post->ID, 'doublee_visual-page-title-entry', true ); 
+				if (!empty($visual_page_title)) {
+					echo $visual_page_title; 
+				} else {
+					the_title(); 
+				}
+			  ?>
                </h1>
            </header>
            
@@ -39,7 +39,6 @@
            
            <footer>
                <?php wp_link_pages( array('before' => '<nav id="page-nav"><p>' . __( 'Pages:', '' ), 'after' => '</p></nav>' ) ); ?>
-               <p><?php the_tags(); ?></p>
            </footer>
            
        </main>
@@ -48,5 +47,7 @@
      <?php get_sidebar(); ?>
 
  </div>
+
+ <?php get_template_part('template-parts/children'); ?>
 
  <?php get_footer(); ?>
