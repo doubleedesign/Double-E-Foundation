@@ -22,9 +22,17 @@
 	<li>Additional WooCommerce functions for if you are using it to display products but aren't using eCommerce functionality. <em>Uncomment functions/woocommerce-catagloue.php to use</em>.</li>
 </ul>
 
+## To-do list ##
+
+<ul>
+	<li>Add breadcrumbs</li>
+	<li>Add icons to the excerpt cards for more post formats</li>
+	<li>Improve the banner image checker, particularly the fallbacks</li>
+</ul>
+
 ## What version are ya up to?
 
-<p>2.2.4 as of June 13, 2017.</p>
+<p>2..3.0 as of June 18, 2017.</p>
 
 ## Foundation version?
 
