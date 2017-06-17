@@ -1,0 +1,13 @@
+.callout { 
+	color: $callout-font-color;
+	
+	a {
+		color: $callout-font-color;
+		border-bottom: 1px solid rgba($callout-font-color, 0.4);
+		
+		&:hover,
+		&:focus {
+			border-color: $callout-font-color;
+		}
+	}
+}

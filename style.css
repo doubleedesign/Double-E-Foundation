@@ -64,7 +64,7 @@ Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
 	OFF CANVAS MENU IF SELECTED
 ===========================================================*/
 /*===========================================================
-	BUTTONS
+	CALLOUTS
 ===========================================================*/
 /*===========================================================
 	FORMS
@@ -3912,8 +3912,8 @@ select[multiple] {
   padding: 1rem;
   border: 1px solid rgba(10, 10, 10, 0.25);
   border-radius: 0;
-  background-color: white;
-  color: #0a0a0a;
+  background-color: #8a8a8a;
+  color: #fefefe;
 }
 
 .callout > :first-child, form .nf-error-msg > :first-child {
@@ -3925,28 +3925,28 @@ select[multiple] {
 }
 
 .callout.primary, form .primary.nf-error-msg {
-  background-color: #def0fc;
-  color: #0a0a0a;
+  background-color: #2199e8;
+  color: #fefefe;
 }
 
 .callout.secondary, form .secondary.nf-error-msg {
-  background-color: #ebebeb;
-  color: #0a0a0a;
+  background-color: #777777;
+  color: #fefefe;
 }
 
 .callout.success, form .success.nf-error-msg {
-  background-color: #e1faea;
-  color: #0a0a0a;
+  background-color: #3adb76;
+  color: #fefefe;
 }
 
 .callout.warning, form .warning.nf-error-msg {
-  background-color: #fff3d9;
-  color: #0a0a0a;
+  background-color: #ffae00;
+  color: #fefefe;
 }
 
 .callout.alert, form .nf-error-msg {
-  background-color: #fce6e2;
-  color: #0a0a0a;
+  background-color: #ec5840;
+  color: #fefefe;
 }
 
 .callout.small, form .small.nf-error-msg {
@@ -8643,6 +8643,19 @@ a {
 .card-wrapper .card {
   height: 100%;
   margin-bottom: 0;
+}
+
+.callout, form .nf-error-msg {
+  color: #fefefe;
+}
+
+.callout a, form .nf-error-msg a {
+  color: #fefefe;
+  border-bottom: 1px solid rgba(254, 254, 254, 0.4);
+}
+
+.callout a:hover, form .nf-error-msg a:hover, .callout a:focus, form .nf-error-msg a:focus {
+  border-color: #fefefe;
 }
 
 .pagination .current {

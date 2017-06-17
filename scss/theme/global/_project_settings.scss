@@ -165,9 +165,15 @@ $offcanvas-fixed-reveal: true;
 $offcanvas-exit-background: rgba($white, 0.25);
 $maincontent-class: 'off-canvas-content';
 
-/*===========================================================
-	BUTTONS
-===========================================================*/
+$callout-background: $white;
+$callout-background-fade: 85%;
+$callout-border: 1px solid rgba($black, 0.25);
+$callout-margin: 0 0 1rem 0;
+$callout-padding: 1rem;
+$callout-font-color: $body-font-color;
+$callout-font-color-alt: $body-background;
+$callout-radius: $global-radius;
+$callout-link-tint: 30%;
 
 $button-padding: 0.85em 1em;
 $button-margin: 0 0 $global-margin 0;
@@ -184,6 +190,20 @@ $button-sizes: (
   large: 1.25rem,
 );
 $button-opacity-disabled: 0.25;
+
+/*===========================================================
+	CALLOUTS
+===========================================================*/
+
+$callout-background: $dark-gray;
+$callout-background-fade: 0%;
+$callout-border: 1px solid rgba($black, 0.25);
+$callout-margin: 0 0 1rem 0;
+$callout-padding: 1rem;
+$callout-font-color: $white;
+$callout-font-color-alt: $callout-font-color;
+$callout-radius: $global-radius;
+$callout-link-tint: 0%;
 
 /*===========================================================
 	FORMS
