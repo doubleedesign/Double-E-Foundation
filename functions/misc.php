@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 2.2.4
+ * @since Double-E-Foundation 2.3.0
  */
 
 /* ==========================================
