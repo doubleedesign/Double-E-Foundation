@@ -6,15 +6,15 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since FoundationPress 0.1.4
+ * @since FoundationPress 2.2.4
  */
 
 ?>
 
 		</section>
 		<div id="footer-container">
-			<footer id="footer">
-				<?php dynamic_sidebar( 'footer-widgets' ); ?>
+			<footer id="footer" class="row">
+				
 			</footer>
 		</div>
 
