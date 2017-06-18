@@ -31,9 +31,20 @@
 		@include breakpoint(medium up) {
 			display: block;
 		}
+		
+		> ul.menu { // top level only
+			width: 100%;
+			display: flex;
+			justify-content: center;
+
+			@include breakpoint(large up) {
+				justify-content: flex-end;
+			}
+		}
 	}
+
 	
-	ul.menu {
+	ul.menu { // all menus including dropdowns
 		
 		> li {
 			
