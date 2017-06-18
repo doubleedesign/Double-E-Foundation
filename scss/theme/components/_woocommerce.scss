@@ -893,7 +893,7 @@ aside {
 				}
 				input {
 					&[name=update_cart] {
-						@extend .button.accent;
+						@extend .button.success;
 
 						@include breakpoint(medium up) {
 							margin-left: auto;
