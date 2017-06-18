@@ -13,10 +13,10 @@ if ( ! function_exists( 'doublee_scripts' ) ) :
 	function doublee_scripts() {
 
 		// Deregister the jquery version bundled with WordPress.
-		wp_deregister_script( 'jquery' );
+		//wp_deregister_script( 'jquery' );
 
 		// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
-		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), '2.2.4', false );
+		//wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), '2.2.4', false );
 
 		// Theme JavaScript - includes foundation.js and others compiled into it
 		$theme = wp_get_theme();
