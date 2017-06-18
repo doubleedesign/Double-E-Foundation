@@ -5,11 +5,11 @@
  *
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 2.2.3
+ * @since Double-E-Foundation 2.3.0
  */
 
 // Remove specific WooCommerce styles and scripts that we're not using
-function davrose_manage_woocommerce_scripts() {
+function doublee_manage_woocommerce_scripts() {
 	wp_deregister_script( 'wc-add-to-cart' );
 	wp_dequeue_script( 'wc-add-to-cart' );
 	
@@ -25,7 +25,7 @@ function davrose_manage_woocommerce_scripts() {
 	wp_deregister_script( 'jqueryui' );
 	wp_dequeue_script( 'jqueryui' );
 }
-add_action( 'wp_enqueue_scripts', 'davrose_manage_woocommerce_scripts', 99 );
+add_action( 'wp_enqueue_scripts', 'doublee_manage_woocommerce_scripts', 99 );
 
 // Customise product lists: 
 
