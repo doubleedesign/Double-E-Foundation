@@ -1,0 +1,55 @@
+.alignright,
+.alignleft,
+.aligncenter {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: $global-margin; 
+	
+	@include breakpoint(large up) {
+		margin-bottom: $global-margin*2;
+	}
+}
+
+.alignleft,
+.alignright {
+	
+	@include breakpoint(medium up) {
+		display: inline; 
+	}
+}
+
+.alignleft {
+	
+	@include breakpoint (medium up) {
+		float: left;
+		margin-right: $global-margin;
+	}
+	
+	@include breakpoint(large up) {
+		margin-right: $global-margin*2;
+	}
+}
+
+.alignright {
+	
+	@include breakpoint (medium up) {
+		float: right;
+		margin-left: $global-margin;
+	}
+	
+	@include breakpoint(large up) {
+		margin-left: $global-margin*2;
+	}
+}
+
+.wp-caption {
+	
+	p:empty {
+		display: none;
+	}
+	
+	.wp-caption-text {
+		color: rgba($body-font-color,0.6);
+		font-style: italic;
+	}
+}

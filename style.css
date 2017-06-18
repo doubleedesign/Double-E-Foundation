@@ -8620,6 +8620,64 @@ a {
   color: #fefefe;
 }
 
+.alignright,
+.alignleft,
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 64em) {
+  .alignright,
+  .alignleft,
+  .aligncenter {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .alignleft,
+  .alignright {
+    display: inline;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .alignleft {
+    float: left;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .alignleft {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  .alignright {
+    float: right;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .alignright {
+    margin-left: 2rem;
+  }
+}
+
+.wp-caption p:empty {
+  display: none;
+}
+
+.wp-caption .wp-caption-text {
+  color: rgba(68, 68, 68, 0.6);
+  font-style: italic;
+}
+
 .card-wrapper {
   margin-bottom: 20px;
 }
