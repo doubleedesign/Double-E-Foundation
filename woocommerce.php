@@ -4,13 +4,21 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since FoundationPress 1.0.0
+ * @since Double-E Foundation 2.3.0
  */
 
 get_header(); ?>
 
+<?php get_template_part('template-parts/featured-image-banner'); ?>
+
 <div class="row">
-	<div class="small-12 large-8 columns">
+		
+	<?php if(is_shop()) { ?>
+		<div class="small-12 large-8 columns">
+		<?php get_sidebar(); ?>
+	<?php } else { ?>
+		<div class="small-12 columns">	
+	<?php } ?>
 
 	<?php while ( woocommerce_content() ) : the_post(); ?>
 		<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
@@ -33,6 +41,6 @@ get_header(); ?>
 	<?php endwhile;?>
 
 	</div>
-	<?php get_sidebar(); ?>
+	
 </div>
 <?php get_footer(); ?>
