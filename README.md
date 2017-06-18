@@ -18,6 +18,8 @@
 			<li><strong>Featured image banner with basic image size checker</strong> that will check if a featured image has been set and whether or not it meets dimension requirements before being displayed; if it does not exist or meet requirements, the same checks will be run on the parent page and its image used if it meets requirements; if there is no parent page or requirements are ot met, a default image is used.</li>
 			<li><strong>Dynamic featured image banner</strong> that loads different sized images (as CSS backgrounds) according to the viewport size; if a page's image doesn't meet size requirements, the parent image will be used, and if there is no parent or that image isn't large enough either, a default image will be used.</li>
 			<li><strong>Visual page title meta field</strong> to use a more descriptive title (e.g. for SEO purposes) as the main heading on a page without needing to change the page name that's used on menus.</li>
+			<li>Add default comment styling.</li>
+			<li>Fix/tweak WooCommerce styling.</li>
 		</ul>
 	</li>
 	<li>Some WooCommerce functions I commonly use. Add to or remove these as needed. <em>To use, you will need to uncomment the call to functions/woocommerce.php the file in functions.php</em></li>
