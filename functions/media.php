@@ -100,7 +100,7 @@ function doublee_change_target($content){
 	return preg_replace_callback('/<a[^>]+/', 'doublee_target_callback', $content);
 }
 function doublee_target_callback($matches){
-	$link = $matches[0];$mu_url = get_bloginfo('url');
+	$link = $matches[0];$mu_url = home_url();
 	if (strpos($link, 'target') === false){
 		$link = preg_replace("%(href=\S(?!$mu_url))%i", 'target="_blank" class="ext" $1', $link);}
 	elseif (preg_match("%href=\S(?!$mu_url)%i", $link)){
