@@ -14,8 +14,8 @@ get_header(); ?>
 <div class="row">
 		
 	<?php if(is_shop()) { ?>
-		<div class="small-12 large-8 columns">
 		<?php get_sidebar(); ?>
+		<div class="small-12 large-8 columns">
 	<?php } else { ?>
 		<div class="small-12 columns">	
 	<?php } ?>

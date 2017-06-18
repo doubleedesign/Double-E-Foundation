@@ -9,5 +9,9 @@
 
 ?>
 <aside id="sidebar" class="small-12 medium-4 columns">
-	
+	<?php
+	if (class_exists('Woocommerce') && is_shop()) {
+		dynamic_sidebar('shop-sidebar'); 
+	} 
+	?>
 </aside>
