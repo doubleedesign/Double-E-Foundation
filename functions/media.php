@@ -24,6 +24,14 @@ add_filter('max_srcset_image_width', function($max_srcset_image_width, $size_arr
 
 
 /* ==========================================
+	DEFAULT CONTENT WIDTH
+===========================================*/
+if (!isset($content_width)) {
+	$content_width = 1280;
+}
+
+
+/* ==========================================
 	ADD A CLASS TO LINKED IMAGES' PARENT ANCHORS
 ============================================*/
 
