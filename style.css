@@ -1,16 +1,15 @@
 @charset "UTF-8";
 /*!
 Theme Name:         	Double-E Foundation
-Theme URI:          	http://www.doubleedesign.com.au
+Theme URI:          	http://foundation.doublee-dev.com.au
 GitHub Theme URI:   	https://github.com/doubleedesign/Double-E-Foundation
 Description:        	Double-E Foundation is a WordPress starter theme using Zurb Foundation 6.
 Version:            	2.3.0
 Foundation version: 	6.3.1
-Author:            		Leesa Ward / Double-E Design
+Author:            	Leesa Ward / Double-E Design
 Author URI:         	http://www.doubleedesign.com.au
-
-Licence:            	GNU General Public License v2 or later
-Licence URI: 			http://www.gnu.org/licenses/gpl-2.0.html
+License:            	GNU General Public License v2 or later
+License URI: 		http://www.gnu.org/licenses/gpl-2.0.html
 */
 /* ---------------------------------------------------------------------------- */
 @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
