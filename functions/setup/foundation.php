@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since FoundationPress 1.0.0
+ * @since Double-E Foundation 2.2.3
  */
 
 // Pagination.
