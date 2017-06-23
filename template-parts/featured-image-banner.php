@@ -26,6 +26,10 @@
 						}
 				}
 				
+				// If this is a search results page, get the search query
+				} else if (is_search()) { 
+					echo 'Search results for: ' . get_search_query(); 
+					
 				// If this is a single post, get the first category name 
 				} else if (is_single()) {
 					 echo $category[0]->name; 
