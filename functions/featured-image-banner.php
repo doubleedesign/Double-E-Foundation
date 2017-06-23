@@ -4,6 +4,8 @@
  * Generates three different CSS background image sizes for #featured-hero 
  * Must be updated on a per-site basis to look for the correct image dimensions and change at the correct breakpoint
  *
+ * ** THIS IS A WORK IN PROGRESS ** 
+ *
  * @package WordPress
  * @subpackage Double-E-Foundation
  * @since Double-E-Foundation 2.2.2
@@ -14,20 +16,20 @@ function doublee_featured_image() {
 	global $post;
 	
 	/* Variables used throughout banner. Theoretically, this is all you should have to edit to customise the banner. */
-		$default_banner = get_stylesheet_directory_uri().'/assets/images/default-banner.jpg';
+	$default_banner = get_stylesheet_directory_uri().'/assets/images/default-banner.jpg';
 
-		// Small screens
-		$wanted_width_small = 639; // how wide we want the banner, minus one pixel
-		$image_size_small_screen = 'medium'; // the WP thumbnail size we want to use. Make sure the width is a minimum of the above wanted width.
+	// Small screens
+	$wanted_width_small = 639; // how wide we want the banner, minus one pixel
+	$image_size_small_screen = 'medium'; // the WP thumbnail size we want to use. Make sure the width is a minimum of the above wanted width.
 
-		// Medium screens
-		$wanted_width_medium = 1023; // how wide we want the banner, minus one pixel
-		$image_size_medium_screen = 'large'; // the WP thumbnail size we want to use. Make sure the width is a minimum fo the above wanted width.
+	// Medium screens
+	$wanted_width_medium = 1023; // how wide we want the banner, minus one pixel
+	$image_size_medium_screen = 'large'; // the WP thumbnail size we want to use. Make sure the width is a minimum fo the above wanted width.
 
-		// Large screens
-		$wanted_width_large = 1919; // how wide we want the banner, minus one pixel
-		$wanted_height_large = 799; // how tall we want the banner, minus one pixel
-		$image_size_large_screen = 'banner'; // the WP thumbnail size we want to use. Make sure the width and height are a minimum of the above wanted width and height.
+	// Large screens
+	$wanted_width_large = 1919; // how wide we want the banner, minus one pixel
+	$wanted_height_large = 799; // how tall we want the banner, minus one pixel
+	$image_size_large_screen = 'banner'; // the WP thumbnail size we want to use. Make sure the width and height are a minimum of the above wanted width and height.
 
 	// Get the featured image
 	if ( has_post_thumbnail() )  {
