@@ -39,7 +39,7 @@
 
 ## What version are ya up to?
 
-<p>2..3.0 as of June 18, 2017.</p>
+<p>2.3.1 as of June 23, 2017.</p>
 
 ## Foundation version?
 
