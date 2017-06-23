@@ -4,21 +4,21 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since FoundationPress 1.0.0
+ * @since Double-E Foundation 2.3.0
  */
 
 get_header(); ?>
 
-<div class="row">
+<?php get_template_part('template-parts/featured-image'); ?>
 
-	<main class="small-12 large-8 columns" role="main">
+<div id="search-results">
 
-		<h2><?php _e( 'Search Results for', '' ); ?> "<?php echo get_search_query(); ?>"</h2>
+	<main class="row" role="main">
 
 		<?php if ( have_posts() ) : ?>
     
             <?php while ( have_posts() ) : the_post(); ?>
-                <?php get_template_part( 'content', get_post_format() ); ?>
+                <?php get_template_part( 'template-parts/excerpt'); ?>
             <?php endwhile; ?>
     
             <?php else : ?>
@@ -27,7 +27,7 @@ get_header(); ?>
         <?php endif;?>
 
 
-		<?php if ( function_exists( 'doublee_pagination' ) ) { doublee_pagination(); } else if ( is_paged() ) { ?>
+		<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
 
 		<nav id="post-nav">
 			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', '' ) ); ?></div>
@@ -37,8 +37,6 @@ get_header(); ?>
 	<?php } ?>
 
 	</main>
-    
-	<?php get_sidebar(); ?>
     
 </div>
 <?php get_footer(); ?>
