@@ -6,16 +6,16 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since Double-E Foundation 0.1.4
+ * @since Double-E Foundation 2.3.0
  */
 
 ?>
 
-<header class="page-header">
+<header class="page-header small-12 columns">
 	<h1 class="page-title"><?php _e( 'Nothing Found', '' ); ?></h1>
 </header>
 
-<div class="page-content">
+<div class="entry-content small-12 columns">
 	<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
 	<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', '' ), admin_url( 'post-new.php' ) ); ?></p>
