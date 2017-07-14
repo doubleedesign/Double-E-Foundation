@@ -3,6 +3,8 @@
 }
 
 .pagination, .woocommerce-pagination {
+	text-align: center;
+	margin: $global-margin 0;
 
 	span.current {
 		padding: $pagination-item-padding;
