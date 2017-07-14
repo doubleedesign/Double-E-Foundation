@@ -1,6 +1,17 @@
-.pagination {
+.woocommerce-pagination {
+	@include pagination-container;
+}
+
+.pagination, .woocommerce-pagination {
+
+	span.current {
+		padding: $pagination-item-padding;
+	}
 	
-	.current {
+	.current,
+	.current a {
+		background: $pagination-item-background-current;
 		display: inline-block !important; // always show, even on mobile (where the others are hidden)
+		color: $white;
 	}
 }
