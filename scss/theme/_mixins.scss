@@ -7,6 +7,37 @@
 }
 
 /*==============================================
+	NEGATIVE MARGINS FOR NESTED ROWS
+	When a .row is inside another .row, it has negative margins applied to ensure there aren't extra gutters on the left and right,
+	however this doesn't work when the flex-grid-row() mixin is used rather than the class.
+	This extra mixin will add the negative margins.
+==============================================*/
+@mixin nested-row-negative-margins() {
+	margin-left: -(map-get($grid-column-gutter,'small'))/2; 
+	margin-right: -(map-get($grid-column-gutter,'small'))/2; 
+	
+	@include breakpoint(medium up) {
+		margin-left: -(map-get($grid-column-gutter,'medium'))/2; 
+		margin-right: -(map-get($grid-column-gutter,'medium'))/2; 
+	}
+	
+	@include breakpoint(large up) {
+		margin-left: -(map-get($grid-column-gutter,'large'))/2; 
+		margin-right: -(map-get($grid-column-gutter,'large'))/2; 
+	}
+	
+	@include breakpoint(xlarge up) {
+		margin-left: -(map-get($grid-column-gutter,'large'))/2; 
+		margin-right: -(map-get($grid-column-gutter,'large'))/2; 
+	}
+	
+	@include breakpoint(xxlarge up) {
+		margin-left: -(map-get($grid-column-gutter,'large'))/2; 
+		margin-right: -(map-get($grid-column-gutter,'large'))/2; 
+	}
+}
+
+/*==============================================
 	GUTTER PADDING ON TOP AND BOTTOM
 	Uses the $grid-column-gutter map 
 	to set responsive top and bottom padding on an element
@@ -35,6 +66,38 @@
 		padding-bottom: map-get($grid-column-gutter,'xxlarge'); 
 	}
 }
+
+
+/*==============================================
+	GUTTER PADDING ON TOP AND BOTTOM - SPECIFY AMOUNT
+	Uses the $grid-column-gutter map - multipled by the number given
+	to set responsive top and bottom padding on an element
+==============================================*/
+@mixin grid-gutter-padding-top-bottom-specify($howmuch) {
+	padding-top: map-get($grid-column-gutter,'small')*$howmuch; 
+	padding-bottom: map-get($grid-column-gutter,'small')*$howmuch; 
+
+	@include breakpoint(medium up) {
+		padding-top: map-get($grid-column-gutter,'medium')*$howmuch; 
+		padding-bottom: map-get($grid-column-gutter,'medium')*$howmuch; 
+	}
+
+	@include breakpoint(large up) {
+		padding-top: map-get($grid-column-gutter,'large')*$howmuch; 
+		padding-bottom: map-get($grid-column-gutter,'large')*$howmuch; 
+	}
+
+	@include breakpoint(xlarge up) {
+		padding-top: map-get($grid-column-gutter,'large')*$howmuch;
+		padding-bottom: map-get($grid-column-gutter,'large')*$howmuch;
+	}
+
+	@include breakpoint(xxlarge up) {
+		padding-top: map-get($grid-column-gutter,'large')*$howmuch; 
+		padding-bottom: map-get($grid-column-gutter,'large')*$howmuch; 
+	}
+}
+
 
 /*==============================================
 	GUTTER MARGIN BOTTOM
