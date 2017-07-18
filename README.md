@@ -39,7 +39,7 @@
 
 ## What version are ya up to?
 
-<p>2.3.1 as of June 23, 2017.</p>
+<p>2.4.0 as of July 18, 2017.</p>
 
 ## Foundation version?
 
@@ -53,6 +53,8 @@
 <ul>
 	<li><a href="http://www.wyndhambusinessandtourism.org.au">Wyndham Business and Tourism Association</a></li>
 	<li><a href="http://www.lynrizdebs.com.au">Lynriz Debutante Presentations</a></li>
+	<li><a href="http://www.elcck.com.au">Early Learning Childcare &amp; Kindergarten</a></li>
+	<li><a href="http://www.connectquest.com.au">ConnectQuest</a></li>
 	<li><a href="http://www.davrose.com.au">Davrose Homes</a> <em>- an example of using WooCommerce for a non-eCommerce product catalogue</em></li>
 	<li><a href="https://www.lovetease.com.au">Love TEAse</a> <em>- WooCommerce store</em></li>
 	<li><a href="http://www.cuttingedgevideo.com.au">Cutting Edge Video Productions</a></li>
