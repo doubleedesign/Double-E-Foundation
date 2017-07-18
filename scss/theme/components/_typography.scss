@@ -1,0 +1,10 @@
+small {
+	font-size: $font-size-small;
+}
+
+p, ul {
+	
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
