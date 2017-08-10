@@ -18,11 +18,11 @@
 				// On the shop page and single product pages, show the Shop page title
 				if (class_exists('Woocommerce')) {
 					if(is_shop() || is_product()) {
-						$visual_page_title = get_post_meta( $shop_page, 'tsi_visual-page-title-entry', true ); 
+						$visual_page_title = get_post_meta( $shop_page, 'doublee_visual-page-title-entry', true ); 
 						if (!empty($visual_page_title)) {
 							echo $visual_page_title; 
 						} else {
-							the_title(); 
+							echo get_the_title($shop_page); 
 						}
 				}
 				
@@ -44,7 +44,7 @@
 				
 				// Otherwise, show this page's title
 				} else {
-					$visual_page_title = get_post_meta( $post->ID, 'tsi_visual-page-title-entry', true ); 
+					$visual_page_title = get_post_meta( $post->ID, 'doublee_visual-page-title-entry', true ); 
 					if (!empty($visual_page_title)) {
 						echo $visual_page_title; 
 					} else {
