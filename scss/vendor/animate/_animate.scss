@@ -1,0 +1,117 @@
+/*!
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.2
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * This SCSS version by Leesa Ward - www.doubleedesign.com.au
+ * github.com/doubleedesign/animate.css
+ *
+ * Animate.css Copyright (c) 2017 Daniel Eden
+ */
+
+@import "source/base";
+
+// Attention seekers
+@import "source/attention_seekers/bounce";
+@import "source/attention_seekers/flash";
+@import "source/attention_seekers/headShake";
+@import "source/attention_seekers/jello";
+@import "source/attention_seekers/pulse";
+@import "source/attention_seekers/rubberBand";
+@import "source/attention_seekers/shake";
+@import "source/attention_seekers/swing";
+@import "source/attention_seekers/tada";
+@import "source/attention_seekers/wobble";
+
+// Bouncing entrances
+@import "source/bouncing_entrances/bounceIn";
+@import "source/bouncing_entrances/bounceInDown";
+@import "source/bouncing_entrances/bounceInLeft";
+@import "source/bouncing_entrances/bounceInRight";
+@import "source/bouncing_entrances/bounceInUp";
+
+// Bouncing exits
+@import "source/bouncing_exits/bounceOut";
+@import "source/bouncing_exits/bounceOutDown";
+@import "source/bouncing_exits/bounceOutLeft";
+@import "source/bouncing_exits/bounceOutRight";
+@import "source/bouncing_exits/bounceOutUp";
+
+// Fading entrances
+@import "source/fading_entrances/fadeIn";
+@import "source/fading_entrances/fadeInDown";
+@import "source/fading_entrances/fadeInDownBig";
+@import "source/fading_entrances/fadeInLeft";
+@import "source/fading_entrances/fadeInLeftBig";
+@import "source/fading_entrances/fadeInRight";
+@import "source/fading_entrances/fadeInRightBig";
+@import "source/fading_entrances/fadeInUp";
+@import "source/fading_entrances/fadeInUpBig";
+
+// Fading exits
+@import "source/fading_exits/fadeOut";
+@import "source/fading_exits/fadeOutDown";
+@import "source/fading_exits/fadeOutDownBig";
+@import "source/fading_exits/fadeOutLeft";
+@import "source/fading_exits/fadeOutLeftBig";
+@import "source/fading_exits/fadeOutRight";
+@import "source/fading_exits/fadeOutRightBig";
+@import "source/fading_exits/fadeOutUp";
+@import "source/fading_exits/fadeOutUpBig";
+
+// Flippers
+@import "source/flippers/flip";
+@import "source/flippers/flipInX";
+@import "source/flippers/flipInY";
+@import "source/flippers/flipOutX";
+@import "source/flippers/flipOutY";
+
+// Lightspeed
+@import "source/lightspeed/lightSpeedIn";
+@import "source/lightspeed/lightSpeedOut";
+
+// Rotating entrances
+@import "source/rotating_entrances/rotateIn";
+@import "source/rotating_entrances/rotateInDownLeft";
+@import "source/rotating_entrances/rotateInDownRight";
+@import "source/rotating_entrances/rotateInUpLeft";
+@import "source/rotating_entrances/rotateInUpRight";
+
+// Rotating exits
+@import "source/rotating_exits/rotateOut";
+@import "source/rotating_exits/rotateOutDownLeft";
+@import "source/rotating_exits/rotateOutDownRight";
+@import "source/rotating_exits/rotateOutUpLeft";
+@import "source/rotating_exits/rotateOutUpRight";
+
+// Sliding entrances
+@import "source/sliding_entrances/slideInDown";
+@import "source/sliding_entrances/slideInLeft";
+@import "source/sliding_entrances/slideInRight";
+@import "source/sliding_entrances/slideInUp";
+
+// Sliding exits
+@import "source/sliding_exits/slideOutDown";
+@import "source/sliding_exits/slideOutLeft";
+@import "source/sliding_exits/slideOutRight";
+@import "source/sliding_exits/slideOutUp";
+
+// Specials
+@import "source/specials/hinge";
+@import "source/specials/jackInTheBox";
+@import "source/specials/rollIn";
+@import "source/specials/rollOut";
+
+// Zooming entrances
+@import "source/zooming_entrances/zoomIn";
+@import "source/zooming_entrances/zoomInDown";
+@import "source/zooming_entrances/zoomInLeft";
+@import "source/zooming_entrances/zoomInRight";
+@import "source/zooming_entrances/zoomInUp";
+
+// Zooming exits
+@import "source/zooming_exits/zoomOut";
+@import "source/zooming_exits/zoomOutDown";
+@import "source/zooming_exits/zoomOutLeft";
+@import "source/zooming_exits/zoomOutRight";
+@import "source/zooming_exits/zoomOutUp";

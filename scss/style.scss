@@ -14,9 +14,11 @@ Text Domain:			double-e-foundation
 
 /* ---------------------------------------------------------------------------- */
 
-// FontAwesome icons
+// FontAwesome icons 
 @import "vendor/font-awesome";
-@import "vendor/woocommerce-fonts";
+
+// WooCommerce fonts
+//@import "vendor/woocommerce-fonts";
 
 /*
   Foundation for Sites components:
@@ -35,6 +37,10 @@ Text Domain:			double-e-foundation
 @import "foundation/settings/settings"; // Foundation default settings
 @import "theme/fonts"; // Theme fonts
 @import "theme/global/project_settings"; // Override settings
+
+// Third-party libraries 
+@import "vendor/animate/animate";
+@import "vendor/hover/hover";
 
 // Foundation mixins & browser resets
 @import "foundation/foundation";
@@ -82,13 +88,6 @@ Text Domain:			double-e-foundation
 @include foundation-title-bar;
 //@include foundation-tooltip;
 @include foundation-top-bar;
-
-/* 
-  Third-party libraries
-  Add third-party CSS libraries that are not part of Foundation here
-*/
-
-@import "vendor/animate";
 
 /*
   Site custom styles:

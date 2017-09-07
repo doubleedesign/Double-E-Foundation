@@ -1,0 +1,18 @@
+@mixin keyframes-zoomIn { 
+
+	@keyframes zoomIn {
+		from {
+			opacity: 0;
+			transform: scale3d(.3, .3, .3);
+		}
+
+		50% {
+			opacity: 1;
+		}
+	}
+}
+
+@mixin zoomIn {
+	@include animate;
+  	animation-name: zoomIn;
+}
