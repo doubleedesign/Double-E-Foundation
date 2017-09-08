@@ -39,7 +39,7 @@
 
 ## What version are ya up to?
 
-<p>2.4.0 as of July 18, 2017.</p>
+<p>2.4.1 as of 7 September, 2017.</p>
 
 ## Foundation version?
 
@@ -50,14 +50,21 @@
 <p>General Public License (GPL) v2. Foundation uses the MIT License.</p>
 
 ## Examples of work
+<p>For Double-E Design:</p>
 <ul>
 	<li><a href="http://www.wyndhambusinessandtourism.org.au">Wyndham Business and Tourism Association</a></li>
 	<li><a href="http://www.lynrizdebs.com.au">Lynriz Debutante Presentations</a></li>
-	<li><a href="http://www.elcck.com.au">Early Learning Childcare &amp; Kindergarten</a></li>
+	<li><a href="http://www.orsecurity.com.au">Oliver-Ramsay Security</a></li>
+	<li><a href="https://www.elcck.com.au">Early Learning Childcare &amp; Kindergarten</a></li>
 	<li><a href="http://www.connectquest.com.au">ConnectQuest</a></li>
-	<li><a href="http://www.davrose.com.au">Davrose Homes</a> <em>- an example of using WooCommerce for a non-eCommerce product catalogue</em></li>
 	<li><a href="https://www.lovetease.com.au">Love TEAse</a> <em>- WooCommerce store</em></li>
 	<li><a href="http://www.cuttingedgevideo.com.au">Cutting Edge Video Productions</a></li>
 	<li><a href="http://www.bhwcc.org.au">Box Hill Wesley Calisthenics Club</a></li>
 	<li><a href="http://www.volairecalisthenics.com.au">Volaire Calisthenics College</a></li>
+</ul>
+
+<p>For Jalapeno Creative:</p>
+<ul>
+	<li><a href="http://www.davrose.com.au">Davrose Homes</a> <em>- an example of using WooCommerce for a non-eCommerce product catalogue</em></li>
+	<li><a href="http://www.thesuccessfulinvestor.com.au">The Successful Investor</a> <em>- an example of using WooCommerce for a non-eCommerce product catalogue</em></li>
 </ul>
