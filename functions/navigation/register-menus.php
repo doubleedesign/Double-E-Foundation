@@ -51,7 +51,7 @@ if ( ! function_exists( 'foundationpress_mobile_nav' ) ) {
 }
 
 /**
- * Desktop navigation - top bar
+ * Footer menu
  */
 if ( ! function_exists( 'doublee_footer_menu' ) ) {
 	function doublee_footer_menu() {
