@@ -29,6 +29,12 @@
 </div><!-- Close off-canvas content wrapper -->
 <?php endif; ?>
 
+<?php // Preloader ?>
+<script type="text/javascript">
+	jQuery(window).load(function(){
+		jQuery('#preloader').fadeOut('slow',function(){jQuery(this).remove();});
+	});
+</script>
 
 <?php wp_footer(); ?>
 

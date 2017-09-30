@@ -22,27 +22,6 @@
 	}
 }
 
-.wf-loading {
-
-	body {
-		
-		&:before {
-			@include icon("\f110");
-			display: block;
-			padding: $global-padding*2;
-			width: 100%;
-			font-size: rem-calc(24);
-			text-align: center;
-		}
-	
-		.off-canvas-wrapper {
-			opacity: 0;
-			display: none;
-			animation-delay: 1s;
-		}
-	}
-}
-
 #children {
 	@include grid-gutter-margin-top;
 	@include grid-gutter-margin-bottom;

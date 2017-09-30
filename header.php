@@ -34,6 +34,29 @@ $parent_class = 'parent-'.$parent->post_name;
 		<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-114x114-precomposed.png">
 		<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-72x72-precomposed.png">
 		<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-precomposed.png">
+		<?php // Preloader styles. JS is in the footer ?>
+		<style type="text/css">
+			#preloader { 
+				position: fixed; 
+				left: 0; 
+				top: 0; 
+				z-index: 9999; 
+				width: 100vw; 
+				height: 100vh;
+				overflow: visible; 
+				background: #222;
+			}
+			#preloader:before {
+				width: 100vw;
+				height: 100vh;
+				position: fixed;
+				top: 0;
+				left: 0;
+				content: '';
+				background: url('<?php echo get_stylesheet_directory_uri();?>/assets/loading.svg') no-repeat center center; 
+				background-size: 200px auto;
+			}
+		</style>
 		<?php wp_head(); ?>
 	</head>
 	<body id="<?php echo $slug; ?>" <?php body_class($browser . ' ' . $parent_class); ?>>
