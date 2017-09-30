@@ -60,6 +60,8 @@ $parent_class = 'parent-'.$parent->post_name;
 		<?php wp_head(); ?>
 	</head>
 	<body id="<?php echo $slug; ?>" <?php body_class($browser . ' ' . $parent_class); ?>>
+		
+	<div id="preloader"></div>
 	
 	<a href="#content" class="skip-to-content">Skip to content</a>
 
