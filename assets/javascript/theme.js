@@ -16,6 +16,16 @@ jQuery(document).ready(function() {
 	jQuery('.title-bar .menu-icon').click(function() {
 		jQuery('#site-navigation').slideToggle(400);
 	});
+	
+	// Fading dropdowns
+	$(function() {
+		$('#top-bar ul').find('ul').show().hide();
+		$('#top-bar ul > li').hover(function() {
+			$(this).children('ul').stop().fadeIn(300);
+		}, function() {
+			$(this).children('ul').stop().fadeOut('fast');
+		});
+	});
 		
 });
 
