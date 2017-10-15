@@ -1,5 +1,6 @@
 .gallery {
 	line-height: 0;
+	@include flex-grid-row();
 	
 	a, a:hover, a:focus {
 		padding: 0;
