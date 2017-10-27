@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
 	
 	// Fading dropdowns
 	$(function() {
-		$('#top-bar ul').find('ul').show().hide();
+		$('body[data-whatinput="mouse"] #top-bar ul').find('ul').show().hide();
 		$('#top-bar ul > li').hover(function() {
 			$(this).children('ul').stop().fadeIn(300);
 		}, function() {
