@@ -66,5 +66,6 @@
 <p>For Jalapeno Creative:</p>
 <ul>
 	<li><a href="http://www.davrose.com.au">Davrose Homes</a> <em>- an example of using WooCommerce for a non-eCommerce product catalogue</em></li>
+	<li><a href="http://www.sustainabletm.com.au">Sustainable Tree Management</a></li>
 	<li><a href="http://www.thesuccessfulinvestor.com.au">The Successful Investor</a> <em>- an example of using WooCommerce for a non-eCommerce product catalogue</em></li>
 </ul>
