@@ -4,7 +4,7 @@
  *
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 2.5.0
+ * @since Double-E-Foundation 3.0.0
  */
 
 /**
@@ -21,9 +21,12 @@ endif;
 /**
  * Increase max srcset width to bigger than its default of 1600
  */
-add_filter('max_srcset_image_width', function($max_srcset_image_width, $size_array){ return 2000; }, 10, 2);
+add_filter('max_srcset_image_width', function($max_srcset_image_width, $size_array){
+	return 2000;
+}, 10, 2);
 
 
+/**
  * Default content width
  */
 if (!isset($content_width)) {
