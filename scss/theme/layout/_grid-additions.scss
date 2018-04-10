@@ -1,0 +1,39 @@
+// Create breakpoint-shrink column classes, e.g. medium-shrink
+@each $breakpoint in $breakpoint-classes {
+	@if $breakpoint == small {
+		// Do nothing
+	} @else {
+		@include breakpoint($breakpoint) {
+			.#{$breakpoint}-shrink {
+				flex: 0 0 auto;
+				max-width: 100%;
+			}
+		}
+	}
+}
+// Create breakpoint-equal-width column classes, e.g. large-equal-width
+@each $breakpoint in $breakpoint-classes {
+	@include breakpoint($breakpoint) {
+		.#{$breakpoint}-equal-width {
+			flex: 1;
+		}
+	}
+}
+
+.row {
+	min-width: 100%;
+	position: relative;
+	padding-left: $global-padding;
+	padding-right: $global-padding;
+
+	.row {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+}
+
+.collapse.columns {
+	padding-left: 0;
+	padding-right: 0;
+}
