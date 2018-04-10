@@ -54,6 +54,7 @@ $foundation-palette: (
 ) !global;
 
 $button-palette: $foundation-palette;
+$label-palette: $foundation-palette;
 
 /*===========================================================
 	TYPOGRAPHY
@@ -93,8 +94,8 @@ $header-styles: (
 );
 
 /* Paragraphs*/ 
-$paragraph-lineheight: 1.6;
-$paragraph-margin-bottom: rem-calc(15);
+$paragraph-lineheight: $global-lineheight;
+$paragraph-margin-bottom: $global-margin;
 
 /* Lists */
 $list-lineheight: $paragraph-lineheight;

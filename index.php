@@ -46,7 +46,7 @@ get_header(); ?>
 	} else if ( is_paged() ) { ?>
 		<nav id="post-nav" class="row align-center align-justify">
 			<div class="post-previous columns"><?php next_posts_link( __( '&larr; Older posts', '' ) ); ?></div>
-			<div class="post-next columnns"><?php previous_posts_link( __( 'Newer posts &rarr;', '' ) ); ?></div>
+			<div class="post-next columns"><?php previous_posts_link( __( 'Newer posts &rarr;', '' ) ); ?></div>
 		</nav>
 	<?php } ?>
     
