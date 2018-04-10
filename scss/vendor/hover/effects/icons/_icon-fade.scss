@@ -9,7 +9,7 @@
 		position: absolute;
 		right: 1em;
 		padding: 0 1px;
-		font-family: FontAwesome;
+		font-family: "Font Awesome 5 Free";
 		@include prefixed(transform, translateZ(0));
 		@include prefixed(transition-duration, .5s);
 		@include prefixed(transition-property, color);
