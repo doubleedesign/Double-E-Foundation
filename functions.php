@@ -46,9 +46,6 @@ require_once( 'functions/setup/enqueue-scripts.php' );
 	NAVIGATION
 ===========================================*/
 
-/** Add Nav Options to Customiser - thanks FoundationPress */
-require_once( 'functions/navigation/custom-nav.php' );
-
 /** Register all navigation menus */
 require_once( 'functions/navigation/register-menus.php' );
 
