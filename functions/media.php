@@ -4,14 +4,12 @@
  *
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 2.0
+ * @since Double-E-Foundation 2.5.0
  */
 
-/* ==========================================
-	IMAGE SIZES
-============================================*/
-
-// Set post thumbnail size and add additional image sizes
+/**
+ * Set post thumbnail size and add additional image sizes
+ */
 if ( ! function_exists( 'doublee_images' ) ) :
 	function doublee_images() {
 		add_image_size('banner',1920,580,true);
@@ -19,22 +17,25 @@ if ( ! function_exists( 'doublee_images' ) ) :
 	add_action( 'after_setup_theme', 'doublee_images' );
 endif;
 
-// Increase max srcset width to bigger than its default of 1600
+
+/**
+ * Increase max srcset width to bigger than its default of 1600
+ */
 add_filter('max_srcset_image_width', function($max_srcset_image_width, $size_array){ return 2000; }, 10, 2);
 
 
-/* ==========================================
-	DEFAULT CONTENT WIDTH
-===========================================*/
+ * Default content width
+ */
 if (!isset($content_width)) {
 	$content_width = 1280;
 }
 
 
-/* ==========================================
-	ADD A CLASS TO LINKED IMAGES' PARENT ANCHORS
-============================================*/
-
+/**
+ * Add a class to linked images' parent anchors
+ * @param $content
+ * @return null|string|string[]
+ */
 function doublee_linked_images_class($content) { 
 	$classes = 'img'; if ( preg_match('/<a.*? class=".*?"><img/', $content) ) { 
 		$content = preg_replace('/(<a.*? class=".*?)(".*?><img)/', '$1 ' . $classes . '$2', $content); 
@@ -45,10 +46,10 @@ function doublee_linked_images_class($content) {
 add_filter('the_content','doublee_linked_images_class');
 
 
-/* ==========================================
-	IF NO FEATURED IMAGE SET, USE FIRST ATTACHMENT
-============================================*/
-
+/**
+ * If no featured image set, use first attachment
+ */
+/*
 function doublee_auto_featured_image() {
    global $post;
    if (!has_post_thumbnail($post->ID)) {
@@ -68,13 +69,13 @@ add_action('draft_to_publish', 'doublee_auto_featured_image');
 add_action('new_to_publish', 'doublee_auto_featured_image'); 
 add_action('pending_to_publish', 'doublee_auto_featured_image'); 
 add_action('future_to_publish', 'doublee_auto_featured_image');
+*/
 
 
-/* ==========================================
-	ENABLE CAPTIONS ON FEATURED IMAGES
-	Template usage: doublee_post_thumbnail_caption();
-============================================*/
-
+/**
+ * Enable captions on featured images
+ * Template usage: doublee_post_thumbnail_caption();
+ */
 /* Function to display caption on featured image, when called in template*/
 function doublee_post_thumbnail_caption() {
   global $post;
@@ -87,11 +88,11 @@ function doublee_post_thumbnail_caption() {
   }
 }
 
-/* ==========================================
-	MISC IMAGE FUNCTIONS
-===========================================*/
 
-// Always default to 'None' when inserting images
+//
+/**
+ * Always default "link to" to "None" when inserting images
+ */
 function doublee_image_setup() {
 	$image_set = get_option( 'image_default_link_type' );
 	if ($image_set !== 'none') {
@@ -100,10 +101,18 @@ function doublee_image_setup() {
 }
 add_action('admin_init', 'doublee_image_setup', 10);
 
-// Always default to 'Media File' when inserting galleries
+
+/**
+ * Always default "link to" to "Media File" when inserting galleries
+ */
 add_filter('shortcode_atts_gallery', function( $out ){$out['link'] = 'file'; return $out; });
 
-// Identify external links automatically and open them in a new window - add class "ext"
+
+/**
+ * Identify external links automatically and open them in a new window - add class "ext"
+ * @param $content
+ * @return null|string|string[]
+ */
 function doublee_change_target($content){
 	return preg_replace_callback('/<a[^>]+/', 'doublee_target_callback', $content);
 }
@@ -118,11 +127,14 @@ function doublee_target_callback($matches){
 }
 add_filter('the_content', 'doublee_change_target');
 
-// Filter <p> tags from images and iframes
+
+/**
+ * Filter <p> tags from images and iframes
+ * @param $content
+ * @return null|string|string[]
+ */
 function doublee_p_filter($content) { 
 	$content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content); 
 	return preg_replace('/<p>\s*(<iframe .*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content); 
 } 
-add_filter('the_content', 'doublee_p_filter'); 
-
-?>
+add_filter('the_content', 'doublee_p_filter');
