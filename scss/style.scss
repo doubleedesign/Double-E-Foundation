@@ -3,31 +3,22 @@ Theme Name:         	Double-E Foundation
 Theme URI:          	http://foundation.doublee-dev.com.au
 GitHub Theme URI:   	https://github.com/doubleedesign/Double-E-Foundation
 Description:        	Double-E Foundation is a WordPress starter theme using Zurb Foundation 6.
-Version:            	2.4.1
+Version:            	3.0.0
 Foundation version: 	6.3.1
-Author:            	Leesa Ward / Double-E Design
+Author:            		Leesa Ward / Double-E Design
 Author URI:         	http://www.doubleedesign.com.au
 License:            	GNU General Public License v2 or later
-License URI: 		http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain:		double-e-foundation
+License URI: 			http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:			doublee
 */
 
 /* ---------------------------------------------------------------------------- */
 
-// FontAwesome icons 
+// Font Awesome CSS
 @import "vendor/font-awesome";
 
 // WooCommerce fonts
 //@import "vendor/woocommerce-fonts";
-
-/*
-  Foundation for Sites components:
-  Import the building blocks you need for your project.
-  Reducing the number of imported components will optimize page speed.
-  ---------------------------------------------------------------------
-  The Foundation framework is built by Zurb
-  Licensed under MIT Open Source
-*/
 
 // Custom functions and mixins
 @import "theme/functions"; 
@@ -47,12 +38,15 @@ Text Domain:		double-e-foundation
 
 // WP overrides
 @import "theme/global/wp-admin"; // Fix issues with wp-admin bar positioning
-@import "theme/global/wp-overrides"; // Override the default WordPress styling for some elements
 
 // Foundation global styles 
 @include foundation-global-styles;
 
-// Foundation components
+/*
+  Foundation for Sites components:
+  Import the building blocks you need for your project.
+  Reducing the number of imported components will optimize page speed.
+*/
 @include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
@@ -89,11 +83,6 @@ Text Domain:		double-e-foundation
 //@include foundation-tooltip;
 @include foundation-top-bar;
 
-/*
-  Site custom styles:
-  Add your scss files below to structure your project styles
-*/
-
 // Theme Components
 @import "theme/components/typography";
 @import "theme/components/links";
@@ -111,7 +100,8 @@ Text Domain:		double-e-foundation
 
 // Theme General Layout
 @import "theme/layout/general";
-@import "theme/layout/fixes";
+@import "theme/layout/grid-additions";
+@import "theme/layout/layout-animation";
 @import "theme/layout/topbar";
 @import "theme/layout/sidebar";
 @import "theme/layout/footer";
