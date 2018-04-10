@@ -32,7 +32,7 @@ get_header(); ?>
 		if ( have_posts() ) {
 			// Start the Loop 
 			while ( have_posts() ) : the_post();
-				get_template_part( 'template-parts/excerpt', get_post_format() );
+				get_template_part( 'excerpts/excerpt-card');
 			endwhile; 
 		} else {
 			get_template_part( 'content', 'none' );

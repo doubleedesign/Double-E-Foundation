@@ -27,7 +27,7 @@ if ( $childpages->have_posts() ) { ?>
 	<div id="children" class="row">
 		<?php while ( $childpages->have_posts() ) {
 			$childpages->the_post();
-			get_template_part('template-parts/excerpt'); 
+			get_template_part('excerpts/excerpt-card');
 		} ?>
 	</div>
 
