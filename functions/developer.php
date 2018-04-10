@@ -46,7 +46,7 @@ function doublee_get_browser() {
 /**
  * Get the visual page title, or if empty get the regular title
  * @return string
- * @since Double-E Foundation 2.5
+ * @since Double-E Foundation 3.0
  * @uses Advanced Custom Fields
  */
 function doublee_get_page_title() {
@@ -62,7 +62,7 @@ function doublee_get_page_title() {
  * Build a "slug" from the page title or other relevant string, such as the visual page title (as the actual slug may be different)
  * @param $string - the string to use to build the slug, generally doublee_get_page_title or get_the_title
  * @return null|string
- * @since Double-E Foundation 2.5
+ * @since Double-E Foundation 3.0
  */
 function doublee_build_title_slug($string) {
 	$title_slug = strtolower($string); // make title lowercase for use as slug
@@ -78,7 +78,7 @@ function doublee_build_title_slug($string) {
  * Get the first paragraph from a given string
  * @param $text - the string to get the first paragraph from
  * @return bool|string
- * @since Double-E Foundation 2.5
+ * @since Double-E Foundation 3.0
  */
 function doublee_get_first_paragraph($text){
 	$text = wpautop($text);
@@ -93,7 +93,7 @@ function doublee_get_first_paragraph($text){
  * useful for avoiding ghost text in titles
  * @param $string - the string to split
  * @return string - a new string with <span> tags added
- * @since Double-E Foundation 2.5
+ * @since Double-E Foundation 3.0
  */
 function doublee_split_text($string) {
 	$word_count = str_word_count($string);
@@ -115,7 +115,7 @@ function doublee_split_text($string) {
  * Get ordinal word from a given integer (up to 9)
  * @param $num - the number to get the ordinal word for
  * @return string
- * @since Double-E Foundation 2.5
+ * @since Double-E Foundation 3.0
  */
 function doublee_integer_to_ordinal_word($num) {
 	$word = array('first','second','third','fourth','fifth','sixth','seventh','eighth','ninth','tenth');
@@ -143,7 +143,7 @@ echo $splitcontent[1];
  *
  * @param $content - the string to split at the <!--more--> tags
  * @return array[]|false|mixed|string[]
- * @since Double-E Foundation 2.5
+ * @since Double-E Foundation 3.0
  */
 function doublee_split_content($content){
 	// run through a couple of essential tasks to prepare the content
@@ -196,7 +196,7 @@ doublee_custom_excerpt(get_the_content());
  * @param $text - the string to strip headings and shorten, generally get_the_excerpt or get_the_content
  * @param $word_count - how many words to include in the output
  * @return string
- * @since Double-E Foundation 2.5
+ * @since Double-E Foundation 3.0
  */
 function doublee_custom_excerpt($text, $word_count) {
 

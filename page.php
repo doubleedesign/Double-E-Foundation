@@ -22,14 +22,7 @@
        
            <header>
                <h1 class="entry-title">
-                    <?php
-				$visual_page_title = get_post_meta( $post->ID, 'doublee_visual-page-title-entry', true ); 
-				if (!empty($visual_page_title)) {
-					echo $visual_page_title; 
-				} else {
-					the_title(); 
-				}
-			  ?>
+                    <?php echo doublee_get_page_title(); ?>
                </h1>
            </header>
            
