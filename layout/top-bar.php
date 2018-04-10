@@ -9,7 +9,7 @@
 			<?php doublee_top_bar_menu(); ?>
 
 			<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-				<?php get_template_part( 'template-parts/mobile-top-bar' ); ?>
+				<?php get_template_part( 'layout/mobile-top-bar' ); ?>
 			<?php endif; ?>
 		</nav>
 	</div>
