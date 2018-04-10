@@ -10,7 +10,7 @@
  * @link https://codex.wordpress.org/Theme_Development
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 2.2.3
+ * @since Double-E-Foundation 3.0.0
  */
 
 /* ==========================================
