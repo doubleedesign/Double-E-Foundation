@@ -32,7 +32,7 @@ function doublee_body_classes($classes) {
 	}
 
 	// Browser
-	$browser = apso_get_browser();
+	$browser = doublee_get_browser();
 	$classes[] .= $browser;
 
 	// Shall we animate?
