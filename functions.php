@@ -60,19 +60,14 @@ require_once( 'functions/navigation/menu-classes.php' );
 
 
 /* ==========================================
-	METABOXES
-===========================================*/
-
-/** Meta fields/boxes */
-require_once ('functions/metaboxes/visual-page-title.php'); 
-
-
-/* ==========================================
 	TEMPLATE DEVELOPMENT FUNCTIONS
 ===========================================*/
 
 /** Developer functions - general functions/tools for theme/template development */ 
 require_once( 'functions/developer.php' );
+
+/** Miscellaneous functions */
+require_once( 'functions/misc.php' );
 
 /** Image-related functions */
 require_once( 'functions/media.php' );
@@ -85,8 +80,3 @@ require_once( 'functions/featured-image-banner.php');
 
 /** WooCommerce functions for non-eCommerce / product catalogue sites */
 //require_once('functions/woocommerce-catalogue.php');
-
-/** Miscellaneous functions */
-require_once( 'functions/misc.php' );
-
-?>
