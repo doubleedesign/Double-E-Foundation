@@ -65,8 +65,24 @@ $body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $global-weight-normal: 400;
 $global-weight-bold: 700;
 $global-lineheight: 1.45;
-
 $font-size-small: 0.9em;
+
+/* Type Scale values - currently only used for mixins */
+$minor-second: 1.067;
+$major-second: 1.125;
+$minor-third: 1.200;
+$major-third: 1.250;
+$perfect-fourth: 1.333;
+$augmented-fourth: 1.414;
+$perfect-fifth: 1.500;
+$golden-ratio: 1.618;
+
+/* Type scale settings - currently only used for mixins */
+$small-typescale: $perfect-fourth;
+$medium-typescale: $small-typescale;
+$large-typescale: $augmented-fourth;
+$xlarge-typescale: $large-typescale;
+$xxlarge-typescale: $xlarge-typescale;
 
 /*Headings*/
 $header-font-family: $body-font-family;
@@ -75,22 +91,60 @@ $header-font-style: normal;
 $header-lineheight: 1.2;
 $header-margin-bottom: $global-margin;
 $header-styles: (
-  small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
-    'h6': ('font-size': 16),
-  ),
-  medium: (
-    'h1': ('font-size': 48),
-    'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
-    'h5': ('font-size': 20),
-    'h6': ('font-size': 16),
-  ),
+	// See type-scale.com
+	// TODO: Find a better way to calculate this using the variables above, or similar
+	small: (
+		// Perfect Fourth, with H1 two steps larger than H2
+		'h1': ('fs': 3.157em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		//'h2': ('fs': 2.369em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h2': ('fs': 1.777em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 1.333em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+	),
+	medium: (
+		// Perfect Fourth, with H1 two steps larger than H2
+		'h1': ('fs': 3.157em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		//'h2': ('fs': 2.369em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h2': ('fs': 1.777em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 1.333em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+	),
+	large: (
+		// Augmented Fourth, with H1 two steps larger than H2
+		'h1': ('fs': 3.998em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		//'h2': ('fs': 2.827em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h2': ('fs': 1.999em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 1.414em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+	),
+	xlarge: (
+		// Augmented Fourth, with H1 two steps larger than H2
+		'h1': ('fs': 3.998em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		//'h2': ('fs': 2.827em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h2': ('fs': 1.999em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 1.414em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+	),
+	xxlarge: (
+		// Augmented Fourth, with H1 two steps larger than H2
+		'h1': ('fs': 3.998em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		//'h2': ('fs': 2.827em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h2': ('fs': 1.999em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 1.414em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+	),
+	// Note: body font is set to 16px up to xxlarge, when it becomes 18
+	// The type scale remains the same as on large, but everything will become larger due to the larger base font size.
 );
 
 /* Paragraphs*/ 

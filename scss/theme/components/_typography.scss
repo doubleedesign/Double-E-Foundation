@@ -1,3 +1,10 @@
+body {
+
+	@include breakpoint(xxlarge up) {
+		font-size: rem-calc(18);
+	}
+}
+
 small {
 	font-size: $font-size-small;
 }
