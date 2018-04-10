@@ -1,4 +1,12 @@
 <?php
+/**
+ * Widget areas
+ *
+ * @package WordPress
+ * @subpackage Double-E-Foundation
+ * @since Double-E-Foundation 2.2.3
+ */
+
 
 if (class_exists('Woocommerce')) {
 	
@@ -16,5 +24,3 @@ if (class_exists('Woocommerce')) {
 	
 	add_action( 'widgets_init', 'doublee_woo_sidebar' );
 }
-
-?>
