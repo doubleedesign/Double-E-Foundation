@@ -4,11 +4,11 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since FoundationPress 1.0.0
+ * @since Double-E Foundation 3.0
  */
 
 ?>
 
 <nav class="off-canvas position-left" id="offCanvas" data-off-canvas data-position="left" role="navigation">
-  <?php foundationpress_mobile_nav(); ?>
+  <?php doublee_mobile_nav(); ?>
 </nav>
