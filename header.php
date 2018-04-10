@@ -6,23 +6,13 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since Double-E Foundation 2.1
+ * @since Double-E Foundation 3.0
  */
 
 ?>
 <?php
-/* Add a CSS class to the body to target browsers */ 
-if (stripos( $_SERVER['HTTP_USER_AGENT'], "chrome")>0){ $browser = 'chrome'; } 
-else if (stripos( $_SERVER['HTTP_USER_AGENT'], "firefox")>0){$browser = 'firefox'; } 
-else if (stripos( $_SERVER['HTTP_USER_AGENT'], "Trident")>0){$browser = 'ie'; } 
-else if (stripos( $_SERVER['HTTP_USER_AGENT'], "MSIE")>0){$browser = 'ie'; } ; 
 /* Add the page slug as an ID on the body tag */
-$slug = 'page-'.$post->post_name; 
-/* Add parent slug as a class on the body tag */
-$parents = get_post_ancestors( $post->ID );
-$id = ($parents) ? $parents[count($parents)-1]: $post->ID;
-$parent = get_post( $id );
-$parent_class = 'parent-'.$parent->post_name;
+$slug = 'page-'.$post->post_name;
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
@@ -59,7 +49,7 @@ $parent_class = 'parent-'.$parent->post_name;
 		</style>
 		<?php wp_head(); ?>
 	</head>
-	<body id="<?php echo $slug; ?>" <?php body_class($browser . ' ' . $parent_class); ?>>
+	<body id="<?php echo $slug; ?>" <?php body_class(); ?>>
 		
 	<div id="preloader"></div>
 	
