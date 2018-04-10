@@ -6,33 +6,34 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since FoundationPress 2.3.0
+ * @since Double-E Foundation 3.0
  */
 
 ?>
 
-		</section>
-		<div id="footer-container">
-			<footer id="footer" class="row align-middle align-justify">
-				<div class="small-12 large-expand columns">
-					<?php doublee_footer_menu(); ?>
-				</div>
-				<div class="shrink columns">
-					<small>Website by <a href="http://www.doubleedesign.com.au">Double-E Design</a>.</small>
-				</div>
-			</footer>
-		</div>
+			</section>
+			<div id="footer-container">
+				<footer id="footer" class="row align-middle align-justify">
+					<div class="small-12 large-expand columns">
+						<?php doublee_footer_menu(); ?>
+					</div>
+					<div class="shrink columns">
+						<small>Website by <a href="http://www.doubleedesign.com.au">Double-E Design</a>.</small>
+					</div>
+				</footer>
+			</div>
 
-<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
+		<?php // Remove these three divs if not using offcanvas ?>
 		</div><!-- Close off-canvas wrapper inner -->
 	</div><!-- Close off-canvas wrapper -->
 </div><!-- Close off-canvas content wrapper -->
-<?php endif; ?>
+
 
 <?php // Preloader ?>
-<script type="text/javascript">
-	jQuery(window).load(function(){
-		jQuery('#preloader').fadeOut('slow',function(){jQuery(this).remove();});
+<script>
+	var elem = document.getElementById('preloader');
+	window.addEventListener('load', function(){
+		elem.classList.add('fadeOut');
 	});
 </script>
 
