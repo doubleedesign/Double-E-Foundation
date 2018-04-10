@@ -7,6 +7,140 @@
 }
 
 /*==============================================
+	LEAD PARAGRAPH
+==============================================*/
+@mixin lead-paragraph() {
+	font-family: $header-font-family;
+	font-weight: $global-weight-bold;
+	font-size: 1.25em;
+	margin-bottom: 1em;
+}
+
+/*==============================================
+	ADD BLOCK COLOURS TO THE SIDES OF ELEMENTS
+	Allows a full-width appearance with the content staying within the grid
+	block-color-remove mixin allows you to easily remove the block at certain breakpoints as needed
+==============================================*/
+@mixin block-color-before($color) {
+	position: relative;
+
+	&:before {
+		content: '';
+		background: $color;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -100%;
+	}
+}
+
+@mixin block-color-after($color) {
+	position: relative;
+
+	&:after {
+		content: '';
+		background: $color;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		right: -100%;
+	}
+}
+
+@mixin block-color-remove($position) {
+
+	&:#{$position} {
+		display: none;
+	}
+}
+
+
+/*==============================================
+	PLAY BUTTON OVERLAY
+==============================================*/
+@mixin play-button($color, $hover-color) {
+
+	&:before {
+		font-family: 'Font Awesome 5 Light';
+		content: '\f04b';
+		font-size: 0;
+		position: absolute;
+	}
+
+	svg {
+		font-size: 1em;
+		border-radius: $global-radius;
+		padding: $global-padding $global-padding/2;
+		background: $color;
+		position: absolute;
+		transition: $anchor-transition;
+		z-index: 500;
+		color: $white;
+		width: 20% !important;
+		left: 40%;
+		height: 15%;
+		line-height: 1.2;
+		top: 42.5%;
+
+		path {
+			fill: $white;
+		}
+	}
+
+	&:hover,
+	&:focus {
+
+		svg {
+			background: $hover-color;
+		}
+	}
+}
+
+/*==============================================
+	Consistently @include heading styles on
+	non-headings that we want to look like headings
+	or headings we want to look like other headings
+	to avoid use of @extend
+==============================================*/
+@mixin pseudo-heading($heading-level) {
+	font-size: map-deep-get($header-styles,'small',$heading-level,'fs');
+	font-weight: $header-font-weight;
+
+	// Note: If you change these fonts, you must also update them in components/_typography.scss
+	@if ($heading-level = 'h1') or ($heading-level = 'h2') or ($heading-level = 'h3') {
+		font-family: $header-font-family;
+	} @else {
+		font-family: $body-font-family;
+	}
+
+	@include breakpoint(medium up) {
+		font-size: map-deep-get($header-styles,'medium',$heading-level,'fs');
+	}
+
+	@include breakpoint(large up) {
+		font-size: map-deep-get($header-styles,'large',$heading-level,'fs');
+	}
+
+	@include breakpoint(xlarge up) {
+		font-size: map-deep-get($header-styles,'xlarge',$heading-level,'fs');
+	}
+
+	@include breakpoint(xxlarge up) {
+		font-size: map-deep-get($header-styles,'xxlarge',$heading-level,'fs');
+	}
+}
+
+/*==============================================
+	GO ANOTHER STEP UP A TYPE SCALE
+	Example usage: @include step-up('medium', 'h2', $medium-typescale);
+==============================================*/
+@mixin step-up($breakpoint, $size, $scale) {
+	font-size: map-deep-get($header-styles, $breakpoint, $size, 'fs')*$scale;
+}
+
+/*==============================================
 	NEGATIVE MARGINS FOR NESTED ROWS
 	When a .row is inside another .row, it has negative margins applied to ensure there aren't extra gutters on the left and right,
 	however this doesn't work when the flex-grid-row() mixin is used rather than the class.
@@ -146,5 +280,80 @@
 
 	@include breakpoint(xxlarge up) {
 		margin-top: map-get($grid-column-gutter,'xxlarge'); 
+	}
+}
+
+/*==============================================
+	GUTTER MARGIN TOP
+	Uses the $grid-column-gutter map
+	to set a responsive top margin on an element
+==============================================*/
+@mixin grid-gutter-margin-top {
+	margin-top: map-get($grid-column-gutter,'small');
+
+	@include breakpoint(medium up) {
+		margin-top: map-get($grid-column-gutter,'medium');
+	}
+
+	@include breakpoint(large up) {
+		margin-top: map-get($grid-column-gutter,'large');
+	}
+
+	@include breakpoint(xlarge up) {
+		margin-top: map-get($grid-column-gutter,'xlarge');
+	}
+
+	@include breakpoint(xxlarge up) {
+		margin-top: map-get($grid-column-gutter,'xxlarge');
+	}
+}
+
+/*==============================================
+	GUTTER MARGIN BOTTOM - SPECIFY AMOUNT
+	Uses the $grid-column-gutter map
+	to set a responsive bottom margin on an element
+==============================================*/
+@mixin grid-gutter-margin-bottom-specify($howmuch) {
+	margin-bottom: map-get($grid-column-gutter,'small')*$howmuch;
+
+	@include breakpoint(medium up) {
+		margin-bottom: map-get($grid-column-gutter,'medium')*$howmuch;
+	}
+
+	@include breakpoint(large up) {
+		margin-bottom: map-get($grid-column-gutter,'large')*$howmuch;
+	}
+
+	@include breakpoint(xlarge up) {
+		margin-bottom: map-get($grid-column-gutter,'xlarge')*$howmuch;
+	}
+
+	@include breakpoint(xxlarge up) {
+		margin-bottom: map-get($grid-column-gutter,'xxlarge')*$howmuch;
+	}
+}
+
+/*==============================================
+	GUTTER MARGIN TOP - SPECIFY AMOUNT
+	Uses the $grid-column-gutter map
+	to set a responsive bottom margin on an element
+==============================================*/
+@mixin grid-gutter-margin-top-specify($howmuch) {
+	margin-top: map-get($grid-column-gutter,'small')*$howmuch;
+
+	@include breakpoint(medium up) {
+		margin-top: map-get($grid-column-gutter,'medium')*$howmuch;
+	}
+
+	@include breakpoint(large up) {
+		margin-top: map-get($grid-column-gutter,'large')*$howmuch;
+	}
+
+	@include breakpoint(xlarge up) {
+		margin-top: map-get($grid-column-gutter,'xlarge')*$howmuch;
+	}
+
+	@include breakpoint(xxlarge up) {
+		margin-top: map-get($grid-column-gutter,'xxlarge')*$howmuch;
 	}
 }
