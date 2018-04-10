@@ -1,57 +1,106 @@
 <?php
 /**
- * Enqueue all scripts
+ * Enqueue scripts
  *
- * Learn more about enqueue_script: {@link https://codex.wordpress.org/Function_Reference/wp_enqueue_script}
+ * @link https://codex.wordpress.org/Function_Reference/wp_enqueue_script}
  *
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 1.1.1
+ * @since Double-E-Foundation 3.0.0
  */
 
-if ( ! function_exists( 'doublee_scripts' ) ) :
+if ( ! function_exists( 'doublee_scripts' ) ) {
 	function doublee_scripts() {
 
-		// Deregister the jquery version bundled with WordPress.
-		//wp_deregister_script( 'jquery' );
-
-		// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
-		//wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js', array(), '2.2.4', false );
-
-		// Theme JavaScript - includes foundation.js and others compiled into it
 		$theme = wp_get_theme();
-		$version = $theme->get( 'Version' );
-		wp_enqueue_script( 'Theme', get_template_directory_uri() . '/assets/javascript/min/theme.min.js', array('jquery'), $version, true );
+		$version = $theme->get('Version');
+		$browser = doublee_get_browser();
+
+		/**
+		 * Register and enqueue scripts
+		 */
+
+		// jQuery - loading it separately enables us to load it asynchronously
+		// Using 1.12.4 as that's the same version that WP was using at the time of writing this.
+		wp_deregister_script('jquery');
+		wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4', false);
+
+		// InView (non IE browsers)
+		if ($browser != 'ie') {
+			wp_enqueue_script('inview', get_template_directory_uri() . '/assets/javascript/min/inview.min.js', array('jquery'), $version, true);
+		}
+
+		// Theme JavaScript - includes Foundation plugins and others compiled into it
+		wp_enqueue_script('theme', get_template_directory_uri() . '/assets/javascript/min/theme.min.js', array('jquery'), $version, true);
+
+		// Font Awesome
+		wp_enqueue_script('fontawesome', get_template_directory_uri() . '/assets/javascript/min/fontawesome.min.js', array(), $version, true);
 
 		// Add the comment-reply library on pages where it is necessary
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-			wp_enqueue_script( 'comment-reply' );
+		if (is_singular() && comments_open() && get_option('thread_comments')) {
+			wp_enqueue_script('comment-reply');
 		}
-		
-		// Async or defer scripts
 
-			// Theme JS
-			add_filter('script_loader_tag', 'themejs_defer', 10, 2);
-			function themejs_defer($tag, $handle) {
-				if ( 'theme' !== $handle)
-				return $tag;
-				return str_replace( ' src', ' defer src', $tag );
-			}
+		/**
+		 * Async or defer scripts where possible
+		 */
 
-			// WP-Embed
-			add_filter('script_loader_tag', 'embedjs_defer', 10, 2);
-			function embedjs_defer($tag, $handle) {
-				if ( 'wp-embed' !== $handle)
+		// Theme JS
+		add_filter('script_loader_tag', 'themejs_defer', 10, 2);
+		function themejs_defer($tag, $handle)
+		{
+			if ('theme' !== $handle)
 				return $tag;
-				return str_replace( ' src', ' defer src', $tag );
-			}
+			return str_replace(' src', ' defer src', $tag);
+		}
+
+		// Font Awesome
+		add_filter('script_loader_tag', 'fontawesome_defer', 10, 2);
+		function fontawesome_defer($tag, $handle)
+		{
+			if ('fontawesome' !== $handle)
+				return $tag;
+			return str_replace(' src', ' defer src', $tag);
+		}
+
+		// InView
+		add_filter('script_loader_tag', 'inview_defer', 10, 2);
+		function inview_defer($tag, $handle)
+		{
+			if ('inview' !== $handle)
+				return $tag;
+			return str_replace(' src', ' defer src', $tag);
+		}
+
+		// WP-Embed
+		add_filter('script_loader_tag', 'embedjs_defer', 10, 2);
+		function embedjs_defer($tag, $handle)
+		{
+			if ('wp-embed' !== $handle)
+				return $tag;
+			return str_replace(' src', ' defer src', $tag);
+		}
+
+		// jQuery
+		add_filter('script_loader_tag', 'jquery_async', 10, 2);
+		function jquery_async($tag, $handle)
+		{
+			if ('jquery' !== $handle)
+				return $tag;
+			return str_replace(' src', ' async src', $tag);
+		}
+
+		// jQuery Migrate
+		add_filter('script_loader_tag', 'jquerymigrate_async', 10, 2);
+		function jquerymigrate_async($tag, $handle)
+		{
+			if ('jquery-migrate' !== $handle)
+				return $tag;
+			return str_replace(' src', ' async src', $tag);
+		}
 
 	}
 
-	add_action( 'wp_enqueue_scripts', 'doublee_scripts' );
+	add_action('wp_enqueue_scripts', 'doublee_scripts');
 
-endif;
-
-
-
-?>
+}
