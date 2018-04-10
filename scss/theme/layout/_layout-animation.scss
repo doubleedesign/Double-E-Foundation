@@ -1,0 +1,43 @@
+/**
+Global/layout animations
+@uses jQuery inView to switch classes - see theme.js
+@uses Animate.scss library for animations
+- Elements to be animated in require "animate not-yet-visible" classes
+- The not-yet-visible class hides the element until it is animated in
+- Once an element is animated in, it remains .visible even if it is scrolled out of view again
+- Apply the animation mixin to the .visible class, e.g. .logo.visible { @include fadeInDown; }
+*/
+
+// Include animation keyframes that we need once so we don't repeat their code multiple times
+@include keyframes-fadeIn;
+@include keyframes-fadeInUp;
+@include keyframes-fadeInDown;
+
+// Set up general animation stuff
+.not-yet-visible {
+	visibility: hidden;
+}
+
+.visible {
+	visibility: visible;
+}
+
+// Example
+section {
+	&.visible {
+		@include fadeIn;
+	}
+}
+
+// Don't bother in IE. .not-yet-visible class should be removed by JS, but this is here just in case.
+body.ie:not(.edge) {
+
+	.not-yet-visible {
+		visibility: visible;
+	}
+
+	.visible {
+		animation-name: unset;
+		animation-duration: 0s;
+	}
+}
