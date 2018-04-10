@@ -8,12 +8,11 @@
  */
 
 if ( ! function_exists( 'foundationpress_sticky_posts' ) ) :
-function foundationpress_sticky_posts( $classes ) {
-	$classes = array_diff($classes, array('sticky'));
-	$classes[] = 'wp-sticky';
-	return $classes;
-}
+	function foundationpress_sticky_posts( $classes ) {
+		$classes = array_diff($classes, array('sticky'));
+		$classes[] = 'wp-sticky';
+		return $classes;
+	}
 add_filter('post_class','foundationpress_sticky_posts');
 
 endif;
-?>
