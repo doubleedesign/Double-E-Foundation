@@ -98,17 +98,40 @@ document.addEventListener('DOMContentLoaded', function() {
 		}
 	});
 
-	/**
+		/**
 	 * Remove animation classes in IE
 	 */
-	var animated = document.querySelectorAll('body.ie .animate');
-	var notYetVisible = document.querySelectorAll('body.ie .not-yet-visible');
-	if(animated.length > 0) {
-		animated.classList.remove('animate');
+	if(document.body.classList.contains('ie')) {
+
+		var animated = document.getElementsByClassName('.animate');
+		var notYetVisible = document.getElementsByClassName('.not-yet-visible');
+
+		var i = 0;
+		if (animated.length > 0) {
+			for (i = 0; i < animated.length; i++) {
+				animated[i].classList.remove('animated');
+			}
+		}
+		if (notYetVisible.length > 0) {
+			for (i = 0; i < notYetVisible.length; i++) {
+				notYetVisible[i].classList.remove('not-yet-visible');
+			}
+		}
 	}
-	if (notYetVisible.length > 0) {
-		notYetVisible.classList.remove('not-yet-visible');
-	}
+
+
+	/**
+	 * Smooth scrolling for same-page anchor links
+	 * Vanilla version, only works on good browsers
+	 */
+	document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+		anchor.addEventListener('click', function(e) {
+			e.preventDefault();
+			document.querySelector(this.getAttribute('href')).scrollIntoView({
+				behavior: 'smooth'
+			});
+		});
+	});
 
 
 	/**
