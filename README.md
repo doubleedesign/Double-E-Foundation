@@ -82,6 +82,7 @@ General Public License (GPL) v2. Foundation uses the MIT License.
 
 ## Examples of work
 * [Kids Compass Paediatric Therapy Centre](https://www.kidscompass.com.au)
+* [Exford Primary School](http://www.exfordps.vic.edu.au) 
 * [Wyndham Business and Tourism Association](http://www.wyndhambusinessandtourism.org.au)
 * [Lynriz Debutante Presentations](http://www.lynrizdebs.com.au)
 * [Oliver-Ramsay Security](https://www.orsecurity.com.au)
