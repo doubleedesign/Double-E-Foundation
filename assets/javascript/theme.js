@@ -176,7 +176,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	 * http://brutaldesign.github.io/swipebox/
 	 * @uses jQuery
 	 */
-	/*
 	;( function( jQuery ) {
 		jQuery( '.swipebox' ).swipebox( {
 			useCSS : true, // false will force the use of jQuery for animations
@@ -192,8 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			loopAtEnd: true // true will return to the first image after the last image is reached
 		} );
 	} )( jQuery );
-	*/
-		
+
 });
 
 /*=======================================
