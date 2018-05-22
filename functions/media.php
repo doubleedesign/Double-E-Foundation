@@ -9,6 +9,7 @@
 
 /**
  * Set post thumbnail size and add additional image sizes
+ * @since Double-E Foundation 1.0
  */
 if ( ! function_exists( 'doublee_images' ) ) :
 	function doublee_images() {
@@ -28,6 +29,7 @@ endif;
  * @param $output
  * @param $attr
  * @return string
+ * @since Double-E Foundation 3.0.1
  */
 function doublee_post_gallery_markup( $output, $attr ) {
 
@@ -218,10 +220,10 @@ function doublee_auto_featured_image() {
 // Temporarily generate all featured images if you need to
 //add_action('the_post', 'doublee_auto_featured_image');
 // For new posts
-add_action('save_post', 'doublee_auto_featured_image'); 
-add_action('draft_to_publish', 'doublee_auto_featured_image'); 
-add_action('new_to_publish', 'doublee_auto_featured_image'); 
-add_action('pending_to_publish', 'doublee_auto_featured_image'); 
+add_action('save_post', 'doublee_auto_featured_image');
+add_action('draft_to_publish', 'doublee_auto_featured_image');
+add_action('new_to_publish', 'doublee_auto_featured_image');
+add_action('pending_to_publish', 'doublee_auto_featured_image');
 add_action('future_to_publish', 'doublee_auto_featured_image');
 */
 
