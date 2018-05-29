@@ -17,7 +17,7 @@ get_header(); ?>
         <article <?php post_class('small-12 medium-8 columns') ?> id="post-<?php the_ID(); ?>">
             <header>
 		    <h2><?php the_title(); ?></h2>
-                <?php doublee_entry_meta(); ?>
+                <?php echo doublee_entry_meta(); ?>
             </header>
     
             <?php if ( has_post_thumbnail() ) : ?>
