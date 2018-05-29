@@ -43,6 +43,7 @@ function doublee_get_browser() {
 	return $browser;
 }
 
+
 /**
  * Get the visual page title, or if empty get the regular title
  * @return string
@@ -59,6 +60,24 @@ function doublee_get_page_title() {
 
 
 /**
+ * Get post entry meta in a consistent format
+ * @return stringOut
+ */
+function doublee_entry_meta() {
+	$meta = '<p class="byline author">';
+	$meta .= __( 'Posted by', '' );
+	$meta .= '<a href="' . get_author_posts_url( get_the_author_meta( 'ID' ) ) . '" rel="author">';
+	$meta .= get_the_author();
+	$meta .= '</a>';
+	$meta .= 'on <time class="date">';
+	$meta .= get_the_date('l, F j, Y');
+	$meta .= '</time>';
+	$meta .= '</p>';
+	return $meta;
+}
+
+
+/**
  * Build a "slug" from the page title or other relevant string, such as the visual page title (as the actual slug may be different)
  * @param $string - the string to use to build the slug, generally doublee_get_page_title or get_the_title
  * @return null|string
@@ -69,7 +88,7 @@ function doublee_build_title_slug($string) {
 	$title_slug = preg_replace("/[^a-z0-9_\s-]/", "", $title_slug); // make alphanumeric
 	$title_slug = preg_replace("/[\s-]+/", " ", $title_slug); // clean up multiple dashes or whitespaces
 	$title_slug = preg_replace("/[\s_]/", "-", $title_slug); // convert whitespaces and underscore to dash
-	
+
 	return $title_slug;
 }
 
@@ -133,13 +152,12 @@ function doublee_integer_to_ordinal_word($num) {
  *
  * Template usage:
  * <?php
-// split content into array
-$content = get_the_content('',FALSE,''); // arguments remove 'more' text
-$splitcontent = doublee_split_content($content);
-echo $splitcontent[0];
-echo $splitcontent[1];
-//and so on for more sections!
- *
+ * // split content into array
+ * $content = get_the_content('',FALSE,''); // arguments remove 'more' text
+ * $splitcontent = doublee_split_content($content);
+ * echo $splitcontent[0];
+ * echo $splitcontent[1];
+ * //and so on for more sections!
  *
  * @param $content - the string to split at the <!--more--> tags
  * @return array[]|false|mixed|string[]
@@ -182,16 +200,91 @@ function doublee_split_content($content){
 
 
 /**
+ * Split a single gallery from the content
+ * @param $content
+ * @return mixed
+ *
+ * Template usage:
+ *
+ * * Single content section:
+ * * // Get the content without the gallery
+ * * $content = str_replace( ']]>', ']]>', apply_filters( 'the_content', $content ) );
+ * * // Show the gallery here
+ * * $gallery = get_post_gallery();
+ * * echo $gallery;
+ * * //Show it
+ * * echo $content;
+ *
+ * * Combine with split content function:
+ * * // Get the content without the gallery
+ * * $content = doublee_strip_shortcode_gallery( get_the_content() );
+ * * $content = str_replace( ']]>', ']]>', apply_filters( 'the_content', $content ) );
+ * * // Split it
+ * * $splitcontent = doublee_split_content($content);
+ * * echo $splitcontent[0];
+ * * echo $splitcontent[1];
+ * * // Show the gallery
+ * * $gallery = get_post_gallery();
+ * * echo $gallery;
+ *
+ */
+function  doublee_strip_shortcode_gallery($content) {
+	preg_match_all( '/'. get_shortcode_regex() .'/s', $content, $matches, PREG_SET_ORDER );
+	if ( ! empty( $matches ) ) {
+		foreach ( $matches as $shortcode ) {
+			if ( 'gallery' === $shortcode[2] ) {
+				$pos = strpos( $content, $shortcode[0] );
+				if ($pos !== false) {
+					return substr_replace($content, '', $pos, strlen($shortcode[0]));
+				}
+			}
+		}
+	}
+	return $content;
+}
+
+
+/**
+ * Split multiple galleries from the content
+ * Not suitable if you are using other shortcodes
+ * @param $content
+ * @return mixed
+ *
+ * Template usage:
+ * * // Show the content without the gallery
+ * * $content = strip_shortcodes(get_the_content());
+ * * echo wpautop($content);
+ * * // Show the galleries
+ * * $shortcodes = doublee_get_shortcodes( get_the_content());
+ * * $gallery = $shortcodes[0];
+ * * echo do_shortcode($gallery[0]);
+ * * echo do_shortcode($gallery[1]);
+ * * //and so on for further galleries
+ *
+ */
+function doublee_get_shortcodes($content) {
+	$shortcode = "";
+	$pattern = get_shortcode_regex();
+	preg_match_all('/' . $pattern . '/uis', $content, $matches);
+	for ($i = 0; $i < 40; $i++) {
+		if (isset($matches[0][$i])) {
+			$shortcode .= $matches[0][$i];
+		}
+	}
+	// return $shortcode; //returns all galleries in one go, we don't necessarily want this
+	return $matches; // returns an array, see above for template usage
+}
+
+
+/**
  * Excerpt customiser
  * Strips headings and sets a custom length
- * Template usage:
- * if(has_excerpt()) {
-the_excerpt();
-// You can also use the function to shorten the manual excerpt:
-// doublee_custom_excerpt(get_the_excerpt());
-} else {
-doublee_custom_excerpt(get_the_content());
-}
+ * * Template usage:
+ * if(has_excerpt()) { the_excerpt(); }
+ * * You can also use the function to shorten the manual excerpt:
+ * doublee_custom_excerpt(get_the_excerpt());
+ * * Or simply shorten the content:
+ * doublee_custom_excerpt(get_the_content());
  *
  * @param $text - the string to strip headings and shorten, generally get_the_excerpt or get_the_content
  * @param $word_count - how many words to include in the output
