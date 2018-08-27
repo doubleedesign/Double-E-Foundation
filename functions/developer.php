@@ -109,7 +109,7 @@ function doublee_get_first_paragraph($text){
 
 /**
  * Split a string in half and wrap each in a span
- * useful for avoiding ghost text in titles
+ * useful for avoiding widows in titles
  * @param $string - the string to split
  * @return string - a new string with <span> tags added
  * @since Double-E Foundation 3.0
