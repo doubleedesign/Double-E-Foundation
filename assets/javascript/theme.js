@@ -139,18 +139,24 @@ document.addEventListener('DOMContentLoaded', function() {
 	 * Slide the mobile topbar menu
 	 * Remove this if mobile topbar isn't being used
 	 */
-	/*
 	jQuery('.title-bar .menu-icon').click(function() {
 		jQuery('#site-navigation').slideToggle(400);
 	});
-	*/
 
 
 	/**
 	 * Owl Carousel image carousels
 	 * @uses jQuery
 	 */
-	/*
+	$('.owl-carousel').owlCarousel({
+		loop: true,
+		margin: 0,
+		nav: false,
+		items: 1,
+		autoplay: true,
+		animateOut: 'fadeOut'
+	})
+	/* WooCommerce example
 	jQuery('.woocommerce-product-gallery__wrapper.owl-carousel').owlCarousel({
 		loop: true,
 		nav: false,
@@ -177,8 +183,14 @@ document.addEventListener('DOMContentLoaded', function() {
 	 * http://brutaldesign.github.io/swipebox/
 	 * @uses jQuery
 	 */
-	;( function( jQuery ) {
-		jQuery( '.swipebox' ).swipebox( {
+	if ($('.gallery').length) {
+		// Add swipebox class to gallery links
+		$('.gallery a').each(function() {
+			$(this).attr('rel', 'gallery');
+			$(this).addClass('swipebox');
+		});
+		// Options
+		$('.swipebox' ).swipebox({
 			useCSS : true, // false will force the use of jQuery for animations
 			useSVG : true, // false to force the use of png for buttons
 			initialIndexOnArray : 0, // which image index to init when a array is passed
@@ -190,8 +202,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			afterOpen: null, // called after opening
 			afterClose: function() {}, // called after closing
 			loopAtEnd: true // true will return to the first image after the last image is reached
-		} );
-	} )( jQuery );
+		});
+	}
 
 });
 
