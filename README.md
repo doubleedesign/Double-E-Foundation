@@ -19,7 +19,12 @@ __Demo:__ Updated demo coming soon.
 	
 ## What version are ya up to?
 
-3.0 as of 11 April, 2018.
+3.1 as of 13 January, 2019.
+
+### Version 3.1 - January 2019
+
+* Added TippyJS (v2)
+* Fixed up inclusions of Swipebox and Owl Carousel
 
 ### Version 3.0 - April 2018
 
@@ -57,6 +62,7 @@ Zurb Foundation 6.3.1 as of Double-E-Foundation 2.2 (April 26, 2017).
 * Add default comment styling
 * Test and improve default WooCommerce styling
 * Learn and implement Foundation 7
+* Update to TippyJS version 3
 
 ## Third-party libraries used
 
@@ -67,6 +73,7 @@ Zurb Foundation 6.3.1 as of Double-E-Foundation 2.2 (April 26, 2017).
 * [inView](https://github.com/protonet/jquery.inview)
 * [Swipebox](http://brutaldesign.github.io/swipebox/)
 * [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/)
+* [TippyJS](https://github.com/atomiks/tippyjs) (version 2, not 3)
 
 ## Recommended plugins
 * [Advanced Custom Fields](https://www.advancedcustomfields.com)
@@ -83,10 +90,13 @@ General Public License (GPL) v2. Foundation uses the MIT License.
 ## Examples of work
 * [Kids Compass Paediatric Therapy Centre](https://www.kidscompass.com.au)
 * [Exford Primary School](http://www.exfordps.vic.edu.au) 
+* [Beejays Calisthenics Club](https://www.beejayscalisthenics.com.au)
 * [Wyndham Business and Tourism Association](http://www.wyndhambusinessandtourism.org.au)
 * [Lynriz Debutante Presentations](http://www.lynrizdebs.com.au)
 * [Oliver-Ramsay Security](https://www.orsecurity.com.au)
+* [Julia Timson](https://www.juliatimson.com.au)
+* [Melton Calisthenics Club](https://www.meltoncalisthenics.org.au)
+* [Doncaster Calisthenics Club](https://www.doncastercalisthenics.org.au)
 * [ConnectQuest](http://www.connectquest.com.au)
 * [Early Learning Childcare &amp; Kindergarten](https://www.elcck.com.au)
 * [Cutting Edge Video Productions](http://www.cuttingedgevideo.com.au)
-* [Davrose Homes](http://www.davrose.com.au)
