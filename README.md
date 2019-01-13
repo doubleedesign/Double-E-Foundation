@@ -21,7 +21,7 @@ __Demo:__ Updated demo coming soon.
 
 3.1 as of 13 January, 2019.
 
-### Version 3.1 - January 2019
+### Version 3.1.1 - January 2019
 
 * Added TippyJS (v2)
 * Fixed up inclusions of Swipebox and Owl Carousel
