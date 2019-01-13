@@ -66,6 +66,15 @@ document.addEventListener('DOMContentLoaded', function() {
 	 * @uses jQuery
 	 */
 	jQuery(document).foundation();
+	
+	
+	/**
+	 * Tippy tooltips
+	 */
+	tippy('.tippy', {
+		placement: 'bottom',
+		arrow: true
+	});
 
 
 	/**
