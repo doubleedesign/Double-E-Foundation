@@ -1,9 +1,9 @@
 //@prepros-prepend foundation.js
 //@prepros-prepend vendor/what-input.min.js
 //@prepros-prepend vendor/swipebox.js
+//@prepros-prepend vendor/owl.carousel.js
 //@prepros-prepend vendor/tippy.js
 
-// If using Owl Carousel, prepend that too (or enqueue it in functions/setup/enqueue-scripts.php)
 // InView is enqueued separately, due to issues in IE < Edge (so it's not used in those browsers by default)
 // Loads ALL of the Foundation JS by default. When practical, prepend only the components actually needed to reduce file size and load time.
 
