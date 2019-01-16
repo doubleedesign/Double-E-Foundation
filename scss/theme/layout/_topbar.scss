@@ -94,6 +94,7 @@
 			width: 100%;
 			display: flex;
 			justify-content: center;
+			align-items: center;
 
 			@include breakpoint(large up) {
 				justify-content: flex-end;
