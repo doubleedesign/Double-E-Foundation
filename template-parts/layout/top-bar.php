@@ -3,6 +3,7 @@
 		<div class="shrink columns">
 			<?php echo doublee_address('compact'); ?>
 			<?php get_template_part('template-parts/social-links'); ?>
+			<?php get_search_form(); ?>
 		</div>
 	</div>
 </div>
@@ -11,7 +12,7 @@
 		<div class="small-12 large-4 columns">
 			<div id="logo">
 				<a href="<?php echo site_url(); ?>" rel="home">
-					<?php bloginfo( 'name' ); ?>
+					<?php bloginfo('name'); ?>
 				</a>
 			</div>
 		</div>

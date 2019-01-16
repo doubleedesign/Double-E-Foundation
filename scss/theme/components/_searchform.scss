@@ -1,0 +1,27 @@
+form[role=search] {
+
+	input, button {
+		margin: 0;
+		height: 100%;
+		background: transparent;
+		color: $white;
+		border: 1px solid rgba($white, 0.6);
+		box-shadow: none;
+	}
+
+	input {
+		border-right: 0;
+
+		&:focus {
+			background: transparent;
+			box-shadow: none;
+			border-right: 0;
+			border-color: rgba($white, 0.6);
+		}
+	}
+
+	button {
+		border-left: 0;
+		box-shadow: none;
+	}
+}

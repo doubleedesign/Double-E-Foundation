@@ -88,17 +88,18 @@ Text Domain:			doublee
 // Theme Components
 @import "theme/components/typography";
 @import "theme/components/links";
+@import "theme/components/buttons";
+@import "theme/components/addresses";
 @import "theme/components/labels";
 @import "theme/components/tables";
-@import "theme/components/buttons";
 @import "theme/components/images";
 @import "theme/components/cards";
 @import "theme/components/callouts";
 @import "theme/components/pagination";
 @import "theme/components/forms";
-@import "theme/components/addresses";
 @import "theme/components/social-icons";
 @import "theme/components/galleries";
+@import "theme/components/searchform";
 //@import "theme/components/woocommerce";
 
 // Theme General Layout
