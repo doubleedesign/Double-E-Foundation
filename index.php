@@ -28,12 +28,13 @@ get_header(); ?>
 
 	<div class="row">
 
+		<?php /** Note: if using card excerpts, remove this wrapping column div */ ?>
 		<div class="small-12 medium-8 columns">
 			<?php
 			if ( have_posts() ) {
 				// Start the Loop
 				while ( have_posts() ) : the_post();
-					get_template_part( 'excerpts/excerpt-list');
+					get_template_part( 'template-parts/excerpts/excerpt-list');
 				endwhile;
 			} else {
 				get_template_part( 'content', 'none' );
