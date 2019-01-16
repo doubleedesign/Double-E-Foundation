@@ -14,6 +14,59 @@
 	}
 }
 
+#upper-bar {
+	background: $secondary-color;
+	padding: $global-padding/2 0;
+
+	* {
+		color: $white;
+		font-size: rem-calc(14);
+	}
+
+	.row {
+		justify-content: center;
+
+		@include breakpoint(large up) {
+			justify-content: flex-end;
+		}
+	}
+
+	.columns {
+		display: flex;
+		align-items: center;
+	}
+
+	span {
+		margin-right: $global-margin;
+	}
+
+	ul.social {
+		display: inline-block;
+		margin-right: $global-margin;
+		margin-bottom: 0;
+		line-height: 1.0;
+
+		li {
+
+			a {
+
+				&:before {
+					content: none;
+				}
+
+				svg {
+					width: rem-calc(25);
+					height: rem-calc(25);
+				}
+			}
+		}
+	}
+
+	.button {
+		margin: 0;
+	}
+}
+
 #top-bar {
 	
 	#logo {

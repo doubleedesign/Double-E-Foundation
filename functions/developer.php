@@ -312,3 +312,55 @@ function doublee_custom_excerpt($text, $word_count) {
 	$excerpt = wp_trim_words( $text, $excerpt_length, $excerpt_more );
 	return wpautop(apply_filters('wp_trim_excerpt', $excerpt));
 }
+
+
+/**
+ * Shortcut function for displaying the address in various formats
+ * @param $format
+ *
+ * @return string
+ */
+function doublee_address($format) {
+
+	// Get fields from the theme options
+	$street_address = get_field('street_address', 'option');
+	$suburb = get_field('suburb', 'option');
+	$state = get_field('state', 'option');
+	$postcode = get_field('postcode', 'option');
+	$phone = get_field('phone', 'option');
+
+	// Return in the relevant format for output
+	$output = '';
+	if($format == 'compact') {
+		$output .= '<span>';
+		$output .= $street_address . ' ';
+		$output .= $suburb . ' ';
+		$output .= $state . ' ';
+		$output .= $postcode . ' ';
+		$output .= '</span>';
+		$output .= '<span class="phone">';
+		$output .= $phone;
+		$output .= '</span>';
+	} else if($format == 'expanded') {
+		$output .= '<address itemscope itemtype="http://schema.org/LocalBusiness">';
+		$output .= '<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">';
+		if(!empty($street_address)) {
+			$output .= '<div class="address"><i class="fas fa-envelope"></i><span itemprop="streetAddress">'.$street_address.'</span></div>';
+		}
+		if(!empty($suburb)) {
+			$output .= '<div><span itemprop="addressLocality">'.$suburb.'</span></div>';
+		}
+		if(!empty($state)) {
+			$output .= '<div><span itemprop="addressRegion">'.$state.'</span></div>';
+		}
+		if(!empty($postcode)) {
+			$output .= '<div><span itemprop="postalCode">'.$postcode.'</span></div>';
+		}
+		if(!empty($phone)) {
+			$output .= '<div class="phone"><i class="fas fa-phone"></i><span itemprop="telephone">'.$phone.'</span></div>';
+		}
+		$output .= '</div></address>';
+	}
+
+	return $output;
+}
