@@ -105,11 +105,15 @@ $slug = 'page-'.$post->post_name;
 	<!--[if lte IE 9]><div class="alert callout"><span>You are using an outdated version of Microsoft's Internet Explorer web browser, which does not display modern web sites properly (including this one). To ensure you always see sites at their best and your browser security is up to date, it is highly recommended that you <a href="http://browsehappy.com/" target="_blank">upgrade to a modern browser</a>.</span></div><![endif]-->
 
 	<header id="masthead" class="site-header" role="banner">
-	
-		<div class="title-bar show-for-small-only">
+
+		<div class="title-bar show-for-small-only row align-middle align-justify">
 			<button class="menu-icon" type="button" data-toggle="offCanvas"><i class="fa fa-bars"></i></button>
 			<?php /* Swap button for this one if using mobile topbar instead of offcanvas
 			<button class="menu-icon" type="button"><i class="fa fa-bars"></i>Menu</button> */ ?>
+			<?php $phone = get_field('phone', 'option');
+			if($phone) { ?>
+				<span class="phone"><i class="fas fa-phone"></i></span>
+			<?php } ?>
 		</div>
 
 		<?php get_template_part('layout/top-bar'); ?>

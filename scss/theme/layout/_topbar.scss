@@ -1,11 +1,16 @@
 .title-bar {
-	
+
 	.menu-icon {
 		color: $white;
-		
-		i {
-			padding-right: $global-padding/2;
-		}
+	}
+
+	i, svg {
+		margin-right: $global-padding/2;
+	}
+
+	&:before,
+	&:after {
+		content: none;
 	}
 }
 
