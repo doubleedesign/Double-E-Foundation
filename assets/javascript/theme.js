@@ -1,11 +1,22 @@
-//@prepros-prepend foundation.js
+//@prepros-prepend foundation-components/foundation.core.js
+//@prepros-prepend foundation-components/foundation.util.keyboard.js
+//@prepros-prepend foundation-components/foundation.util.triggers.js
+//@prepros-prepend foundation-components/foundation.util.mediaQuery.js
+//@prepros-prepend foundation-components/foundation.util.box.js
+//@prepros-prepend foundation-components/foundation.util.nest.js
+
+//@prepros-prepend foundation-components/foundation.offCanvas.js
+//@prepros-prepend foundation-components/foundation.accordionMenu.js
+//@prepros-prepend foundation-components/foundation.dropdownMenu.js
+
 //@prepros-prepend vendor/what-input.min.js
-//@prepros-prepend vendor/swipebox.js
-//@prepros-prepend vendor/owl.carousel.js
 //@prepros-prepend vendor/tippy.js
+//@prepros-prepend vendor/swipebox.js
+
+/**@prepros-prepend vendor/owl.carousel.js**/
 
 // InView is enqueued separately, due to issues in IE < Edge (so it's not used in those browsers by default)
-// Loads ALL of the Foundation JS by default. When practical, prepend only the components actually needed to reduce file size and load time.
+// To load all of Foundation, prepend foundation.js instead of individual components
 
 /*=======================================
 	FUNCTIONS
