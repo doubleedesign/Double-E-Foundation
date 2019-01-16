@@ -21,48 +21,9 @@ __Demo:__ Updated demo coming soon.
 
 3.1 as of 13 January, 2019.
 
-### Version 3.1.1 - January 2019
-
-* Added TippyJS (v2)
-* Fixed up inclusions of Swipebox and Owl Carousel
-
-### Version 3.0 - April 2018
-
-I have decided to bump the version from 2.4 to 3.0 due to the significant volume of improvements made, both large and small:
-* Added and implemented some new PHP functions for theme development
-* Improved some existing PHP functions (e.g. the custom excerpt function now takes a word count parameter)
-* Improved in-file documentation using PHPDoc comments for PHP and JavaScript
-* Converted much JS to vanilla instead of using jQuery where I don't really need to
-* Added InView.js and basic CSS and JS setup for using it for layout animation 
-* Moved some template parts into new separate folders - `layout` and `excerpts`
-* Added options for how to display excerpts - `excerpt-card.php` or `excerpt-list.php`, to be called by `get_template_part` as desired
-* Added mixins:
-    * Lead paragraph
-    * Block colours on :before and :after
-    * Play button overlay
-    * Pseudo-heading (e.g. Apply the styles for a H3 to a H2 for visual design reasons)
-    * Go another step up a type scale
-* Updated Font Awesome to version 5 (free edition, but Pro can easily be added if you have a licence)
-* Removed customiser option to select offcanvas or mobile topbar for the mobile menu, as this is a design decision that should be implemented in code once and the unneeded markup and files removed on each site
-* Removed metabox for the visual page title, in favour of going back to using an ACF field for this as it's more flexible and provides a more consistent interface when other ACF fields are used
-* Readme now written in proper markdown 
-
 ## Foundation version?
 
 Zurb Foundation 6.3.1 as of Double-E-Foundation 2.2 (April 26, 2017).
-
-## To-do list ##
-
-* Write Wiki page on how to choose which mobile menu to use and what to remove for simplicity
-* Add breadcrumbs
-* Add support (including templates) for more post formats
-* Add icons to the excerpt cards for additional post formats
-* Improve the banner image checker, particularly the fallbacks
-* Fix the third-level menus in the top bar
-* Add default comment styling
-* Test and improve default WooCommerce styling
-* Learn and implement Foundation 7
-* Update to TippyJS version 3
 
 ## Third-party libraries used
 
@@ -76,7 +37,7 @@ Zurb Foundation 6.3.1 as of Double-E-Foundation 2.2 (April 26, 2017).
 * [TippyJS](https://github.com/atomiks/tippyjs) (version 2, not 3)
 
 ## Recommended plugins
-* [Advanced Custom Fields](https://www.advancedcustomfields.com)
+* [Advanced Custom Fields Pro](https://www.advancedcustomfields.com)
 
 ## Other credits
 
