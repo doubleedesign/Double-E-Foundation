@@ -27,11 +27,11 @@
 			// Use the manual excerpt if set
 			if(has_excerpt()) {
 				the_excerpt();
-				// Otherwise, use custom excerpt function, which can be found in functions/developer.php
+				// Otherwise, use custom excerpt function,
+				// which can be found in functions/developer.php
 			} else {
 				echo doublee_custom_excerpt(get_the_content(), 30);
-			}
-			?>
+			} ?>
 			<?php
 			if ($format == 'video') {
 				$button_text = "Watch";

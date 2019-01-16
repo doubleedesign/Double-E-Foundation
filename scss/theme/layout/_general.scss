@@ -33,7 +33,18 @@ body {
 	background: $white;
 }
 
+#page {
+	@include grid-gutter-padding-top-bottom;
+}
+
 #children {
 	@include grid-gutter-margin-top;
-	@include grid-gutter-margin-bottom;
+}
+
+.copy-image {
+	@include grid-gutter-padding-top-bottom;
+
+	&.odd {
+		background: lighten($light-gray, 5%);
+	}
 }
