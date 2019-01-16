@@ -18,7 +18,7 @@
 		$category = get_the_category();
 		?>
 
-		<?php include('meta.php'); // get_template_part doesn't work for same subfolder ?>
+		<?php include( 'meta.php' ); // get_template_part doesn't work for same subfolder ?>
 
 		<div class="card-section">
 			<div class="wrap">

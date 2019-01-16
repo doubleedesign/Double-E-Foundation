@@ -41,7 +41,7 @@ if ($format == 'video') {
 			<div class="content small-12 columns">
 		<?php } ?>
 
-		<?php include('meta.php'); // get_template_part doesn't work for same subfolder ?>
+		<?php include( 'meta.php' ); // get_template_part doesn't work for same subfolder ?>
 
 		<h2><?php the_title(); ?></h2>
 
