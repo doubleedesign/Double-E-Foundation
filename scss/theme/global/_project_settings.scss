@@ -185,6 +185,8 @@ $breadcrumbs-item-slash: true;
 	TOP BAR
 ===========================================================*/
 
+$titlebar-padding: $global-padding;
+
 $topbar-padding: 0.5rem 0;
 $topbar-background: $white;
 $topbar-submenu-background: map-get($foundation-palette, primary);

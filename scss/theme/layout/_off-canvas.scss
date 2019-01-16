@@ -1,13 +1,48 @@
 .off-canvas {
-  ul#menu-main-menu {
-    height: 100vh;
-    padding: 1rem;
-  }
-}
+	background: $secondary-color;
 
-.title-bar-title {
-  a {
-    font-size: 1rem;
-    color: #B9B9B9;
-  }
+	> ul {
+		height: 100vh;
+	}
+
+	ul {
+
+		li {
+
+			a {
+				color: rgba($white, 0.8);
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $white;
+					background: rgba($white, 0.1);
+				}
+			}
+
+			&.menu-item-has-children {
+
+				> a {
+					display: flex;
+					width: 100%;
+					flex-wrap: nowrap;
+					justify-content: space-between;
+
+					&:after {
+						content: '+';
+					}
+				}
+
+				&[aria-expanded=true] {
+
+					> a {
+
+						&:after {
+							content: '-';
+						}
+					}
+				}
+			}
+		}
+	}
 }

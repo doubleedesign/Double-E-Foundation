@@ -42,7 +42,7 @@ $slug = 'page-'.$post->post_name;
 	<header id="masthead" class="site-header" role="banner">
 
 		<div class="title-bar show-for-small-only row align-middle align-justify">
-			<button class="menu-icon" type="button" data-toggle="offCanvas"><i class="fa fa-bars"></i></button>
+			<button class="menu-icon" type="button" data-toggle="offCanvas"><i class="fa fa-bars"></i>Menu</button>
 			<?php /* Swap button for this one if using mobile topbar instead of offcanvas
 			<button class="menu-icon" type="button"><i class="fa fa-bars"></i>Menu</button> */ ?>
 			<?php $phone = get_field('phone', 'option');
