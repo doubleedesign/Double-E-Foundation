@@ -46,6 +46,7 @@ if ( ! function_exists( 'doublee_mobile_nav' ) ) {
 			'menu'				=> __( 'mobile-nav', '' ),
 			'menu_class'     	=> 'vertical menu',
 			'theme_location' 	=> 'mobile-nav',
+			'depth' 			=> 2,
 			'items_wrap'     	=> '<ul id="%1$s" class="%2$s show-for-small-only" data-accordion-menu>%3$s</ul>',
 			'fallback_cb'   	=> false,
 			'walker' 			=> new Foundationpress_Mobile_Walker(),

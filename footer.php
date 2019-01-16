@@ -11,7 +11,7 @@
 
 ?>
 
-			</section>
+			</div>
 			<div id="footer-container">
 				<footer id="footer" class="row align-middle align-justify">
 					<div class="small-12 large-expand columns">

@@ -116,4 +116,4 @@ $slug = 'page-'.$post->post_name;
 		
 	</header>
 
-	<section id="content">
+	<div id="content">
