@@ -4,37 +4,35 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since Double-E Foundation 2.3.0
+ * @since Double-E Foundation 3.1.2
  */
 
 get_header(); ?>
 
-<?php get_template_part('template-parts/featured-image'); ?>
+<?php get_template_part('template-parts/featured-image-banner'); ?>
 
-<div id="search-results">
+<div id="page" class="search-results">
 
-	<main class="row" role="main">
+	<main class="row align-center" role="main">
 
-		<?php if ( have_posts() ) : ?>
-    
-            <?php while ( have_posts() ) : the_post(); ?>
-                <?php get_template_part( 'excerpts/excerpt-card'); ?>
-            <?php endwhile; ?>
-    
-            <?php else : ?>
-                <?php get_template_part( 'content', 'none' ); ?>
-    
-        <?php endif;?>
+		<div class="small-12 medium-8 columns">
 
+			<h1>Search results for &ldquo;<?php get_search_query(); ?>&rdquo;</h1>
 
-		<?php if ( function_exists( 'doublee_pagination' ) ) { doublee_pagination(); } else if ( is_paged() ) { ?>
+			<?php if ( have_posts() ) : ?>
 
-		<nav id="post-nav">
-			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', '' ) ); ?></div>
-			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', '' ) ); ?></div>
-		</nav>
-        
-	<?php } ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'template-parts/excerpts/excerpt-list'); ?>
+				<?php endwhile; ?>
+
+				<?php else : ?>
+					<?php get_template_part( 'content', 'none' ); ?>
+
+			<?php endif;?>
+
+			<?php doublee_pagination(); ?>
+
+		</div>
 
 	</main>
     
