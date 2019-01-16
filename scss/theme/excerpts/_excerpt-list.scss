@@ -1,0 +1,35 @@
+.excerpt-list-style {
+	padding: $global-padding 0;
+	border-bottom: 1px solid $light-gray;
+
+	@include breakpoint(large up) {
+		padding: $global-padding*2 0;
+	}
+
+	&:first-of-type {
+		padding-top: 0;
+	}
+
+	.meta {
+		margin-bottom: $paragraph-margin-bottom/2;
+	}
+
+	.image {
+
+		img {
+			width: 100%;
+		}
+	}
+
+	& + .content {
+
+		@include breakpoint(medium up) {
+			padding-left: 0;
+		}
+	}
+
+	.button {
+		margin-bottom: 0;
+	}
+
+}

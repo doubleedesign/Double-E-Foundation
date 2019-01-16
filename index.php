@@ -24,20 +24,24 @@ get_header(); ?>
 		<div class="small-12 medium-8 columns">
 			<?php //echo term_description(); ?>
 		</div>
-		<?php get_sidebar(); ?>
 	</main>
 
 	<div class="row">
-		<?php 
-		if ( have_posts() ) {
-			// Start the Loop 
-			while ( have_posts() ) : the_post();
-				get_template_part( 'excerpts/excerpt-card');
-			endwhile; 
-		} else {
-			get_template_part( 'content', 'none' );
-		} // End have_posts() check. 
-		?>
+
+		<div class="small-12 medium-8 columns">
+			<?php
+			if ( have_posts() ) {
+				// Start the Loop
+				while ( have_posts() ) : the_post();
+					get_template_part( 'excerpts/excerpt-list');
+				endwhile;
+			} else {
+				get_template_part( 'content', 'none' );
+			} // End have_posts() check.
+			?>
+		</div>
+
+		<?php get_sidebar(); ?>
 	</div>
 	
 	<?php // Display navigation to next/previous pages when applicable 
