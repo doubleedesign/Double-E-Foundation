@@ -15,14 +15,15 @@ get_header(); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
         <article <?php post_class('small-12 medium-8 columns') ?> id="post-<?php the_ID(); ?>">
+
             <header>
-		    <h2><?php the_title(); ?></h2>
+		    	<h1><?php the_title(); ?></h1>
                 <?php echo doublee_entry_meta(); ?>
             </header>
     
             <?php if ( has_post_thumbnail() ) : ?>
                 <div class="featured-image-wrapper">
-                    <?php the_post_thumbnail( '', array('class' => 'th') ); ?>
+                    <?php the_post_thumbnail('large'); ?>
                 </div>
             <?php endif; ?>
     
