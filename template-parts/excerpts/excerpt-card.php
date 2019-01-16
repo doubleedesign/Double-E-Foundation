@@ -18,31 +18,34 @@
 		$category = get_the_category();
 		?>
 
-		<?php include( 'meta.php' ); // get_template_part doesn't work for same subfolder ?>
+		<?php the_post_thumbnail('medium'); ?>
 
 		<div class="card-section">
-			<div class="wrap">
-				<h2><?php the_title(); ?></h2>
-				<?php
-				// Use the manual excerpt if set
-				if(has_excerpt()) {
-					the_excerpt();
-					// Otherwise, use custom excerpt function, which can be found in functions/developer.php
-				} else {
-					echo doublee_custom_excerpt(get_the_content(), 30);
-				}
-				?>
-				<?php
-				if ($format == 'video') {
-					$button_text = "Watch";
-				} else if($type == 'question') {
-					$button_text = "Read answer";
-				} else {
-					$button_text = "Read more";
-				}
-				?>
-			</div>
-			<a class="small button" href="<?php the_permalink(); ?>"><?php echo $button_text; ?></a>
+			<?php include( 'meta.php' ); // get_template_part doesn't work for same subfolder ?>
+			<h2><?php the_title(); ?></h2>
+			<?php
+			// Use the manual excerpt if set
+			if(has_excerpt()) {
+				the_excerpt();
+				// Otherwise, use custom excerpt function, which can be found in functions/developer.php
+			} else {
+				echo doublee_custom_excerpt(get_the_content(), 30);
+			}
+			?>
+			<?php
+			if ($format == 'video') {
+				$button_text = "Watch";
+			} else if($type == 'question') {
+				$button_text = "Read answer";
+			} else {
+				$button_text = "Read more";
+			} ?>
+		</div>
+
+		<div class="card-divider">
+			<a class="small button" href="<?php the_permalink(); ?>">
+				<?php echo $button_text; ?>
+			</a>
 		</div>
 
 	</div>
