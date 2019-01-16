@@ -1,0 +1,15 @@
+// CSS common to all types of excerpt
+.excerpt {
+
+	.meta {
+		margin-bottom: $paragraph-margin-bottom/2;
+
+		.columns {
+			display: flex;
+
+			.label {
+				height: 100%;
+			}
+		}
+	}
+}

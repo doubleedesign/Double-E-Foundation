@@ -10,10 +10,6 @@
 		padding-top: 0;
 	}
 
-	.meta {
-		margin-bottom: $paragraph-margin-bottom/2;
-	}
-
 	.image {
 
 		img {
@@ -21,7 +17,7 @@
 		}
 	}
 
-	& + .content {
+	.image + .content {
 
 		@include breakpoint(medium up) {
 			padding-left: 0;

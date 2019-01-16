@@ -112,8 +112,8 @@ Text Domain:			doublee
 
 // Template Parts
 @import "theme/template-parts/featured-image";
+@import "theme/excerpts/excerpt";
 @import "theme/excerpts/excerpt-list";
-// card excerpts use card styling so generally don't need their own file
 
 // Theme Templates
 @import "theme/templates/styleguide";
