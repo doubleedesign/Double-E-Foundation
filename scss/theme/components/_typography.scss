@@ -15,3 +15,10 @@ p, ul {
 		margin-bottom: 0;
 	}
 }
+
+.byline {
+	display: block;
+	margin-bottom: $paragraph-margin-bottom;
+	color: rgba($body-font-color, 0.8);
+	font-size: $font-size-small;
+}

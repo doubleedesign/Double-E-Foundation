@@ -64,15 +64,15 @@ function doublee_get_page_title() {
  * @return stringOut
  */
 function doublee_entry_meta() {
-	$meta = '<p class="byline author">';
-	$meta .= __( 'Posted by', '' );
+	$meta = '<span class="byline author">';
+	$meta .= __( 'Posted by ', '' );
 	$meta .= '<a href="' . get_author_posts_url( get_the_author_meta( 'ID' ) ) . '" rel="author">';
 	$meta .= get_the_author();
 	$meta .= '</a>';
-	$meta .= 'on <time class="date">';
+	$meta .= ' on <time class="date">';
 	$meta .= get_the_date('l, F j, Y');
 	$meta .= '</time>';
-	$meta .= '</p>';
+	$meta .= '</span>';
 	return $meta;
 }
 
