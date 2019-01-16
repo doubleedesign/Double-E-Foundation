@@ -19,7 +19,7 @@ __Demo:__ Updated demo coming soon.
 	
 ## What version are ya up to?
 
-3.1 as of 13 January, 2019.
+3.1.2 as of 17 January, 2019.
 
 ## Foundation version?
 

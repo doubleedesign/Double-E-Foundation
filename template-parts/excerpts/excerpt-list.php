@@ -4,7 +4,7 @@
 
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since Double-E Foundation 1.0
+ * @since Double-E Foundation 3.1.2
  */
 ?>
 
@@ -41,22 +41,24 @@ if ($format == 'video') {
 			<div class="content small-12 columns">
 		<?php } ?>
 
-		<?php include( 'meta.php' ); // get_template_part doesn't work for same subfolder ?>
+			<?php include( 'meta.php' ); // get_template_part doesn't work for same subfolder ?>
 
-		<h2><?php the_title(); ?></h2>
+			<h2><?php the_title(); ?></h2>
 
-		<?php
-		// If manual excerpt is set, use that
-		if(has_excerpt()) {
-			the_excerpt();
-		} else {
-			// Otherwise, use custom excerpt function,
-			// which can be found in functions/developer.php
-			echo doublee_custom_excerpt(get_the_content(), 30);
-		} ?>
-		<a class="small button" href="<?php the_permalink(); ?>">
-			<?php echo $button_text; ?>
-		</a>
+			<?php
+			// If manual excerpt is set, use that
+			if(has_excerpt()) {
+				the_excerpt();
+			} else {
+				// Otherwise, use custom excerpt function,
+				// which can be found in functions/developer.php
+				echo doublee_custom_excerpt(get_the_content(), 30);
+			} ?>
+			<a class="small button" href="<?php the_permalink(); ?>">
+				<?php echo $button_text; ?>
+			</a>
+
+		</div>
 
 	</div>
 
