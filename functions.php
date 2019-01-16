@@ -41,6 +41,9 @@ require_once( 'functions/setup/enqueue-styles.php' );
 /** Enqueue scripts */
 require_once( 'functions/setup/enqueue-scripts.php' );
 
+/** ACF Theme Options panel */
+require_once( 'functions/setup/acf.php' );
+
 
 /* ==========================================
 	NAVIGATION

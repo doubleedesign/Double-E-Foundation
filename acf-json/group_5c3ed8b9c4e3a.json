@@ -1,0 +1,43 @@
+{
+    "key": "group_5c3ed8b9c4e3a",
+    "title": "Visual page title",
+    "fields": [
+        {
+            "key": "field_5c3ed8be89efe",
+            "label": "Visual page title",
+            "name": "visual_page_title",
+            "type": "text",
+            "instructions": "To use an alternative or more descriptive title on the page itself (e.g. for SEO purposes), enter it here. If this field is empty, the default page title will be used everywhere.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1547622663
+}
