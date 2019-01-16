@@ -80,25 +80,6 @@ if ( ! function_exists( 'doublee_scripts' ) ) {
 				return $tag;
 			return str_replace(' src', ' defer src', $tag);
 		}
-
-		// jQuery
-		add_filter('script_loader_tag', 'jquery_async', 10, 2);
-		function jquery_async($tag, $handle)
-		{
-			if ('jquery' !== $handle)
-				return $tag;
-			return str_replace(' src', ' async src', $tag);
-		}
-
-		// jQuery Migrate
-		add_filter('script_loader_tag', 'jquerymigrate_async', 10, 2);
-		function jquerymigrate_async($tag, $handle)
-		{
-			if ('jquery-migrate' !== $handle)
-				return $tag;
-			return str_replace(' src', ' async src', $tag);
-		}
-
 	}
 
 	add_action('wp_enqueue_scripts', 'doublee_scripts');
