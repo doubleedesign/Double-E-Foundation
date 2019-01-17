@@ -1,0 +1,49 @@
+// Animate.scss animations, not Motion UI
+@include keyframes-fadeInDown;
+@include keyframes-fadeOutUp;
+
+.reveal-overlay {
+	display: block !important; // JS controls showing/hiding so we can animate
+	transition: $anchor-transition;
+	opacity: 0;
+	z-index: -100;
+
+	&.open {
+		opacity: 1.0;
+		z-index: 9999;
+	}
+}
+
+.reveal {
+	overflow: hidden;
+	display: block !important;
+
+	&[aria-hidden=false] {
+		@include fadeInDown;
+	}
+
+	&[aria-hidden=true] {
+		@include fadeOutUp;
+	}
+
+	.reveal-header {
+		display: flex;
+		width: 100%;
+
+		.close-button {
+			margin-left: auto;
+			font-size: 2em;
+			cursor: pointer;
+			transition: $anchor-transition;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: $anchor-color-hover;
+			}
+		}
+	}
+
+	.reveal-inner {
+	}
+}

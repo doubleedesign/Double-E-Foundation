@@ -166,6 +166,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	/**
+	 * Customise Reveal modal behaviour so we can use Animate.scss animations for in/out
+	 * @see scss/components/_modals.scss
+	 */
+	jQuery('.reveal').on('open.zf.reveal', function() {
+		jQuery(this).parent().addClass('open');
+	});
+	jQuery('.reveal').on('closed.zf.reveal', function() {
+		jQuery(this).parent().removeClass('open');
+	});
+
+
+	/**
 	 * Owl Carousel image carousels
 	 * @uses jQuery
 	 */
