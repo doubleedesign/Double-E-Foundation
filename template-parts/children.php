@@ -55,6 +55,7 @@ if ( $childpages->have_posts() ) { ?>
 						} else {
 							echo doublee_custom_excerpt(get_the_content(), 30);
 						} ?>
+						<a class="primary button">Read more <i class="fal fa-angle-right"></i></a>
 					</div>
 				</div>
 			</div>
