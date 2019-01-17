@@ -23,6 +23,6 @@ form {
 	}
 	
 	input[type=button] {
-		@extend .button, .button.alert; 
+		@extend .button, .button.primary; 
 	}
 }
