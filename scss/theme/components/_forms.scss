@@ -6,6 +6,15 @@ form {
 	
 	.nf-error-msg {
 		@extend .callout, .alert.callout;
+		padding: $global-padding/4;
+	}
+
+	.label-above .nf-field-label {
+		margin-bottom: 0;
+	}
+
+	.nf-field-container {
+		margin-bottom: $global-margin/2 !important;
 	}
 	
 	.nf-after-field {
@@ -21,8 +30,17 @@ form {
 			border-color: $alert-color;
 		}
 	}
-	
-	input[type=button] {
-		@extend .button, .button.alert; 
+
+	.submit-wrap {
+
+		.nf-field-element {
+			width: 100%;
+			display: flex;
+
+			input[type=button] {
+				@extend .button, .button.primary;
+				margin-left: auto;
+			}
+		}
 	}
 }
