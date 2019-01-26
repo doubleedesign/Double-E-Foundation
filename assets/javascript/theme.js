@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	 * Owl Carousel image carousels
 	 * @uses jQuery
 	 */
-	$('.owl-carousel').owlCarousel({
+	jQuery('.owl-carousel').owlCarousel({
 		loop: true,
 		margin: 0,
 		nav: false,
@@ -235,14 +235,14 @@ document.addEventListener('DOMContentLoaded', function() {
 	 * http://brutaldesign.github.io/swipebox/
 	 * @uses jQuery
 	 */
-	if ($('.gallery').length) {
+	if (jQuery('.gallery').length) {
 		// Add swipebox class to gallery links
-		$('.gallery a').each(function() {
-			$(this).attr('rel', 'gallery');
-			$(this).addClass('swipebox');
+		jQuery('.gallery a').each(function() {
+			jQuery(this).attr('rel', 'gallery');
+			jQuery(this).addClass('swipebox');
 		});
 		// Options
-		$('.swipebox' ).swipebox({
+		jQuery('.swipebox' ).swipebox({
 			useCSS : true, // false will force the use of jQuery for animations
 			useSVG : true, // false to force the use of png for buttons
 			initialIndexOnArray : 0, // which image index to init when a array is passed
