@@ -72,28 +72,27 @@
 }
 
 #top-bar {
-	
+
 	#logo {
 		height: 100%;
-		
+
 		a {
-			padding: $global-padding 0;
 			display: block;
 			text-align: center;
-			
+
 			@include breakpoint(large up) {
 				text-align: left;
 			}
 		}
 	}
-	
+
 	#site-navigation {
 		display: none;
-		
+
 		@include breakpoint(medium up) {
 			display: block;
 		}
-		
+
 		> ul.menu { // top level only
 			width: 100%;
 			display: flex;
@@ -103,86 +102,96 @@
 			@include breakpoint(large up) {
 				justify-content: flex-end;
 			}
-		}
-	}
 
-	
-	ul.menu { // all menus including dropdowns
-		
-		> li {
-			
-			a {
-				padding: $global-padding;
-				
-				&:focus {
-					color: $menu-item-color-active;
-					background: $menu-item-background-active;
-
-					&:after {
-						border-color: $menu-item-color-active transparent transparent;
-					}
-				}
-			}
-			
-			&.is-dropdown-submenu-parent {
-				
-				a {
-					padding-right: $global-padding*2;
-					
-					&:after {
-						right: $global-padding;	
-					}
-					
-				}
-			}
-
-			&:hover,
-			&.active {
+			> li {
+				padding: 0 $global-padding;
 
 				> a {
-					color: $menu-item-color-active;
-					background: $menu-item-background-active;
-					
-					&:after {
-						border-color: $menu-item-color-active transparent transparent;
+					padding: $global-padding 0;
+					overflow: visible;
+					border-bottom: 2px solid transparent;
+
+					&:before {
+						height: 2px;
+						bottom: -2px;
+						z-index: 100;
 					}
 				}
-			}
-			
-			&:hover,
-			&:focus {
-				
-				> ul.dropdown.menu {
-					opacity: 1.0;
-				}
-			}
-			
-			ul.dropdown.menu {
-				left: 0;
-				right: auto;
-				border: 0;
-				opacity: 0;
-				
-				li, li a {
-					line-height: $global-lineheight;
-				}
-				
-				li {
-					font-size: 0.9em;
-					
-					a {
-						padding: $global-padding/2 $global-padding;
-						color: $menu-item-color-active;
-						
-						&:hover,
-						&:focus {
-							background: darken($menu-item-background-active, 10%);
+
+				&.current-menu-item,
+				&.menu-item-has-children {
+
+					&:hover {
+
+						> a {
+
+							&:before {
+								background: $secondary-color;
+							}
 						}
 					}
 				}
-				
+
+				&.current-menu-item {
+
+					> a {
+						border-bottom: 2px solid $primary-color;
+					}
+				}
+
+				&.menu-item-has-children {
+
+					> a {
+						z-index: 100;
+
+						&:before {
+							background: $secondary-color;
+						}
+					}
+
+					&:hover {
+
+						> a {
+							border-bottom: 2px solid $primary-color;
+						}
+					}
+				}
 			}
-			
+		}
+	}
+
+	ul.submenu {
+		padding: $global-padding/2 0;
+		left: $global-margin;
+		margin-top: 2px;
+
+		li {
+
+			a {
+				padding: $global-padding/2 $global-padding;
+				color: $white;
+				width: 100%;
+				display: block;
+
+				&:before {
+					content: none;
+				}
+
+				&:hover,
+				&:focus,
+				&:active {
+					color: $white;
+					background: darken($topbar-submenu-background, 5%);
+				}
+			}
+
+			&.active {
+
+				> a {
+					color: $white;
+					background: darken($topbar-submenu-background, 5%);
+				}
+			}
 		}
 	}
 }
