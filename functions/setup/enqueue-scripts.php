@@ -20,10 +20,9 @@ if ( ! function_exists( 'doublee_scripts' ) ) {
 		 * Register and enqueue scripts
 		 */
 
-		// jQuery - loading it separately enables us to load it asynchronously
-		// Using 1.12.4 as that's the same version that WP was using at the time of writing this.
+		// jQuery - use Foundation's version
 		wp_deregister_script('jquery');
-		wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4', false);
+		wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', array(), '3.1.1', false);
 
 		// InView (non IE browsers)
 		if ($browser != 'ie') {
