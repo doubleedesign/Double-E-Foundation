@@ -178,6 +178,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	/**
+	 * Animate the topbar dropdown menus
+	 * Any jQuery animations can be used
+	 * @see https://foundation.zurb.com/forum/posts/36965-f6-topbar-dropdown-animations
+	 * @see https://codepen.io/rafibomb/pen/qZBbaO
+	 */
+	jQuery('#site-navigation > ul').on(
+		'show.zf.dropdownmenu', function(ev, el) {
+			el.css('display', 'none')
+				.slideDown(400);
+		});
+	jQuery('#site-navigation > ul').on(
+		'hide.zf.dropdownmenu', function(ev, el) {
+			el.children('ul')
+				.css('display', 'inherit')
+				.slideUp(100);
+		});
+
+
+	/**
 	 * Owl Carousel image carousels
 	 * @uses jQuery
 	 */
