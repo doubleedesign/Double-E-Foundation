@@ -65,6 +65,7 @@ require_once( 'functions/navigation/menu-classes.php' );
 
 /** Developer functions - general functions/tools for theme/template development */ 
 require_once( 'functions/developer.php' );
+require_once( 'functions/developer/breadcrumbs.php' );
 
 /** Miscellaneous functions */
 require_once( 'functions/misc.php' );
