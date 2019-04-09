@@ -61,6 +61,5 @@ General Public License (GPL) v2. Foundation uses the MIT License.
 * [Julia Timson Civil Celebrant](https://www.juliatimson.com.au)
 * [Melton Calisthenics Club](https://www.meltoncalisthenics.org.au)
 * [Doncaster Calisthenics Club](https://www.doncastercalisthenics.org.au)
-* [ConnectQuest](http://www.connectquest.com.au)
 * [Early Learning Childcare &amp; Kindergarten](https://www.elcck.com.au)
 * [Cutting Edge Video Productions](http://www.cuttingedgevideo.com.au)
