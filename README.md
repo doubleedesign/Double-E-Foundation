@@ -19,25 +19,26 @@ __Demo:__ Updated demo coming soon.
 	
 ## What version are ya up to?
 
-3.1.2 as of 17 January, 2019.
+4.0.0 as of 7 September, 2019.
 
 ## Foundation version?
 
-Zurb Foundation 6.3.1 as of Double-E-Foundation 2.2 (April 26, 2017).
+Zurb Foundation 6.5.3 as of Double-E-Foundation 4.0 (7 September, 2019).
 
 ## Third-party libraries used
 
 * [Zurb Foundation 6](https://foundation.zurb.com)
 * [Animate.scss](https://github.com/doubleedesign/Animate.scss)
 * [Hover.css](https://github.com/IanLunn/Hover)
-* [Font Awesome 5](http://www.fontawesome.com/)
+* [Font Awesome 5](http://www.fontawesome.com/) (**Note**: You must add your own kit code in `functions/setup/enqueue-scripts.php`)
 * [inView](https://github.com/protonet/jquery.inview)
-* [Swipebox](http://brutaldesign.github.io/swipebox/)
+* [Fancybox](http://fancyapps.com/fancybox) (**Note**: Fancybox is GPL licensed for open source projects only. For commercial projects you must [purchase a licence](http://fancyapps.com/fancybox/3/#license)).
 * [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/)
-* [TippyJS](https://github.com/atomiks/tippyjs) (version 2, not 3)
+* [TippyJS](https://github.com/atomiks/tippyjs)
 
 ## Recommended plugins
-* [Advanced Custom Fields Pro](https://www.advancedcustomfields.com)
+* [Advanced Custom Fields Pro](https://www.advancedcustomfields.com) 
+* [Classic Editor](https://en-au.wordpress.org/plugins/classic-editor/) (This theme is untested with Gutenberg)
 
 ## Other credits
 
@@ -46,15 +47,16 @@ Zurb Foundation 6.3.1 as of Double-E-Foundation 2.2 (April 26, 2017).
 
 ## Licence
 
-General Public License (GPL) v2. Foundation uses the MIT License.
+General Public License (GPL) as per the WordPress standard. Foundation uses the MIT License.
 
 ## Examples of work
+* [Triathlon Victoria](https://www.triathlonvictoria.org.au)
 * [Kids Compass Paediatric Therapy Centre](https://www.kidscompass.com.au)
 * [Exford Primary School](http://www.exfordps.vic.edu.au) 
 * [AMR Hewitts Print Packaging](https://www.amrhewitts.com.au)
 * [Calisthenics Association of Queensland Inc](https://www.calisthenicsqld.com.au)
 * [Beejays Calisthenics Club](https://www.beejayscalisthenics.com.au)
-* [Wyndham Business and Tourism Association](http://www.wyndhambusinessandtourism.org.au)
+* [Werribee Business and Tourism Association](http://www.werribeebusinessandtourism.org.au)
 * [Lynriz Debutante Presentations](http://www.lynrizdebs.com.au)
 * [Oliver-Ramsay Security](https://www.orsecurity.com.au)
 * [Ellyn Shepherd](https://www.ellynshepherd.com.au)

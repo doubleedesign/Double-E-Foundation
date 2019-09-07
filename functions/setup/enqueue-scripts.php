@@ -26,11 +26,11 @@ if ( ! function_exists( 'doublee_scripts' ) ) {
 
 		// InView (non IE browsers)
 		if ($browser != 'ie') {
-			wp_enqueue_script('inview', get_template_directory_uri() . '/assets/javascript/min/inview.min.js', array('jquery'), $version, true);
+			wp_enqueue_script('inview', get_template_directory_uri() . '/javascript/min/inview.min.js', array('jquery'), $version, true);
 		}
 
 		// Theme JavaScript - includes Foundation plugins and others compiled into it
-		wp_enqueue_script('theme', get_template_directory_uri() . '/assets/javascript/min/theme.min.js', array('jquery'), $version, true);
+		wp_enqueue_script('theme', get_template_directory_uri() . '/javascript/min/theme.min.js', array('jquery'), $version, true);
 
 		// Font Awesome (insert kit URL here)
 		wp_enqueue_script('fontawesome', '', array(), $version, true);
