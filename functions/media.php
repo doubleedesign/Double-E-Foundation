@@ -21,17 +21,18 @@ endif;
 
 /**
  * Alter the default gallery markup to:
- * - Incorporate Swipebox
+ * - Incorporate Fancybox
  * - Remove <br> tags
  * - Use the markup we want (by default, galleries are definition lists unless theme support for HTML5 has been added and galleries included in that;
  * 	 this allows further customisation than that
  * Adapted from: http://robido.com/wordpress/wordpress-gallery-filter-to-modify-the-html-output-of-the-default-gallery-shortcode-and-style/
  * @param $output
  * @param $attr
+ * @param $instance
  * @return string
- * @since Double-E Foundation 3.0.1
+ * @since Double-E Foundation 4.0.0
  */
-function doublee_post_gallery_markup( $output, $attr ) {
+function doublee_post_gallery_markup($output, $attr, $instance) {
 
 	// Initialize
 	global $post, $wp_locale;
@@ -142,7 +143,7 @@ function doublee_post_gallery_markup( $output, $attr ) {
 			$title = get_the_title($id);
 			$image_file = wp_get_attachment_image_src($id, $size);
 			$setimage = $image_file[0];
-			$link = '<a class="swipebox" href="'.$url.'" title="'.$title.'"><img src="'.$setimage.'" alt="'.$title.'"/></a>';
+			$link = '<a data-fancybox="gallery" href="'.$url.'" title="'.$title.'"><img src="'.$setimage.'" alt="'.$title.'"/></a>';
 		} else { // It's not (i.e. it's set to attachment page or none)
 			$link = wp_get_attachment_link($id, $size, false, false, false, false);
 		}
@@ -154,9 +155,9 @@ function doublee_post_gallery_markup( $output, $attr ) {
 		// Add the caption
 		if ( $captiontag && trim( $attachment->post_excerpt ) ) {
 			$output .= "
-		<{$captiontag} class='gallery-caption'>
-			" . wptexturize($attachment->post_excerpt) . "
-		</{$captiontag}>";
+	<{$captiontag} class='gallery-caption'>
+		" . wptexturize($attachment->post_excerpt) . "
+	</{$captiontag}>";
 		}
 		// End itemtag
 		$output .= "</{$itemtag}>";
@@ -166,9 +167,6 @@ function doublee_post_gallery_markup( $output, $attr ) {
 	$output .= "</div>\n";
 	return $output;
 }
-
-// Apply filter to default gallery shortcode
-add_filter( 'post_gallery', 'doublee_post_gallery_markup', 10, 2 );
 
 
 /**
