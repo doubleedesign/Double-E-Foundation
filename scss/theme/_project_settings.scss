@@ -1,0 +1,339 @@
+// Copy variables from _settings.scss and change here to customise. 
+
+/*===========================================================
+	STRUCTURE
+===========================================================*/
+
+$global-width: rem-calc(1280);
+$grid-row-width: $global-width;
+$global-margin: 1rem;
+$global-padding: 1rem;
+
+/* Breakpoints */
+$breakpoints: (
+	small: 0,
+	medium: 640px,
+	large: 1024px,
+	xlarge: 1280px,
+	xxlarge: 1800px,
+);
+$breakpoint-classes: (small medium large xlarge xxlarge);
+
+/* Grid */
+$grid-row-width: $global-width;
+$grid-column-count: 12;
+$grid-column-gutter: (
+	small: 20px,
+	medium: 30px,
+	large: 40px,
+	xlarge: 50px,
+	xxlarge: 60px,
+);
+$grid-column-align-edge: true;
+$grid-column-alias: 'columns';
+$block-grid-max: 8;
+
+
+/*===========================================================
+	COLOUR SCHEME
+===========================================================*/
+
+$primary-color: #7e3f98;
+$secondary-color: #222;
+$success-color: #00a550;
+$warning-color: #ffae00;
+$alert-color: #98196b;
+$accent-color: $warning-color;
+
+$foundation-palette: (
+	primary: $primary-color,
+	secondary: $secondary-color,
+	success: $success-color,
+	warning: $warning-color,
+	alert: $alert-color,
+) !global;
+
+$button-palette: $foundation-palette;
+$label-palette: $foundation-palette;
+
+/*===========================================================
+	TYPOGRAPHY
+===========================================================*/
+
+$body-font-color: #444;
+$body-font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$global-weight-normal: 400;
+$global-weight-bold: 700;
+$global-lineheight: 1.45;
+$font-size-small: 0.9em;
+
+/* Type Scale values - currently only used for mixins */
+$minor-second: 1.067;
+$major-second: 1.125;
+$minor-third: 1.200;
+$major-third: 1.250;
+$perfect-fourth: 1.333;
+$augmented-fourth: 1.414;
+$perfect-fifth: 1.500;
+$golden-ratio: 1.618;
+
+/* Type scale settings - currently only used for mixins */
+$small-typescale: $perfect-fourth;
+$medium-typescale: $small-typescale;
+$large-typescale: $augmented-fourth;
+$xlarge-typescale: $large-typescale;
+$xxlarge-typescale: $xlarge-typescale;
+
+/*Headings*/
+$header-font-family: $body-font-family;
+$header-font-weight: $global-weight-bold;
+$header-font-style: normal;
+$header-lineheight: 1.2;
+$header-margin-bottom: $global-margin;
+$header-styles: (
+	// See type-scale.com
+	// TODO: Find a better way to calculate this using the variables above, or similar
+	small: (
+		// Perfect Fourth, with H1 two steps larger than H2
+		'h1': ('fs': 3.157em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		//'h2': ('fs': 2.369em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h2': ('fs': 1.777em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 1.333em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+	),
+	medium: (
+		// Perfect Fourth, with H1 two steps larger than H2
+		'h1': ('fs': 3.157em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		//'h2': ('fs': 2.369em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h2': ('fs': 1.777em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 1.333em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+	),
+	large: (
+		// Augmented Fourth, with H1 two steps larger than H2
+		'h1': ('fs': 3.998em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		//'h2': ('fs': 2.827em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h2': ('fs': 1.999em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 1.414em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+	),
+	xlarge: (
+		// Augmented Fourth, with H1 two steps larger than H2
+		'h1': ('fs': 3.998em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		//'h2': ('fs': 2.827em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h2': ('fs': 1.999em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 1.414em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+	),
+	xxlarge: (
+		// Augmented Fourth, with H1 two steps larger than H2
+		'h1': ('fs': 3.998em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		//'h2': ('fs': 2.827em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h2': ('fs': 1.999em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h3': ('fs': 1.414em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h4': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h5': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+		'h6': ('fs': 1em, 'lh': $header-lineheight, 'mt': 0, 'mb': $header-margin-bottom),
+	),
+	// Note: body font is set to 16px up to xxlarge, when it becomes 18
+	// The type scale remains the same as on large, but everything will become larger due to the larger base font size.
+);
+
+/* Paragraphs*/ 
+$paragraph-lineheight: $global-lineheight;
+$paragraph-margin-bottom: $global-margin;
+
+/* Lists */
+$list-lineheight: $paragraph-lineheight;
+$list-margin-bottom: $paragraph-margin-bottom;
+$list-style-type: disc;
+$list-style-position: outside;
+$list-side-margin: 1.25rem;
+$list-nested-side-margin: 1.25rem;
+
+/* Blockquotes */
+$blockquote-color: $dark-gray;
+$blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-border: 1px solid $medium-gray;
+
+/* Links */
+$anchor-color: $primary-color;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+$anchor-text-decoration: none;
+$anchor-text-decoration-hover: none;
+$anchor-transition: all 0.3s ease;
+
+/* Breadcrumbs */
+$breadcrumbs-margin: 0 0 $global-margin 0;
+$breadcrumbs-item-font-size: rem-calc(11);
+$breadcrumbs-item-color: $primary-color;
+$breadcrumbs-item-color-current: $black;
+$breadcrumbs-item-color-disabled: $medium-gray;
+$breadcrumbs-item-margin: 0.75rem;
+$breadcrumbs-item-uppercase: true;
+$breadcrumbs-item-slash: true;
+
+/*===========================================================
+	TOP BAR
+===========================================================*/
+
+$titlebar-padding: $global-padding;
+
+$topbar-padding: 0.5rem 0;
+$topbar-background: $white;
+$topbar-submenu-background: map-get($foundation-palette, primary);
+$topbar-title-spacing: 1rem;
+$topbar-input-width: 200px;
+$topbar-unstack-breakpoint: medium;
+
+$menu-margin: 0;
+$menu-margin-nested: 1rem;
+$menu-item-padding: 0.7rem 1rem;
+$menu-item-color-active: $white;
+$menu-item-background-active: map-get($foundation-palette, primary);
+$menu-icon-spacing: 0.25rem;
+
+$dropdownmenu-arrows: true;
+$dropdownmenu-arrow-color: $anchor-color;
+$dropdownmenu-min-width: 200px;
+$dropdownmenu-background: $menu-item-background-active;
+$dropdownmenu-border: 0;
+
+/*===========================================================
+	OFF CANVAS MENU IF SELECTED
+===========================================================*/
+
+$offcanvas-size: 250px;
+$offcanvas-vertical-size: 250px;
+$offcanvas-background: $light-gray;
+$offcanvas-shadow: 0 0 10px rgba($black, 0.7);
+$offcanvas-push-zindex: 1;
+$offcanvas-overlap-zindex: 10;
+$offcanvas-reveal-zindex: 1;
+$offcanvas-transition-length: 0.5s;
+$offcanvas-transition-timing: ease;
+$offcanvas-fixed-reveal: true;
+$offcanvas-exit-background: rgba($white, 0.25);
+$maincontent-class: 'off-canvas-content';
+
+$callout-background: $white;
+$callout-background-fade: 85%;
+$callout-border: 1px solid rgba($black, 0.25);
+$callout-margin: 0 0 1rem 0;
+$callout-padding: 1rem;
+$callout-font-color: $body-font-color;
+$callout-font-color-alt: $body-background;
+$callout-radius: $global-radius;
+$callout-link-tint: 30%;
+
+$button-padding: 0.85em 1em;
+$button-margin: 0 0 $global-margin 0;
+$button-fill: solid;
+$button-background: $primary-color;
+$button-background-hover: scale-color($button-background, $lightness: -15%);
+$button-color: #fff;
+$button-color-alt: #000;
+$button-radius: $global-radius;
+$button-sizes: (
+  tiny: 0.6rem,
+  small: 0.75rem,
+  default: 0.9rem,
+  large: 1.25rem,
+);
+$button-opacity-disabled: 0.25;
+
+/*===========================================================
+	CALLOUTS
+===========================================================*/
+
+$callout-background: $dark-gray;
+$callout-background-fade: 0%;
+$callout-border: 1px solid rgba($black, 0.25);
+$callout-margin: 0 0 1rem 0;
+$callout-padding: 1rem;
+$callout-font-color: $white;
+$callout-font-color-alt: $callout-font-color;
+$callout-radius: $global-radius;
+$callout-link-tint: 0%;
+
+/*===========================================================
+	FORMS
+===========================================================*/
+
+$fieldset-border: 1px solid $medium-gray;
+$fieldset-padding: rem-calc(20);
+$fieldset-margin: rem-calc(18 0);
+$legend-padding: rem-calc(0 3);
+$form-spacing: rem-calc(16);
+$helptext-color: #333;
+$helptext-font-size: rem-calc(13);
+$helptext-font-style: italic;
+$input-prefix-color: $black;
+$input-prefix-background: $light-gray;
+$input-prefix-border: 1px solid $medium-gray;
+$input-prefix-padding: 1rem;
+$form-label-color: $black;
+$form-label-font-size: rem-calc(14);
+$form-label-font-weight: $global-weight-normal;
+$form-label-line-height: 1.8;
+$select-background: $white;
+$select-triangle-color: #333;
+$select-radius: $global-radius;
+$input-color: $black;
+$input-font-family: inherit;
+$input-font-size: rem-calc(16);
+$input-background: $white;
+$input-background-focus: $white;
+$input-background-disabled: $light-gray;
+$input-border: 1px solid $medium-gray;
+$input-border-focus: 1px solid $dark-gray;
+$input-shadow: inset 0 1px 2px rgba($black, 0.1);
+$input-shadow-focus: 0 0 5px $medium-gray;
+$input-cursor-disabled: default;
+$input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
+$input-number-spinners: true;
+$input-radius: $global-radius;
+
+/*===========================================================
+	PAGINATION
+===========================================================*/
+
+$pagination-font-size: rem-calc(14);
+$pagination-margin-bottom: $global-margin;
+$pagination-item-color: $black;
+$pagination-item-padding: rem-calc(3 10);
+$pagination-item-spacing: rem-calc(1);
+$pagination-radius: $global-radius;
+$pagination-item-background-hover: $light-gray;
+$pagination-item-background-current: $primary-color;
+$pagination-item-color-current: foreground($pagination-item-background-current);
+$pagination-item-color-disabled: $medium-gray;
+$pagination-ellipsis-color: $black;
+$pagination-mobile-items: false;
+$pagination-arrows: true;
+
+/*===========================================================
+	TABLES
+===========================================================*/
+
+$table-background: $white;
+$table-color-scale: 5%;
+$table-border: 1px solid smart-scale($table-background, $table-color-scale);
+$table-padding: rem-calc(8 10 10);
+$table-hover-scale: 2%;
+$table-row-hover: darken($table-background, $table-hover-scale);
+$table-row-stripe-hover: darken($table-background, $table-color-scale + $table-hover-scale);
+$table-striped-background: smart-scale($table-background, $table-color-scale);
+$table-stripe: even;
+$table-head-background: smart-scale($table-background, $table-color-scale / 2);
+$table-foot-background: smart-scale($table-background, $table-color-scale);
+$table-head-font-color: $body-font-color;
+$show-header-for-stacked: false;

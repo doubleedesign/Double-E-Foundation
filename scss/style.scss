@@ -27,7 +27,7 @@ Text Domain:			doublee
 // Settings
 @import "foundation/settings/settings"; // Foundation default settings
 @import "theme/fonts"; // Theme fonts
-@import "theme/global/project_settings"; // Override settings
+@import "theme/project_settings"; // Override default settings for this theme
 
 // Third-party libraries 
 @import "vendor/animate/animate";
