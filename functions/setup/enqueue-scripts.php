@@ -32,8 +32,8 @@ if ( ! function_exists( 'doublee_scripts' ) ) {
 		// Theme JavaScript - includes Foundation plugins and others compiled into it
 		wp_enqueue_script('theme', get_template_directory_uri() . '/assets/javascript/min/theme.min.js', array('jquery'), $version, true);
 
-		// Font Awesome
-		wp_enqueue_script('fontawesome', get_template_directory_uri() . '/assets/javascript/min/fontawesome.min.js', array(), $version, true);
+		// Font Awesome (insert kit URL here)
+		wp_enqueue_script('fontawesome', '', array(), $version, true);
 
 		// Add the comment-reply library on pages where it is necessary
 		if (is_singular() && comments_open() && get_option('thread_comments')) {
