@@ -36,9 +36,11 @@ Zurb Foundation 6.5.3 as of Double-E-Foundation 4.0 (7 September, 2019).
 * [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/)
 * [TippyJS](https://github.com/atomiks/tippyjs)
 
+## Required Plugins
+* [Advanced Custom Fields Pro](https://www.advancedcustomfields.com) - the theme will error upon activation if you don't have ACF, but if you don't want to use it you can remove the `acf-json` folder and replace calls to predefined fields with your own code (or remove them). 
+
 ## Recommended plugins
-* [Advanced Custom Fields Pro](https://www.advancedcustomfields.com) 
-* [Classic Editor](https://en-au.wordpress.org/plugins/classic-editor/) (This theme is untested with Gutenberg)
+* [Classic Editor](https://en-au.wordpress.org/plugins/classic-editor/) (This theme is untested with the block editor aka Gutenberg)
 
 ## Other credits
 
