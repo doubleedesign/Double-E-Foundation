@@ -40,7 +40,7 @@ Zurb Foundation 6.5.3 as of Double-E-Foundation 4.0 (7 September, 2019).
 * [Advanced Custom Fields Pro](https://www.advancedcustomfields.com) - the theme will error upon activation if you don't have ACF, but if you don't want to use it you can remove the `acf-json` folder and replace calls to predefined fields with your own code (or remove them). 
 
 ## Recommended plugins
-* [Classic Editor](https://en-au.wordpress.org/plugins/classic-editor/) (This theme is untested with the block editor aka Gutenberg)
+* [Classic Editor](https://en-au.wordpress.org/plugins/classic-editor/) - This theme is untested with the block editor aka Gutenberg
 
 ## Other credits
 
@@ -55,6 +55,8 @@ General Public License (GPL) as per the WordPress standard. Foundation uses the 
 * [Triathlon Victoria](https://www.triathlonvictoria.org.au)
 * [Kids Compass Paediatric Therapy Centre](https://www.kidscompass.com.au)
 * [Exford Primary School](http://www.exfordps.vic.edu.au) 
+* [Instyle Dance Company](https://www.instyledance.com.au)
+* [Dog Connections](https://www.dogconnections.com.au)
 * [AMR Hewitts Print Packaging](https://www.amrhewitts.com.au)
 * [Calisthenics Association of Queensland Inc](https://www.calisthenicsqld.com.au)
 * [Beejays Calisthenics Club](https://www.beejayscalisthenics.com.au)
