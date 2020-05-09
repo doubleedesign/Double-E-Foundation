@@ -18,20 +18,17 @@ Text Domain:			doublee
 //@import "vendor/woocommerce-fonts";
 
 // Custom functions and mixins
-@import "theme/functions"; 
-@import "theme/mixins"; 
+@import "theme/functions";
+@import "theme/mixins";
 
 // Settings
 @import "foundation/settings/settings"; // Foundation default settings
-@import "theme/fonts"; // Theme fonts
-@import "theme/project_settings"; // Override default settings for this theme
+@import "foundation/foundation"; // Foundation mixins & browser resets
+@import "theme/variables"; // Override default settings for this theme
 
 // Third-party libraries 
 @import "vendor/animate/animate";
 @import "vendor/hover/hover";
-
-// Foundation mixins & browser resets
-@import "foundation/foundation";
 
 // WP overrides
 @import "theme/global/wp-admin"; // Fix issues with wp-admin bar positioning
