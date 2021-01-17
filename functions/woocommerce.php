@@ -20,7 +20,7 @@ add_action( 'after_setup_theme', 'doublee_woocommerce_support' );
 
 
 // Don't load WooCommerce's CSS files
-add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+//add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
 
 // Add an option to sort products alphabetically
