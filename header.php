@@ -6,13 +6,9 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since Double-E Foundation 3.0
+ * @since Double-E Foundation 5.0
  */
 
-?>
-<?php
-/* Add the page slug as an ID on the body tag */
-$slug = 'page-'.$post->post_name;
 ?>
 <!doctype html>
 <html class="no-js" <?php language_attributes(); ?> >
@@ -24,31 +20,23 @@ $slug = 'page-'.$post->post_name;
 		<?php get_template_part('template-parts/header/preloader'); ?>
 		<?php wp_head(); ?>
 	</head>
-	<body id="<?php echo $slug; ?>" <?php body_class(); ?>>
-		
-	<div id="preloader"></div>
-	
-	<a href="#content" class="skip-to-content">Skip to content</a>
 
-	<?php // Remove these if not using offcanvas?>
-	<div class="off-canvas-wrapper fadeIn animated">
-		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
-			<?php get_template_part( 'template-parts/layout/mobile-off-canvas' ); ?>
-			<div class="off-canvas-content" data-off-canvas-content>
-	<?php // end of things to remove if not using offcanvas ?>
+	<body <?php body_class(); ?>>
 
-	<!--[if lte IE 9]><div class="alert callout"><span>You are using an outdated version of Microsoft's Internet Explorer web browser, which does not display modern web sites properly (including this one). To ensure you always see sites at their best and your browser security is up to date, it is highly recommended that you <a href="http://browsehappy.com/" target="_blank">upgrade to a modern browser</a>.</span></div><![endif]-->
+		<div id="preloader"></div>
 
-	<header id="masthead" class="site-header" role="banner">
+		<a href="#content" class="skip-to-content">Skip to content</a>
 
-		<div class="title-bar show-for-small-only row align-middle align-justify">
-			<button class="menu-icon" type="button" data-toggle="offCanvas"><i class="fa fa-bars"></i>Menu</button>
-			<?php /* Swap button for this one if using mobile topbar instead of offcanvas
-			<button class="menu-icon" type="button"><i class="fa fa-bars"></i>Menu</button> */ ?>
-		</div>
+		<?php // Remove these if not using offcanvas?>
+		<div class="off-canvas-wrapper fadeIn animated">
+			<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+				<?php get_template_part( 'template-parts/layout/off-canvas' ); ?>
+				<div class="off-canvas-content" data-off-canvas-content>
+		<?php // end of things to remove if not using offcanvas ?>
 
-		<?php get_template_part('template-parts/layout/top-bar'); ?>
-		
-	</header>
+		<header id="masthead" class="site-header" role="banner">
+			<?php get_template_part('template-parts/layout/title-bar'); ?>
+			<?php get_template_part('template-parts/layout/top-bar'); ?>
+		</header>
 
-	<div id="content">
+		<div id="content">

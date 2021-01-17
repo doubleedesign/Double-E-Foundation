@@ -11,50 +11,45 @@
  *
  * @package WordPress
  * @subpackage Double-E Foundation
- * @since Double-E Foundation 2.3.0
+ * @since Double-E Foundation 5.0
  */
+
+if(is_category()) {
+	$title = get_the_archive_title();
+}
+else if(is_search()) {
+	$title = 'Search results for &ldquo' . get_search_query() .' &rdquo;';
+}
+else {
+	$title = get_the_title(get_option('page_for_posts'));
+}
 
 get_header(); ?>
 
-<?php get_template_part('template-parts/featured-image-banner'); ?>
+<div class="archive archive--post">
 
-<div id="page" class="archive">
-	
-	<main class="row">
-		<div class="small-12 medium-8 columns">
-			<?php //echo term_description(); ?>
+	<header class="page-header pseudo-module row animate">
+		<div class="small-12 large-8 columns body-copy">
+			<h1><?php echo $title; ?></h1>
 		</div>
-	</main>
+	</header>
 
 	<div class="row">
-
-		<?php /** Note: if using card excerpts, remove this wrapping column div */ ?>
-		<div class="small-12 medium-8 columns">
+		<div class="small-12 large-8 columns">
 			<?php
 			if ( have_posts() ) {
 				// Start the Loop
 				while ( have_posts() ) : the_post();
-					get_template_part( 'template-parts/excerpts/excerpt-list');
+					get_template_part( 'template-parts/excerpt');
 				endwhile;
 			} else {
 				get_template_part( 'content', 'none' );
-			} // End have_posts() check.
-			?>
+			} ?>
 		</div>
-
-		<?php get_sidebar(); ?>
 	</div>
-	
-	<?php // Display navigation to next/previous pages when applicable 
-	if ( function_exists( 'doublee_pagination' ) ) { 
-		doublee_pagination(); 
-	} else if ( is_paged() ) { ?>
-		<nav id="post-nav" class="row align-center align-justify">
-			<div class="post-previous columns"><?php next_posts_link( __( '&larr; Older posts', '' ) ); ?></div>
-			<div class="post-next columns"><?php previous_posts_link( __( 'Newer posts &rarr;', '' ) ); ?></div>
-		</nav>
-	<?php } ?>
-    
+
+	<?php get_template_part('template-parts/pagination'); ?>
+
 </div>
 
 <?php get_footer(); ?>

@@ -17,67 +17,46 @@
 	GENERAL SETUP
 ===========================================*/
 
-/** Required for Foundation to work properly - thanks FoundationPress */
-require_once( 'functions/setup/foundation.php' );
-
-/** If your site requires protocol relative URLs for theme assets, uncomment the line below. Also from FoundationPress*/
-require_once( 'functions/setup/protocol-relative-theme-assets.php' );
-
-/** Various clean up functions - thanks FoundationPress */
-require_once( 'functions/setup/cleanup.php' );
-
-/** Change WP's sticky post class - thanks FoundationPress */
-require_once( 'functions/setup/sticky-posts.php' );
-
-/** Declare theme support for various WordPress features */
+/**
+ * General setup
+ */
+require_once( 'functions/setup/foundation.php' ); // Source: FoundationPress
+require_once( 'functions/setup/protocol-relative-theme-assets.php' ); // Source: FoundationPress
+require_once( 'functions/setup/cleanup.php' ); // Source: FoundationPress
+require_once( 'functions/setup/sticky-posts.php' ); // Source: FoundationPress
 require_once( 'functions/setup/theme-support.php' );
-
-/** Widget areas if required */
 require_once( 'functions/setup/widget-areas.php' );
-
-/** Enqueue styles */
 require_once( 'functions/setup/enqueue-styles.php' );
-
-/** Enqueue scripts */
 require_once( 'functions/setup/enqueue-scripts.php' );
+require_once( 'functions/setup/media.php' );
 
-/** ACF Theme Options panel */
-require_once( 'functions/setup/acf.php' );
-
-
-/* ==========================================
-	NAVIGATION
-===========================================*/
-
-/** Register all navigation menus */
+/**
+ * Navigation
+ */
 require_once( 'functions/navigation/register-menus.php' );
+require_once( 'functions/navigation/menu-walkers.php' ); // Source: FoundationPress
+require_once( 'functions/navigation/breadcrumbs.php' );
 
-/** Add menu walkers for top-bar and off-canvas - thanks FoundationPress */
-require_once( 'functions/navigation/menu-walkers.php' );
+/**
+ * Admin area
+ */
+require_once( 'functions/admin.php' );
 
-/** Add classes to menu items */
-require_once( 'functions/navigation/menu-classes.php' );
+/**
+ * Theming utilities
+ */
+require_once( 'functions/theming/utilities.php' );
+require_once( 'functions/theming/classes.php' );
+require_once( 'functions/theming/template-tags.php' );
 
 
-/* ==========================================
-	TEMPLATE DEVELOPMENT FUNCTIONS
-===========================================*/
+/**
+ * Plugin extensions
+ */
+if (class_exists('ACF')) {
+	require_once( 'functions/setup/acf.php' );
+}
 
-/** Developer functions - general functions/tools for theme/template development */ 
-require_once( 'functions/developer.php' );
-require_once( 'functions/developer/breadcrumbs.php' );
-
-/** Miscellaneous functions */
-require_once( 'functions/misc.php' );
-
-/** Image-related functions */
-require_once( 'functions/media.php' );
-
-/** Featured image banner */
-require_once( 'functions/featured-image-banner.php'); 
-
-/** WooCommerce functions if you're using it */
-//require_once('functions/woocommerce.php');
-
-/** WooCommerce functions for non-eCommerce / product catalogue sites */
-//require_once('functions/woocommerce-catalogue.php');
+if (class_exists('Woocommerce')) {
+	require_once('functions/woocommerce.php');
+}

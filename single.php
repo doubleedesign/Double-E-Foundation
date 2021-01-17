@@ -9,8 +9,6 @@
 
 get_header(); ?>
 
-<?php get_template_part('template-parts/featured-image-banner'); ?>
-
 <div id="single-post" class="row">
 
 	<?php while ( have_posts() ) : the_post(); ?>

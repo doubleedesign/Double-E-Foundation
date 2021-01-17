@@ -11,12 +11,10 @@
  * Set post thumbnail size and add additional image sizes
  * @since Double-E Foundation 1.0
  */
-if ( ! function_exists( 'doublee_images' ) ) :
-	function doublee_images() {
-		add_image_size('banner',1920,580,true);
-	}
-	add_action( 'after_setup_theme', 'doublee_images' );
-endif;
+function doublee_images() {
+	add_image_size('banner',1920,1080,true);
+}
+add_action( 'after_setup_theme', 'doublee_images' );
 
 
 /**

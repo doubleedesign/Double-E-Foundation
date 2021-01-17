@@ -6,21 +6,16 @@
  *
  * @package WordPress
  * @subpackage Double-E-Foundation
- * @since Double-E-Foundation 3.0.0
+ * @since Double-E-Foundation 5.0
  */
+function doublee_styles() {
 
-if ( ! function_exists( 'doublee_styles' ) ) {
+	$theme = wp_get_theme();
+	$version = $theme->get('Version');
 
-	function doublee_styles() {
-
-		$theme = wp_get_theme();
-		$version = $theme->get('Version');
-
-		// Theme stylesheet
-		wp_enqueue_style('theme', get_stylesheet_directory_uri() . '/style.css', array(), $version, 'all');
-
-	}
-
-	add_action('wp_enqueue_scripts', 'doublee_styles');
+	// Theme stylesheet
+	wp_enqueue_style('theme', get_stylesheet_directory_uri() . '/style.css', array(), $version, 'all');
 
 }
+
+add_action('wp_enqueue_scripts', 'doublee_styles');

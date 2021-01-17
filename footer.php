@@ -11,17 +11,18 @@
 
 ?>
 
-			</div>
-			<div id="footer-container">
-				<footer id="footer" class="row align-middle align-justify">
+			</div><!-- #content -->
+
+			<footer id="footer">
+				<div class="row">
 					<div class="small-12 large-expand columns">
 						<?php doublee_footer_menu(); ?>
 					</div>
 					<div class="shrink columns">
 						<small>Website by <a href="http://www.doubleedesign.com.au">Double-E Design</a>.</small>
 					</div>
-				</footer>
-			</div>
+				</div>
+			</footer>
 
 		<?php // Remove these three divs if not using offcanvas ?>
 		</div><!-- Close off-canvas wrapper inner -->
