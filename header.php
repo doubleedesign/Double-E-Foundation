@@ -45,10 +45,6 @@ $slug = 'page-'.$post->post_name;
 			<button class="menu-icon" type="button" data-toggle="offCanvas"><i class="fa fa-bars"></i>Menu</button>
 			<?php /* Swap button for this one if using mobile topbar instead of offcanvas
 			<button class="menu-icon" type="button"><i class="fa fa-bars"></i>Menu</button> */ ?>
-			<?php $phone = get_field('phone', 'option');
-			if($phone) { ?>
-				<span class="phone"><i class="fas fa-phone"></i></span>
-			<?php } ?>
 		</div>
 
 		<?php get_template_part('template-parts/layout/top-bar'); ?>

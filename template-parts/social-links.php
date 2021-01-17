@@ -1,4 +1,4 @@
-<?php if( have_rows('social_media_links', 'option' ) ) { ?>
+<?php if( ( class_exists('ACF') ) && have_rows('social_media_links', 'option' ) ) { ?>
 	<ul class="social">
 		<?php while( have_rows('social_media_links', 'option') ) {
 			the_row();
