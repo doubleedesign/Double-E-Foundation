@@ -19,7 +19,7 @@ Zurb Foundation 6.5.3 as of Double-E-Foundation 4.0 (7 September, 2019).
 * [Hover.css](https://github.com/IanLunn/Hover)
 * [Font Awesome 5](http://www.fontawesome.com/) (**Note**: You must add your own kit code in `functions/setup/enqueue-scripts.php`)
 * [inView](https://github.com/protonet/jquery.inview)
-* [Fancybox](http://fancyapps.com/fancybox) (**Note**: Fancybox is GPL licensed for open source projects only. For commercial projects you must [purchase a licence](http://fancyapps.com/fancybox/3/#license)) or replace this with an alternative of your choice.
+* [Fancybox](http://fancyapps.com/fancybox) (**Note**: Fancybox is GPL licensed for open source projects only, for commercial projects you must [purchase a licence](http://fancyapps.com/fancybox/3/#license) or replace this with an alternative of your choice)
 * [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/)
 * [TippyJS](https://github.com/atomiks/tippyjs)
 
