@@ -4,22 +4,9 @@ This is a starter WordPress theme that uses the Zurb Foundation 6 front-end fram
 
 __Demo:__ Updated demo coming soon.
 
-## Features 
-
-* Style Guide page template</strong> containing core elements such as headings, paragraphs, lists, tables, forms, callouts/messages, buttons and pagination. I use this template to set up all of my core styling at once, early in the theme development process.
-* Uses Foundation's <strong>Flexbox</strong> grid and utilises flexbox throughout.
-* Handy template development functions:
-    * __Content splitter:__ Allows you to use the 'read more' tag in the WordPress editor to split the content into an array and output each section in different places in a template.
-	* __Gallery / content splitter:__ Enables you to separate out galleries inserted in the WordPress editor to display them separately in the template.
-	* __Featured image banner with basic image size checker__ that will check if a featured image has been set and whether or not it meets dimension requirements before being displayed; if it does not exist or meet requirements, the same checks will be run on the parent page and its image used if it meets requirements; if there is no parent page or requirements are ot met, a default image is used.
-	* __Dynamic featured image banner (work in progress)__ that loads different sized images (as CSS backgrounds) according to the viewport size; if a page's image doesn't meet size requirements, the parent image will be used, and if there is no parent or that image isn't large enough either, a default image will be used.
-	* __Automatic featured image:__ If no image is set, use the first attachment. Uncomment the function in `functions/media.php` to use.
-	* Some __WooCommerce functions__ I commonly use. Add to or remove these as needed. _To use, you will need to uncomment the call to functions/woocommerce.php the file in functions.php._
-	* Additional WooCommerce functions for if you are using it to display products but aren't using eCommerce functionality (e.g. product catalogue). _Uncomment functions/woocommerce-catagloue.php to use_.
-	
 ## What version are ya up to?
 
-4.0.0 as of 7 September, 2019.
+Version 5 is currently in progress, beginning with a general tidy-up (removal of things I don't use anymore, moving some things to more suitable places etc) and then moving on to testing and tweaking with Gutenberg editor compatibility.
 
 ## Foundation version?
 
@@ -36,11 +23,9 @@ Zurb Foundation 6.5.3 as of Double-E-Foundation 4.0 (7 September, 2019).
 * [Owl Carousel 2](https://owlcarousel2.github.io/OwlCarousel2/)
 * [TippyJS](https://github.com/atomiks/tippyjs)
 
-## Required Plugins
-* [Advanced Custom Fields Pro](https://www.advancedcustomfields.com) - the theme will error upon activation if you don't have ACF, but if you don't want to use it you can remove the `acf-json` folder and replace calls to predefined fields with your own code (or remove them). 
-
 ## Recommended plugins
-* [Classic Editor](https://en-au.wordpress.org/plugins/classic-editor/) - This theme is untested with the block editor aka Gutenberg
+* [Advanced Custom Fields Pro](https://www.advancedcustomfields.com)
+* [Classic Editor](https://en-au.wordpress.org/plugins/classic-editor/) until Gutenberg support is improved or if using ACF for most of your content (e.g. using the flexible content fields to build your own page builder).
 
 ## Other credits
 
@@ -57,6 +42,7 @@ General Public License (GPL) as per the WordPress standard. Foundation uses the 
 * [Exford Primary School](http://www.exfordps.vic.edu.au) 
 * [Instyle Dance Company](https://www.instyledance.com.au)
 * [Dog Connections](https://www.dogconnections.com.au)
+* [Mountain View Rise](https://www.mountainviewrise.com.au)
 * [AMR Hewitts Print Packaging](https://www.amrhewitts.com.au)
 * [Calisthenics Association of Queensland Inc](https://www.calisthenicsqld.com.au)
 * [Beejays Calisthenics Club](https://www.beejayscalisthenics.com.au)
@@ -67,5 +53,3 @@ General Public License (GPL) as per the WordPress standard. Foundation uses the 
 * [Julia Timson Civil Celebrant](https://www.juliatimson.com.au)
 * [Melton Calisthenics Club](https://www.meltoncalisthenics.org.au)
 * [Doncaster Calisthenics Club](https://www.doncastercalisthenics.org.au)
-* [Early Learning Childcare &amp; Kindergarten](https://www.elcck.com.au)
-* [Cutting Edge Video Productions](http://www.cuttingedgevideo.com.au)
