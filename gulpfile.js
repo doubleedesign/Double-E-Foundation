@@ -58,4 +58,4 @@ gulp.task('build', function() {
 	browsersync.reload();
 });
 
-gulp.task('default', gulp.parallel(gulp.series('build')));
+gulp.task('default', gulp.parallel(gulp.series('build'))); 
