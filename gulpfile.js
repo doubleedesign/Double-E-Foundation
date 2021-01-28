@@ -9,7 +9,7 @@ const uglify        = require('gulp-uglify');
 const concat        = require('gulp-concat');
 const gutil         = require('gulp-util');
 const browsersync   = require('browser-sync').create();
-const sourcemaps	= require('gulp-sourcemaps');
+const sourcemaps	= require('gulp-sourcemaps'); 
 
 gulp.task('styles',  done =>  {
 	gulp.src('scss/style.scss')
